@@ -4,8 +4,11 @@ class_name Players
 
 @export var starting_oxygen_time: float
 @export var damaged_oxygen_time_loss: float
+@export var damage_cooldown: float
 
 @onready var temporary_oxygen_label: Label = $TemporaryOxygenLabel
+
+var time_last_damaged: float = -INF
 
 var oxygen_time: float
 var players_array: Array[PlayerRigidBody]
@@ -17,8 +20,6 @@ func _ready() -> void:
 	for child in get_children():
 		if child is PlayerRigidBody:
 			players_array.append(child)
-	for player in players_array:
-		player.player_damaged.connect(_player_damaged)
 
 
 func _process(delta: float) -> void:
@@ -30,5 +31,8 @@ func _process(delta: float) -> void:
 	temporary_oxygen_label.text = "Oxygen: " + str(ceili(oxygen_time)) + "/" + str(ceili(starting_oxygen_time))
 
 
-func _player_damaged() -> void:
-	oxygen_time -= damaged_oxygen_time_loss
+func _on_body_entered(body: Node, sender: NodePath) -> void:
+	var current_time := Time.get_ticks_msec() / 1000.0
+	if current_time - time_last_damaged >= damage_cooldown:
+		time_last_damaged = current_time
+		oxygen_time -= damaged_oxygen_time_loss

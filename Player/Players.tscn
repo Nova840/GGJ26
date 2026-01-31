@@ -15,6 +15,7 @@ height = 1.2
 script = ExtResource("1_34lnl")
 starting_oxygen_time = 120.0
 damaged_oxygen_time_loss = 10.0
+damage_cooldown = 1.0
 
 [node name="PlayerRigidBody1" parent="." unique_id=553536451 instance=ExtResource("2_34lnl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 0)
@@ -96,3 +97,7 @@ current = true
 [node name="TemporaryOxygenLabel" type="Label" parent="." unique_id=1860177115]
 offset_right = 40.0
 offset_bottom = 23.0
+
+[connection signal="body_entered" from="PlayerRigidBody1" to="." method="_on_body_entered" binds= [NodePath("PlayerRigidBody1")]]
+[connection signal="body_entered" from="PlayerRigidBody2" to="." method="_on_body_entered" binds= [NodePath("PlayerRigidBody2")]]
+[connection signal="body_entered" from="Tether" to="." method="_on_body_entered" binds= [NodePath("Tether")]]

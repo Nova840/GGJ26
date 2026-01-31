@@ -2,17 +2,25 @@ extends Node
 class_name Players
 
 
+static var instance: Players
+
+
 @export var starting_oxygen_time: float
 @export var damaged_oxygen_time_loss: float
 @export var damage_cooldown: float
 
 @onready var temporary_oxygen_label: Label = $TemporaryOxygenLabel
+@onready var tether: Tether = $Tether
 
 var time_last_damaged: float = -INF
 
 var oxygen_time: float
 var players_array: Array[PlayerRigidBody]
 var oxygen_depleted: bool = false
+
+
+func _enter_tree() -> void:
+	instance = self
 
 
 func _ready() -> void:
@@ -36,3 +44,7 @@ func _on_body_entered(body: Node, sender: NodePath) -> void:
 	if current_time - time_last_damaged >= damage_cooldown:
 		time_last_damaged = current_time
 		oxygen_time -= damaged_oxygen_time_loss
+
+
+func get_distance_of_tank() -> float:
+	return maxf(-tether.global_position.z, 0)

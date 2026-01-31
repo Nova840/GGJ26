@@ -2,6 +2,7 @@
 
 [ext_resource type="FontFile" uid="uid://dmvi1bt1pvrvi" path="res://UI/Bayon/Bayon-Regular.ttf" id="1_o320q"]
 [ext_resource type="Texture2D" uid="uid://celck32gm17ws" path="res://UI/Vectors/Slider_Oxygen.png" id="2_b3kxw"]
+[ext_resource type="Script" uid="uid://b8e2qwgglpmid" path="res://Level/oxygen_gauge.gd" id="3_tienu"]
 [ext_resource type="Texture2D" uid="uid://o7mbwc0vs6nt" path="res://UI/Vectors/Frame_Oxygen.png" id="3_upy20"]
 [ext_resource type="Script" uid="uid://d0h27lw1wfoai" path="res://Level/distance_label.gd" id="4_b3kxw"]
 
@@ -51,12 +52,13 @@ offset_left = 1326.0
 offset_top = 77.0
 offset_right = 1896.0
 offset_bottom = 257.0
-max_value = 360.0
-value = 360.0
+max_value = 1.0
+step = 0.0
 texture_over = ExtResource("3_upy20")
 texture_progress = ExtResource("2_b3kxw")
 texture_progress_offset = Vector2(80, 0)
 tint_progress = Color(0.6117647, 0.972549, 1, 1)
+script = ExtResource("3_tienu")
 
 [node name="Counters" type="HBoxContainer" parent="HBoxContainer" unique_id=2071450398]
 layout_mode = 2

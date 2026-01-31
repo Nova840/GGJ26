@@ -9,7 +9,6 @@ static var instance: Players
 @export var damaged_oxygen_time_loss: float
 @export var damage_cooldown: float
 
-@onready var temporary_oxygen_label: Label = $TemporaryOxygenLabel
 @onready var tether: Tether = $Tether
 
 var time_last_damaged: float = -INF
@@ -36,7 +35,6 @@ func _process(delta: float) -> void:
 	if oxygen_time <= 0 and not oxygen_depleted:
 		oxygen_depleted = true
 		print("Lose")
-	temporary_oxygen_label.text = "Oxygen: " + str(ceili(oxygen_time)) + "/" + str(ceili(starting_oxygen_time))
 
 
 func _on_body_entered(body: Node, sender: NodePath) -> void:

@@ -1,7 +1,21 @@
 [gd_scene format=3 uid="uid://hfv7g1b5dwtx"]
 
 [ext_resource type="PackedScene" uid="uid://0i3n7l781pub" path="res://Models/Janitor Model.fbx" id="1_fwqhj"]
+[ext_resource type="PackedScene" uid="uid://bqyyoahhxdux6" path="res://Models/Tube Segment.fbx" id="2_16enq"]
+[ext_resource type="PackedScene" uid="uid://cpajenxkvx0y" path="res://Models/Air Tank.fbx" id="3_weftq"]
 
 [node name="Node3D" type="Node3D" unique_id=599412236]
 
 [node name="Janitor Model" parent="." unique_id=2022574152 instance=ExtResource("1_fwqhj")]
+
+[node name="Tube Segment" parent="." unique_id=599646913 instance=ExtResource("2_16enq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.6770054, 0, -0.16219401)
+
+[node name="Tube Segment2" parent="." unique_id=999464979 instance=ExtResource("2_16enq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.0385466, 0, -0.16219401)
+
+[node name="Tube Segment3" parent="." unique_id=1437028999 instance=ExtResource("2_16enq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.3947923, 0, -0.16219401)
+
+[node name="Air Tank" parent="." unique_id=1479493546 instance=ExtResource("3_weftq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.0848756, 0, -0.0684315)

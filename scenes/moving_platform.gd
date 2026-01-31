@@ -1,0 +1,22 @@
+extends Path3D
+
+@export var loop = true
+@export var speed = 2.0
+@export var speed_scale = 1.0
+
+@onready var path = $PathFollow3D
+@onready var animation = $AnimationPlayer
+
+# followed this tutorial - https://www.youtube.com/watch?v=iwNQ2sqH2cw
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	if not loop:
+		animation.play("moving")
+		animation.speed_scale = speed_scale
+		set_process(false)
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta: float) -> void:
+	path.progress += speed

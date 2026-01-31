@@ -17,7 +17,6 @@ script = ExtResource("1_a23br")
 rocket_strength = 50.0
 max_velocity = 20.0
 rotate_speed = 15.0
-damage_cooldown = 1.0
 input_left = "Left1"
 input_right = "Right1"
 input_up = "Up1"
@@ -33,5 +32,3 @@ mesh = SubResource("BoxMesh_3qydi")
 [node name="MeshInstance3D" type="MeshInstance3D" parent="MeshInstance3D" unique_id=188329183]
 transform = Transform3D(0.5758609, 0, 0, 0, 1, 0, 0, 0, 2.018433, 0, 0, 1.272577)
 mesh = SubResource("BoxMesh_q3lat")
-
-[connection signal="body_entered" from="." to="." method="_on_body_entered"]

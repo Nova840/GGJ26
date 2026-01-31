@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://bxgnbhnwva80e"]
+
+[ext_resource type="PackedScene" uid="uid://bg42iqvbrq18v" path="res://Models/T-Pipe.fbx" id="1_b4vlj"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_b4vlj"]
+height = 2.6740723
+radius = 1.3085938
+
+[node name="2xTpipe" type="RigidBody3D" unique_id=239153085]
+axis_lock_linear_y = true
+
+[node name="T-Pipe" parent="." unique_id=531012264 instance=ExtResource("1_b4vlj")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1790205243]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.13239098, 0.18981934, 0)
+shape = SubResource("CylinderShape3D_b4vlj")

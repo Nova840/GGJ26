@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://d0t4et1rit4dl"]
+
+[ext_resource type="PackedScene" uid="uid://gso5hjbn1ebq" path="res://Models/Solar Panel.fbx" id="1_7usrx"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_7usrx"]
+size = Vector3(11.804626, 1, 10.845459)
+
+[node name="2xSolarPanel" type="RigidBody3D" unique_id=1974463534]
+axis_lock_linear_y = true
+
+[node name="Solar Panel" parent="." unique_id=997302859 instance=ExtResource("1_7usrx")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=66297735]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.31845093, 0, -0.94763184)
+shape = SubResource("BoxShape3D_7usrx")

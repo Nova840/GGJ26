@@ -3,5 +3,5 @@
 [resource]
 resource_name = "Player_1_Mat"
 vertex_color_use_as_albedo = true
-albedo_color = Color(0, 0.6741261, 0.9063318, 1)
+albedo_color = Color(1, 0, 0, 1)
 emission_enabled = true

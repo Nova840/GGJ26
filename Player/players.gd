@@ -39,7 +39,7 @@ func _process(delta: float) -> void:
 
 func _on_body_entered(body: Node, sender: NodePath) -> void:
 	var current_time := Time.get_ticks_msec() / 1000.0
-	if current_time - time_last_damaged >= damage_cooldown:
+	if current_time - time_last_damaged >= damage_cooldown and body.get_parent() is not Players:
 		time_last_damaged = current_time
 		oxygen_time -= damaged_oxygen_time_loss
 

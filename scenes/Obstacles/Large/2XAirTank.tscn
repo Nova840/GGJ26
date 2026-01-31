@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://bauwda0caf8en"]
+
+[ext_resource type="PackedScene" uid="uid://cpajenxkvx0y" path="res://Models/Air Tank.fbx" id="1_1xm17"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_7jcef"]
+height = 2.1228027
+radius = 0.8496094
+
+[node name="2XAirTank" type="RigidBody3D" unique_id=321542567]
+axis_lock_linear_y = true
+
+[node name="Air Tank" parent="." unique_id=1178055918 instance=ExtResource("1_1xm17")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1396959743]
+transform = Transform3D(-4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0, 1, 0.02746582, 1.2005691e-09, 0)
+shape = SubResource("CylinderShape3D_7jcef")

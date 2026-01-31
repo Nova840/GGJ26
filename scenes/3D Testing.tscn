@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://hfv7g1b5dwtx"]
+
+[ext_resource type="PackedScene" uid="uid://0i3n7l781pub" path="res://Models/Janitor Model.fbx" id="1_fwqhj"]
+
+[node name="Node3D" type="Node3D" unique_id=599412236]
+
+[node name="Janitor Model" parent="." unique_id=2022574152 instance=ExtResource("1_fwqhj")]

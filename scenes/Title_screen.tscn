@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://dph261e1bojt5"]
+
+[node name="CanvasLayer" type="CanvasLayer" unique_id=471357788]
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=285110818]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="PanelContainer" type="PanelContainer" parent="VBoxContainer" unique_id=1828361749]
+layout_mode = 2
+
+[node name="Panel" type="Panel" parent="VBoxContainer/PanelContainer" unique_id=726153789]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer/PanelContainer/Panel" unique_id=1899675421]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+text = "AIR remaining"

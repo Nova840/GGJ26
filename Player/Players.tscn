@@ -1,67 +1,25 @@
 [gd_scene format=3 uid="uid://cpwjhx66rd4l6"]
 
-[ext_resource type="Script" uid="uid://b4rlgneyvj53u" path="res://Player/player_rigid_body.gd" id="1_3qydi"]
 [ext_resource type="Script" uid="uid://bt4flonvff3qa" path="res://Player/players.gd" id="1_34lnl"]
+[ext_resource type="PackedScene" uid="uid://cearjmrpr23g5" path="res://Player/player_rigid_body.tscn" id="2_34lnl"]
 [ext_resource type="Script" uid="uid://fe81yhyqb5j6" path="res://Player/tether.gd" id="2_q3lat"]
 [ext_resource type="Script" uid="uid://cy6iwl5cvohu2" path="res://Player/camera_point.gd" id="3_ow8rm"]
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_l2ndj"]
-
-[sub_resource type="BoxMesh" id="BoxMesh_3qydi"]
-
-[sub_resource type="BoxMesh" id="BoxMesh_q3lat"]
 
 [node name="Players" type="Node" unique_id=803663936]
 script = ExtResource("1_34lnl")
 starting_oxygen_time = 120.0
+damaged_oxygen_time_loss = 10.0
 
-[node name="PlayerRigidBody1" type="RigidBody3D" parent="." unique_id=1109088470]
+[node name="PlayerRigidBody1" parent="." unique_id=553536451 instance=ExtResource("2_34lnl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 0)
-axis_lock_linear_y = true
-gravity_scale = 0.0
-script = ExtResource("1_3qydi")
-rocket_strength = 50.0
-max_velocity = 20.0
-rotate_speed = 15.0
-input_left = "Left1"
-input_right = "Right1"
-input_up = "Up1"
-input_down = "Down1"
-input_add_force = "AddForce1"
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="PlayerRigidBody1" unique_id=1354186586]
-shape = SubResource("BoxShape3D_l2ndj")
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="PlayerRigidBody1" unique_id=1798068337]
-mesh = SubResource("BoxMesh_3qydi")
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="PlayerRigidBody1/MeshInstance3D" unique_id=2135975425]
-transform = Transform3D(0.5758609, 0, 0, 0, 1, 0, 0, 0, 2.018433, 0, 0, 1.272577)
-mesh = SubResource("BoxMesh_q3lat")
-
-[node name="PlayerRigidBody2" type="RigidBody3D" parent="." unique_id=972350221]
+[node name="PlayerRigidBody2" parent="." unique_id=763412840 instance=ExtResource("2_34lnl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 0)
-axis_lock_linear_y = true
-gravity_scale = 0.0
-script = ExtResource("1_3qydi")
-rocket_strength = 50.0
-max_velocity = 20.0
-rotate_speed = 15.0
 input_left = "Left2"
 input_right = "Right2"
 input_up = "Up2"
 input_down = "Down2"
 input_add_force = "AddForce2"
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="PlayerRigidBody2" unique_id=1898917754]
-shape = SubResource("BoxShape3D_l2ndj")
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="PlayerRigidBody2" unique_id=1107072195]
-mesh = SubResource("BoxMesh_3qydi")
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="PlayerRigidBody2/MeshInstance3D" unique_id=1901271425]
-transform = Transform3D(0.5758609, 0, 0, 0, 1, 0, 0, 0, 2.018433, 0, 0, 1.272577)
-mesh = SubResource("BoxMesh_q3lat")
 
 [node name="Tether" type="Node3D" parent="." unique_id=1054946273 node_paths=PackedStringArray("body_a", "body_b")]
 script = ExtResource("2_q3lat")

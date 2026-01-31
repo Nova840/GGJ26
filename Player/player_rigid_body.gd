@@ -2,9 +2,15 @@ extends RigidBody3D
 class_name PlayerRigidBody
 
 
+signal player_damaged
+
+
 @export var rocket_strength: float
 @export var max_velocity: float
 @export var rotate_speed: float
+
+@export var damage_cooldown: float
+var time_last_damaged: float = -INF
 
 @export var input_left: String
 @export var input_right: String
@@ -26,3 +32,10 @@ func _integrate_forces(state: PhysicsDirectBodyState3D) -> void:
 	if state.linear_velocity.length() > max_velocity:
 		state.linear_velocity = state.linear_velocity.normalized() * max_velocity
 	state.angular_velocity = Vector3.ZERO
+
+
+func _on_body_entered(body: Node) -> void:
+	var current_time := Time.get_ticks_msec() / 1000.0
+	if body.get_meta("DamagePlayer", false) and current_time - time_last_damaged >= damage_cooldown:
+		time_last_damaged = current_time
+		player_damaged.emit()

@@ -10,8 +10,12 @@ grow_vertical = 2
 
 [node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=2082985576]
 layout_mode = 2
+theme_override_constants/separation = 30
 
 [node name="Bars" type="VBoxContainer" parent="HBoxContainer" unique_id=226061965]
+layout_mode = 2
+
+[node name="OxygenBar" type="HBoxContainer" parent="HBoxContainer/Bars" unique_id=1299915983]
 layout_mode = 2
 
 [node name="Counters" type="HBoxContainer" parent="HBoxContainer" unique_id=2071450398]

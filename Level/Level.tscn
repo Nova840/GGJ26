@@ -2,6 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://cpwjhx66rd4l6" path="res://Player/Players.tscn" id="1_a526m"]
 [ext_resource type="Script" uid="uid://pvuhvrdu7l84" path="res://Level/finish.gd" id="2_r3cbp"]
+[ext_resource type="PackedScene" uid="uid://dgqn6io4i1gr5" path="res://Level/gui.tscn" id="3_cyxyq"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_a526m"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -80,21 +81,6 @@ script = ExtResource("2_r3cbp")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Finish" unique_id=285719030]
 shape = SubResource("BoxShape3D_a526m")
 
-[node name="GUi" type="MarginContainer" parent="." unique_id=1453978773]
-custom_minimum_size = Vector2(1920, 1080)
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="HBoxContainer" type="HBoxContainer" parent="GUi" unique_id=930639094]
-layout_mode = 2
-
-[node name="Bars" type="VBoxContainer" parent="GUi/HBoxContainer" unique_id=1144659771]
-layout_mode = 2
-
-[node name="Counters" type="HBoxContainer" parent="GUi/HBoxContainer" unique_id=687413883]
-layout_mode = 2
+[node name="GUi" parent="." unique_id=619308295 instance=ExtResource("3_cyxyq")]
 
 [connection signal="body_entered" from="Finish" to="Finish" method="_on_body_entered"]

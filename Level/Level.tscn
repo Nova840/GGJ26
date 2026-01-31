@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://b7cuij4ir5lg2"]
 
 [ext_resource type="PackedScene" uid="uid://cpwjhx66rd4l6" path="res://Player/Players.tscn" id="1_a526m"]
+[ext_resource type="Script" uid="uid://pvuhvrdu7l84" path="res://Level/finish.gd" id="2_r3cbp"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_a526m"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -20,6 +21,9 @@ size = Vector3(1, 1, 20)
 
 [sub_resource type="BoxMesh" id="BoxMesh_2gduj"]
 size = Vector3(1, 1, 20)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_a526m"]
+size = Vector3(10, 10, 10)
 
 [node name="Level" type="Node3D" unique_id=1624418232]
 
@@ -60,10 +64,19 @@ shape = SubResource("BoxShape3D_2gduj")
 mesh = SubResource("BoxMesh_2gduj")
 
 [node name="StaticBody3D4" type="StaticBody3D" parent="." unique_id=326248823]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -1.118967, -1.9073486e-06, -10.737576)
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0.50001526, -1.9073486e-06, -16.174728)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D4" unique_id=1032526646]
 shape = SubResource("BoxShape3D_2gduj")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D4" unique_id=637018672]
 mesh = SubResource("BoxMesh_2gduj")
+
+[node name="Finish" type="Area3D" parent="." unique_id=605422326]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -23.7855)
+script = ExtResource("2_r3cbp")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Finish" unique_id=285719030]
+shape = SubResource("BoxShape3D_a526m")
+
+[connection signal="body_entered" from="Finish" to="Finish" method="_on_body_entered"]

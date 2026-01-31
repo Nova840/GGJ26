@@ -20,7 +20,7 @@ damaged_oxygen_time_loss = 10.0
 damage_cooldown = 1.0
 
 [node name="PlayerRigidBody1" parent="." unique_id=553536451 instance=ExtResource("2_34lnl")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.53, 0, 0.011)
 
 [node name="MeshInstance3D" parent="PlayerRigidBody1" index="1" unique_id=461416040]
 material_override = ExtResource("3_ofj18")
@@ -29,7 +29,7 @@ material_override = ExtResource("3_ofj18")
 material_override = ExtResource("3_ofj18")
 
 [node name="PlayerRigidBody2" parent="." unique_id=763412840 instance=ExtResource("2_34lnl")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.53, 0, 0.011)
 input_left = "Left2"
 input_right = "Right2"
 input_up = "Up2"
@@ -43,6 +43,7 @@ material_override = ExtResource("4_3wvmt")
 material_override = ExtResource("4_3wvmt")
 
 [node name="Tether" type="RigidBody3D" parent="." unique_id=375111991 node_paths=PackedStringArray("body_a", "body_b")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.49, 0)
 script = ExtResource("2_q3lat")
 body_a = NodePath("../PlayerRigidBody1")
 body_b = NodePath("../PlayerRigidBody2")
@@ -105,7 +106,7 @@ targets_array = [NodePath("../PlayerRigidBody1"), NodePath("../PlayerRigidBody2"
 camera_follow_speed = 10.0
 
 [node name="Camera3D" type="Camera3D" parent="CameraPoint" unique_id=1928295089]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 25)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 15)
 current = true
 
 [connection signal="body_entered" from="PlayerRigidBody1" to="." method="_on_body_entered" binds= [NodePath("PlayerRigidBody1")]]

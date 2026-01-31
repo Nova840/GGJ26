@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://cf68vxfdd3vyb"]
+
+[ext_resource type="PackedScene" uid="uid://cnkr4ss0u8rel" path="res://Models/Radar Dish.fbx" id="1_eiumv"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_pw4ej"]
+radius = 0.99569863
+
+[node name="RadarDish" type="RigidBody3D" unique_id=1953574351]
+axis_lock_linear_y = true
+
+[node name="Radar Dish" parent="." unique_id=312877236 instance=ExtResource("1_eiumv")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1798959123]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.12908602, 0.7215644)
+shape = SubResource("SphereShape3D_pw4ej")

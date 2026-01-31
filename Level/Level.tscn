@@ -80,12 +80,21 @@ script = ExtResource("2_r3cbp")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Finish" unique_id=285719030]
 shape = SubResource("BoxShape3D_a526m")
 
-[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1453978773]
+[node name="GUi" type="MarginContainer" parent="." unique_id=1453978773]
 custom_minimum_size = Vector2(1920, 1080)
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="GUi" unique_id=930639094]
+layout_mode = 2
+
+[node name="Bars" type="VBoxContainer" parent="GUi/HBoxContainer" unique_id=1144659771]
+layout_mode = 2
+
+[node name="Counters" type="HBoxContainer" parent="GUi/HBoxContainer" unique_id=687413883]
+layout_mode = 2
 
 [connection signal="body_entered" from="Finish" to="Finish" method="_on_body_entered"]

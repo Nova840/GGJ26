@@ -4,6 +4,8 @@
 [ext_resource type="PackedScene" uid="uid://cearjmrpr23g5" path="res://Player/player_rigid_body.tscn" id="2_34lnl"]
 [ext_resource type="Script" uid="uid://fe81yhyqb5j6" path="res://Player/tether.gd" id="2_q3lat"]
 [ext_resource type="Script" uid="uid://cy6iwl5cvohu2" path="res://Player/camera_point.gd" id="3_ow8rm"]
+[ext_resource type="PackedScene" uid="uid://cpajenxkvx0y" path="res://Models/Air Tank.fbx" id="4_a1q3i"]
+[ext_resource type="PackedScene" uid="uid://bqyyoahhxdux6" path="res://Models/Tube Segment.fbx" id="5_i4cbt"]
 
 [node name="Players" type="Node" unique_id=803663936]
 script = ExtResource("1_34lnl")
@@ -27,6 +29,50 @@ body_a = NodePath("../PlayerRigidBody1")
 body_b = NodePath("../PlayerRigidBody2")
 stiffness = 5.0
 damping = 1.0
+
+[node name="Air Tank" parent="Tether" unique_id=1918810815 instance=ExtResource("4_a1q3i")]
+
+[node name="Tube1" type="Node3D" parent="Tether" unique_id=330867185]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0.5, 0, 0)
+
+[node name="Tube Segment" parent="Tether/Tube1" unique_id=1278979247 instance=ExtResource("5_i4cbt")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 0, -0.2)
+
+[node name="Tube Segment2" parent="Tether/Tube1" unique_id=1811273847 instance=ExtResource("5_i4cbt")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 0, -0.5)
+
+[node name="Tube Segment3" parent="Tether/Tube1" unique_id=917598435 instance=ExtResource("5_i4cbt")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 0, -0.8)
+
+[node name="Tube Segment4" parent="Tether/Tube1" unique_id=2048287066 instance=ExtResource("5_i4cbt")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 0, -1.1)
+
+[node name="Tube Segment5" parent="Tether/Tube1" unique_id=1020242313 instance=ExtResource("5_i4cbt")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 0, -1.4)
+
+[node name="Tube Segment6" parent="Tether/Tube1" unique_id=1124161725 instance=ExtResource("5_i4cbt")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 0, -1.7)
+
+[node name="Tube2" type="Node3D" parent="Tether" unique_id=273412975]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -0.5, 0, 0)
+
+[node name="Tube Segment" parent="Tether/Tube2" unique_id=2077134176 instance=ExtResource("5_i4cbt")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 0, -0.2)
+
+[node name="Tube Segment2" parent="Tether/Tube2" unique_id=1740156010 instance=ExtResource("5_i4cbt")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 0, -0.5)
+
+[node name="Tube Segment3" parent="Tether/Tube2" unique_id=465360906 instance=ExtResource("5_i4cbt")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 0, -0.8)
+
+[node name="Tube Segment4" parent="Tether/Tube2" unique_id=563791237 instance=ExtResource("5_i4cbt")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 0, -1.1)
+
+[node name="Tube Segment5" parent="Tether/Tube2" unique_id=1096373066 instance=ExtResource("5_i4cbt")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 0, -1.4)
+
+[node name="Tube Segment6" parent="Tether/Tube2" unique_id=72311075 instance=ExtResource("5_i4cbt")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 0, -1.7)
 
 [node name="CameraPoint" type="Node3D" parent="." unique_id=1277252675 node_paths=PackedStringArray("targets_array")]
 transform = Transform3D(1, 0, 0, 0, 0.49999997, 0.86602545, 0, -0.86602545, 0.49999997, 0, 0, 0)

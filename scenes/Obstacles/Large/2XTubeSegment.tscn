@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://febn8edef2vr"]
+
+[ext_resource type="PackedScene" uid="uid://bqyyoahhxdux6" path="res://Models/Tube Segment.fbx" id="1_bsc7x"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_bsc7x"]
+height = 0.6171875
+radius = 0.40527344
+
+[node name="2xTubeSegment" type="RigidBody3D" unique_id=1569529409]
+
+[node name="Tube Segment" parent="." unique_id=1256874408 instance=ExtResource("1_bsc7x")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1446210294]
+transform = Transform3D(-4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0, 1, 0.0107421875, 4.6955595e-10, 0)
+shape = SubResource("CylinderShape3D_bsc7x")

@@ -12,7 +12,6 @@ size = Vector3(0.49, 0.46, 1.483)
 [sub_resource type="BoxMesh" id="BoxMesh_q3lat"]
 
 [node name="PlayerRigidBody" type="RigidBody3D" unique_id=553536451]
-axis_lock_linear_y = true
 gravity_scale = 0.0
 contact_monitor = true
 max_contacts_reported = 5

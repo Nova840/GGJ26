@@ -25,6 +25,7 @@ func _physics_process(delta: float) -> void:
 		previous_global_basis = global_basis
 	else:
 		global_basis = previous_global_basis
+	global_position.y = 0
 	var force_strength := Input.get_action_strength(input_add_force)
 	apply_central_force(-global_basis.z * (rocket_strength * force_strength))
 

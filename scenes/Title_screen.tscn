@@ -66,6 +66,7 @@ offset_bottom = 469.0
 grow_horizontal = 2
 theme = ExtResource("1_jau5q")
 text = "Janitors from outer space"
+horizontal_alignment = 1
 
 [node name="GPUParticles2D" type="GPUParticles2D" parent="." unique_id=2136858020]
 position = Vector2(960, 540)

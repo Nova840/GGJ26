@@ -67,6 +67,7 @@ offset_bottom = 469.0
 grow_horizontal = 2
 theme = ExtResource("1_87vmq")
 text = "kjsfdhguoihguoi"
+horizontal_alignment = 1
 script = ExtResource("4_g44xs")
 
 [node name="GPUParticles2D" type="GPUParticles2D" parent="." unique_id=2136858020]

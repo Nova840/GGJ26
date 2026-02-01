@@ -30,7 +30,7 @@ height = 1.2
 [node name="Players" type="Node" unique_id=803663936]
 script = ExtResource("1_34lnl")
 starting_oxygen_time = 120.0
-damaged_oxygen_time_loss = 10.0
+damaged_oxygen_time_loss = 15.0
 damage_cooldown = 0.5
 bump_sound = SubResource("AudioStreamRandomizer_5xdf3")
 
@@ -98,10 +98,10 @@ tube_length = 1.9
 
 [node name="Air Tank" parent="Tether" unique_id=785992069 instance=ExtResource("4_a1q3i")]
 
-[node name="Skeleton3D" parent="Tether/Air Tank/Air_Tank/Armature" parent_id_path=PackedInt32Array(785992069, 14848008) index="0" unique_id=407832387]
+[node name="Skeleton3D" parent="Tether/Air Tank/Air_Tank/Armature" parent_id_path=PackedInt32Array(785992069, 2049813765) index="0" unique_id=1254876979]
 bones/1/rotation = Quaternion(-0.7071068, 0, 0, 0.7071067)
 
-[node name="AnimationPlayer" parent="Tether/Air Tank" index="2" unique_id=1518299538]
+[node name="AnimationPlayer" parent="Tether/Air Tank" index="2" unique_id=1686362496]
 script = ExtResource("12_jsfkk")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Tether" unique_id=652967938]

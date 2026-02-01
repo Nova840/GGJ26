@@ -5,6 +5,44 @@
 [ext_resource type="Script" uid="uid://b8e2qwgglpmid" path="res://Level/oxygen_gauge.gd" id="3_tienu"]
 [ext_resource type="Script" uid="uid://d0h27lw1wfoai" path="res://Level/distance_label.gd" id="4_b3kxw"]
 [ext_resource type="FontFile" uid="uid://7vcln671i4fh" path="res://Font/Sterion-BLLld.ttf" id="4_upy20"]
+[ext_resource type="Script" uid="uid://ci2pxexl8pv8x" path="res://Level/hurt_image.gd" id="6_tienu"]
+[ext_resource type="Texture2D" uid="uid://dw32jgouoemqk" path="res://Textures/Red Vignette.png" id="6_vwws5"]
+
+[sub_resource type="Animation" id="Animation_vwws5"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_8ungg"]
+resource_name = "fade"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.06666667, 0.96666664),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_1kr5l"]
+_data = {
+&"RESET": SubResource("Animation_vwws5"),
+&"fade": SubResource("Animation_8ungg")
+}
 
 [node name="GUi" type="MarginContainer" unique_id=619308295]
 custom_minimum_size = Vector2(1920, 1080)
@@ -85,3 +123,11 @@ theme_override_fonts/font = ExtResource("4_upy20")
 theme_override_font_sizes/font_size = 50
 text = "1000 M"
 script = ExtResource("4_b3kxw")
+
+[node name="HurtImage" type="TextureRect" parent="." unique_id=258031217]
+layout_mode = 2
+texture = ExtResource("6_vwws5")
+script = ExtResource("6_tienu")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="HurtImage" unique_id=953082437]
+libraries/ = SubResource("AnimationLibrary_1kr5l")

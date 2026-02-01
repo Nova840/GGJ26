@@ -8,6 +8,7 @@ static var last_distance: float
 static var last_time_existed: float
 static var finished: bool
 
+signal damage_taken
 
 @export var starting_oxygen_time: float
 @export var damaged_oxygen_time_loss: float
@@ -53,6 +54,7 @@ func _on_body_entered(body: Node, sender: NodePath) -> void:
 		time_last_damaged = current_time
 		oxygen_time -= damaged_oxygen_time_loss
 		Sound.play(bump_sound)
+		damage_taken.emit()
 
 
 func get_distance_of_tank() -> float:

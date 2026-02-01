@@ -1,19 +1,66 @@
 [gd_scene format=3 uid="uid://dph261e1bojt5"]
 
+[ext_resource type="Theme" uid="uid://dg3umheryfd32" path="res://UI_theme.tres" id="1_jau5q"]
+[ext_resource type="Texture2D" uid="uid://dp2yjijlpc0c8" path="res://Art/star.png" id="2_6x1xr"]
+[ext_resource type="Script" uid="uid://j73e7wccy6gi" path="res://scene_change.gd" id="2_iiq27"]
+
+[sub_resource type="Curve" id="Curve_6x1xr"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_iiq27"]
+curve = SubResource("Curve_6x1xr")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_wv7dd"]
+particle_flag_disable_z = true
+emission_shape = 1
+emission_sphere_radius = 128.0
+spread = 180.0
+radial_velocity_min = 99.99998
+radial_velocity_max = 199.99997
+gravity = Vector3(0, 0, 0)
+radial_accel_min = -39.24
+radial_accel_max = 17.719997
+scale_min = 0.0
+scale_curve = SubResource("CurveTexture_iiq27")
+
 [node name="CanvasLayer" type="CanvasLayer" unique_id=471357788]
 
-[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=285110818]
-offset_right = 40.0
-offset_bottom = 40.0
+[node name="PlayButton" type="Button" parent="." unique_id=373178044]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -54.5
+offset_top = -171.0
+offset_right = 54.5
+offset_bottom = -132.0
+grow_horizontal = 2
+grow_vertical = 0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme = ExtResource("1_jau5q")
+text = "Play"
+script = ExtResource("2_iiq27")
 
-[node name="PanelContainer" type="PanelContainer" parent="VBoxContainer" unique_id=1828361749]
-layout_mode = 2
+[node name="Title" type="Label" parent="." unique_id=828828634]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -98.5
+offset_top = 443.0
+offset_right = 98.5
+offset_bottom = 469.0
+grow_horizontal = 2
+theme = ExtResource("1_jau5q")
+text = "Janitors from outer space"
 
-[node name="Panel" type="Panel" parent="VBoxContainer/PanelContainer" unique_id=726153789]
-layout_mode = 2
+[node name="GPUParticles2D" type="GPUParticles2D" parent="." unique_id=2136858020]
+position = Vector2(960, 540)
+amount = 200
+texture = ExtResource("2_6x1xr")
+lifetime = 3.0
+process_material = SubResource("ParticleProcessMaterial_wv7dd")
 
-[node name="Label" type="Label" parent="VBoxContainer/PanelContainer/Panel" unique_id=1899675421]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 23.0
-text = "AIR remaining"
+[connection signal="pressed" from="PlayButton" to="PlayButton" method="_on_pressed"]

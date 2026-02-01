@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://cxo07ninhjclr"]
+[gd_scene format=3 uid="uid://bxtq6xnmvwjxq"]
 
 [ext_resource type="Script" uid="uid://c6moqv4xogv1k" path="res://scenes/scene_transition.gd" id="1_e0bkc"]
 
@@ -42,6 +42,7 @@ _data = {
 script = ExtResource("1_e0bkc")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=1092855523]
+z_index = -1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0

@@ -228,7 +228,7 @@ transform = Transform3D(-0.7563788, -0.51222885, 0.40683252, 0, 0.6219408, 0.783
 freeze = true
 
 [node name="StraightPipe9" parent="Obstacles" unique_id=186208845 instance=ExtResource("8_66v8m")]
-transform = Transform3D(-0.7563788, 0, 0.65413386, 0, 1, 0, -0.65413386, 0, -0.7563788, 39.527336, 0, -52.964657)
+transform = Transform3D(-0.7563788, 0, 0.65413386, 0, 1, 0, -0.65413386, 0, -0.7563788, 39.514687, -0.07101059, -52.964657)
 freeze = true
 
 [node name="Tpipe7" parent="Obstacles" unique_id=818697676 instance=ExtResource("9_ul75j")]
@@ -249,6 +249,10 @@ freeze = true
 
 [node name="Tpipe9" parent="Obstacles" unique_id=1777820940 instance=ExtResource("9_ul75j")]
 transform = Transform3D(-0.13360247, -0.98799837, -0.07752281, 0.92970896, -0.15204093, 0.3354476, -0.34320813, -0.027257152, 0.9388639, -16.07436, 0, -13.576581)
+freeze = true
+
+[node name="Tpipe54" parent="Obstacles" unique_id=245515157 instance=ExtResource("9_ul75j")]
+transform = Transform3D(-0.13360247, -0.98799837, -0.07752281, 0.92970896, -0.15204093, 0.3354476, -0.34320813, -0.027257152, 0.9388639, 7.531288, 0, -4.8928766)
 freeze = true
 
 [node name="StraightPipe10" parent="Obstacles" unique_id=1574660923 instance=ExtResource("8_66v8m")]
@@ -823,6 +827,10 @@ freeze = true
 
 [node name="Tpipe34" parent="Obstacles" unique_id=1161662253 instance=ExtResource("9_ul75j")]
 transform = Transform3D(0.9955555, 0, 0.09417768, 0, 1, 0, -0.09417768, 0, 0.9955555, -12.3858, 0, -13.361726)
+freeze = true
+
+[node name="Tpipe55" parent="Obstacles" unique_id=2024630824 instance=ExtResource("9_ul75j")]
+transform = Transform3D(0.6509068, 0, 0.75915766, 0, 1, 0, -0.75915766, 0, 0.6509068, 5.0368423, 0, -5.8683186)
 freeze = true
 
 [node name="SolarPanel29" parent="Obstacles" unique_id=169888707 instance=ExtResource("7_32x38")]
@@ -1494,7 +1502,16 @@ freeze = true
 [node name="Walls" type="Node3D" parent="." unique_id=116988649]
 
 [node name="Wall1" parent="Walls" unique_id=1000503565 instance=ExtResource("21_kmry4")]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -8, 0, 0)
+transform = Transform3D(-0.67072445, 9.988414e-09, 0.74170667, 0.5665628, 0.64537764, 0.51234204, -0.47868097, 0.7638636, -0.43287063, -8, 0, 0)
+disable_mode = 1
+axis_lock_linear_x = true
+axis_lock_linear_z = true
+axis_lock_angular_x = true
+axis_lock_angular_y = true
+axis_lock_angular_z = true
+
+[node name="Wall13" parent="Walls" unique_id=1583028885 instance=ExtResource("21_kmry4")]
+transform = Transform3D(-0.67072445, 9.988414e-09, 0.74170667, 0.5665628, 0.64537764, 0.51234204, -0.47868097, 0.7638636, -0.43287063, 12.864229, 0, 3.231408)
 disable_mode = 1
 axis_lock_linear_x = true
 axis_lock_linear_z = true
@@ -1503,7 +1520,7 @@ axis_lock_angular_y = true
 axis_lock_angular_z = true
 
 [node name="Wall2" parent="Walls" unique_id=751417869 instance=ExtResource("21_kmry4")]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -8, 0, -4)
+transform = Transform3D(0.16991793, -0.2164396, 0.9613958, 0.0376699, 0.9762961, 0.21313635, -0.9847381, 0, 0.17404346, -8, 0, -4)
 axis_lock_linear_x = true
 axis_lock_linear_z = true
 axis_lock_angular_x = true
@@ -1511,7 +1528,7 @@ axis_lock_angular_y = true
 axis_lock_angular_z = true
 
 [node name="Wall5" parent="Walls" unique_id=191754426 instance=ExtResource("22_ag07g")]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -8, 0, 4)
+transform = Transform3D(-3.189972e-08, 0.6836814, 0.72978055, 2.9884664e-08, 0.72978055, -0.6836814, -1, 0, -4.371139e-08, -8, 0, 4)
 axis_lock_linear_x = true
 axis_lock_linear_z = true
 axis_lock_angular_x = true
@@ -1519,7 +1536,7 @@ axis_lock_angular_y = true
 axis_lock_angular_z = true
 
 [node name="Wall3" parent="Walls" unique_id=1972180810 instance=ExtResource("21_kmry4")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 8)
+transform = Transform3D(0.9704938, -0.020482989, 0.24025425, 0.16719103, 0.7751333, -0.60927445, -0.17374936, 0.6314654, 0.75568664, 0, 0, 8)
 axis_lock_linear_x = true
 axis_lock_linear_z = true
 axis_lock_angular_x = true
@@ -1527,7 +1544,7 @@ axis_lock_angular_y = true
 axis_lock_angular_z = true
 
 [node name="Wall4" parent="Walls" unique_id=1154436023 instance=ExtResource("21_kmry4")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 8)
+transform = Transform3D(0.9889254, 0, 0.14841354, 0.04379799, 0.95546395, -0.29183957, -0.14180379, 0.29510778, 0.9448826, 4, 0, 8)
 axis_lock_linear_x = true
 axis_lock_linear_z = true
 axis_lock_angular_x = true
@@ -1535,7 +1552,55 @@ axis_lock_angular_y = true
 axis_lock_angular_z = true
 
 [node name="Wall6" parent="Walls" unique_id=1273417551 instance=ExtResource("23_ag07g")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, 8)
+transform = Transform3D(0.98043984, -0.06092166, -0.187153, 0, 0.95088917, -0.3095315, 0.19681893, 0.30347702, 0.9322896, -4, 0, 8)
+axis_lock_linear_x = true
+axis_lock_linear_z = true
+axis_lock_angular_x = true
+axis_lock_angular_y = true
+axis_lock_angular_z = true
+
+[node name="Wall14" parent="Walls" unique_id=1965165870 instance=ExtResource("21_kmry4")]
+transform = Transform3D(0.62219965, -0.7759927, 0.10345361, 0.24108548, 0.06420326, -0.96837777, 0.74481225, 0.62746537, 0.22702773, -22.287952, 0, -42.65515)
+axis_lock_linear_x = true
+axis_lock_linear_z = true
+axis_lock_angular_x = true
+axis_lock_angular_y = true
+axis_lock_angular_z = true
+
+[node name="Wall15" parent="Walls" unique_id=1818426553 instance=ExtResource("21_kmry4")]
+transform = Transform3D(0.6866328, -0.6889793, -0.23204023, 0.1337477, 0.4334388, -0.89120257, 0.71459556, 0.5808942, 0.38976282, -19.709587, 0, -39.59704)
+axis_lock_linear_x = true
+axis_lock_linear_z = true
+axis_lock_angular_x = true
+axis_lock_angular_y = true
+axis_lock_angular_z = true
+
+[node name="Wall16" parent="Walls" unique_id=638511880 instance=ExtResource("23_ag07g")]
+transform = Transform3D(0.4139309, -0.7947397, -0.443903, -0.14429516, 0.42419183, -0.8940023, 0.89879924, 0.4341083, 0.06090896, -31.321476, 0, -54.64898)
+axis_lock_linear_x = true
+axis_lock_linear_z = true
+axis_lock_angular_x = true
+axis_lock_angular_y = true
+axis_lock_angular_z = true
+
+[node name="Wall17" parent="Walls" unique_id=802720179 instance=ExtResource("21_kmry4")]
+transform = Transform3D(-0.25470677, -0.9586463, -0.12696917, 0.24108547, 0.06420326, -0.96837777, 0.93648404, -0.2772629, 0.21476284, 34.56322, 0, -27.951853)
+axis_lock_linear_x = true
+axis_lock_linear_z = true
+axis_lock_angular_x = true
+axis_lock_angular_y = true
+axis_lock_angular_z = true
+
+[node name="Wall18" parent="Walls" unique_id=1912509782 instance=ExtResource("21_kmry4")]
+transform = Transform3D(0.24933198, -0.8850727, -0.39303896, 0.1337477, 0.43343878, -0.89120257, 0.9591376, 0.16963728, 0.22644669, 36.233948, 0, -23.45402)
+axis_lock_linear_x = true
+axis_lock_linear_z = true
+axis_lock_angular_x = true
+axis_lock_angular_y = true
+axis_lock_angular_z = true
+
+[node name="Wall19" parent="Walls" unique_id=722588007 instance=ExtResource("23_ag07g")]
+transform = Transform3D(-0.50017405, -0.8108122, -0.30398935, -0.14429516, 0.42419183, -0.8940023, 0.85381776, -0.40329254, -0.32916605, 39.228996, 0, -35.8442)
 axis_lock_linear_x = true
 axis_lock_linear_z = true
 axis_lock_angular_x = true
@@ -1543,7 +1608,31 @@ axis_lock_angular_y = true
 axis_lock_angular_z = true
 
 [node name="Wall7" parent="Walls" unique_id=1267741589 instance=ExtResource("22_ag07g")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, 8)
+transform = Transform3D(0.08329515, 0.5446413, -0.83452255, 1.8608468e-09, 0.8374327, 0.5465405, 0.9965251, -0.0455242, 0.069754094, 7.1638203, 0, 7.6388197)
+axis_lock_linear_x = true
+axis_lock_linear_z = true
+axis_lock_angular_x = true
+axis_lock_angular_y = true
+axis_lock_angular_z = true
+
+[node name="Wall20" parent="Walls" unique_id=803476653 instance=ExtResource("21_kmry4")]
+transform = Transform3D(0.9889254, 0, 0.14841354, 0.13251384, 0.4503166, -0.88298076, -0.06683307, 0.89286894, 0.44532955, 40.23832, -0.13006425, -56.223373)
+axis_lock_linear_x = true
+axis_lock_linear_z = true
+axis_lock_angular_x = true
+axis_lock_angular_y = true
+axis_lock_angular_z = true
+
+[node name="Wall21" parent="Walls" unique_id=69470243 instance=ExtResource("22_ag07g")]
+transform = Transform3D(-0.6594186, 0.74915856, 0.06267926, -0.2953169, -0.33480725, 0.8948139, 0.6913431, 0.5715466, 0.4420173, 43.402138, 0.13006425, -60.29867)
+axis_lock_linear_x = true
+axis_lock_linear_z = true
+axis_lock_angular_x = true
+axis_lock_angular_y = true
+axis_lock_angular_z = true
+
+[node name="Wall12" parent="Walls" unique_id=2030661897 instance=ExtResource("22_ag07g")]
+transform = Transform3D(0.40237924, 0.5003432, -0.7666471, -6.2154215e-10, 0.8374327, 0.5465405, 0.9154734, -0.21991661, 0.33696553, 13.614088, 0, -1.484191)
 axis_lock_linear_x = true
 axis_lock_linear_z = true
 axis_lock_angular_x = true
@@ -1551,7 +1640,7 @@ axis_lock_angular_y = true
 axis_lock_angular_z = true
 
 [node name="Wall8" parent="Walls" unique_id=1173216820 instance=ExtResource("21_kmry4")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -8)
+transform = Transform3D(1, 0, 0, 0, 0.5502913, -0.83497274, 0, 0.83497274, 0.5502913, 0, 0, -8)
 axis_lock_linear_x = true
 axis_lock_linear_z = true
 axis_lock_angular_x = true
@@ -1567,7 +1656,7 @@ axis_lock_angular_y = true
 axis_lock_angular_z = true
 
 [node name="Wall10" parent="Walls" unique_id=1359042749 instance=ExtResource("22_ag07g")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, -8)
+transform = Transform3D(0.8217464, 0.16508654, 0.5454166, 0, 0.9571175, -0.28970006, -0.5698533, 0.23805998, 0.78650784, 8, 0, -8)
 axis_lock_linear_x = true
 axis_lock_linear_z = true
 axis_lock_angular_x = true

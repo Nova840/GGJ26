@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://b73ejcdb1gdj0"]
+
+[ext_resource type="PackedScene" uid="uid://cdikfds6u22cd" path="res://Models/Steel Beam.fbx" id="1_ylu0t"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ocn31"]
+size = Vector3(6.4266357, 0.6542969, 0.64160156)
+
+[node name="SteelBeam" type="RigidBody3D" unique_id=333948647]
+axis_lock_linear_y = true
+
+[node name="Steel Beam" parent="." unique_id=1045233567 instance=ExtResource("1_ylu0t")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1551596730]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00950253, 0.004043609, -1.0162884)
+shape = SubResource("BoxShape3D_ocn31")

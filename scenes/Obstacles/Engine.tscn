@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://djdbwldfd2rdj"]
+
+[ext_resource type="PackedScene" uid="uid://cah52fcyxm6je" path="res://Models/Rocket_Engine.fbx" id="1_qiagc"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_ap4ix"]
+radius = 1.1083984
+height = 3.288208
+
+[node name="Engine" type="RigidBody3D" unique_id=141423551]
+
+[node name="Rocket_Engine" parent="." unique_id=1224011872 instance=ExtResource("1_qiagc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.55089295, 0, -1.9030452)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1142754415]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5050491, -0.17546988, -1.8831179)
+shape = SubResource("CapsuleShape3D_ap4ix")

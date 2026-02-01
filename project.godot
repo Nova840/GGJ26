@@ -18,6 +18,7 @@ config/features=PackedStringArray("4.6")
 
 SceneTransition="*uid://bxtq6xnmvwjxq"
 Music="*uid://iojpkvet4pfu"
+Sound="*uid://cmfcmb43xvqvu"
 
 [debug]
 

@@ -7,6 +7,7 @@ radius = 1.1083984
 height = 3.288208
 
 [node name="Engine" type="RigidBody3D" unique_id=141423551]
+axis_lock_linear_y = true
 
 [node name="Rocket_Engine" parent="." unique_id=1224011872 instance=ExtResource("1_qiagc")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.55089295, 0, -1.9030452)

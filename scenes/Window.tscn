@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://d1vg3n42ax1u8"]
+
+[ext_resource type="PackedScene" uid="uid://be42b5nqvxdin" path="res://Models/Window.fbx" id="1_n375k"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_85sac"]
+height = 0.20812988
+radius = 0.99609375
+
+[node name="Window" type="RigidBody3D" unique_id=155392629]
+axis_lock_linear_y = true
+
+[node name="Window" parent="." unique_id=321971105 instance=ExtResource("1_n375k")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.017582893, 0, 0.04533434)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=572054479]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0.6909013, 0.008361816)
+shape = SubResource("CylinderShape3D_85sac")

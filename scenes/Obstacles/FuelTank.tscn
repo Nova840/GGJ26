@@ -1,3 +1,17 @@
 [gd_scene format=3 uid="uid://boe41wd387f2j"]
 
+[ext_resource type="PackedScene" uid="uid://dwk1x1rkgh47k" path="res://Models/Fuel Tank.fbx" id="1_q5u6c"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_blf6p"]
+radius = 1.2412109
+height = 5.7998047
+
 [node name="FuelTank" type="RigidBody3D" unique_id=1650509228]
+axis_lock_linear_y = true
+
+[node name="Fuel Tank" parent="." unique_id=351503539 instance=ExtResource("1_q5u6c")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.2226101, 0, -2.042471)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=2007216336]
+transform = Transform3D(-4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0, 1, -1.2139368, -8.304737e-08, -2.012004)
+shape = SubResource("CapsuleShape3D_blf6p")

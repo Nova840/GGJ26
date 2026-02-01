@@ -4,6 +4,8 @@ class_name Players
 
 static var instance: Players
 
+static var last_distance: float
+
 
 @export var starting_oxygen_time: float
 @export var damaged_oxygen_time_loss: float
@@ -35,7 +37,7 @@ func _process(delta: float) -> void:
 	oxygen_time = max(oxygen_time, 0)
 	if oxygen_time <= 0 and not oxygen_depleted:
 		oxygen_depleted = true
-		print("Lose")
+		SceneTransition.change_scene("res://scenes/end_screen.tscn")
 
 
 func _on_body_entered(body: Node, sender: NodePath) -> void:
@@ -47,4 +49,6 @@ func _on_body_entered(body: Node, sender: NodePath) -> void:
 
 
 func get_distance_of_tank() -> float:
-	return maxf(-tether.global_position.z, 0)
+	var d := maxf(-tether.global_position.z, 0)
+	last_distance = maxf(-tether.global_position.z, 0)
+	return d

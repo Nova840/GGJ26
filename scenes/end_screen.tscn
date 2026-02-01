@@ -1,9 +1,10 @@
-[gd_scene format=3 uid="uid://dph261e1bojt5"]
+[gd_scene format=3 uid="uid://bsw83o1rfnwu"]
 
-[ext_resource type="Theme" uid="uid://dg3umheryfd32" path="res://UI_theme.tres" id="1_jau5q"]
-[ext_resource type="Texture2D" uid="uid://dp2yjijlpc0c8" path="res://Art/star.png" id="2_6x1xr"]
-[ext_resource type="Script" uid="uid://j73e7wccy6gi" path="res://scene_change.gd" id="2_iiq27"]
-[ext_resource type="AudioStream" uid="uid://q1ft48kc1v2f" path="res://Music/DigitalClick.mp3" id="3_wv7dd"]
+[ext_resource type="Theme" uid="uid://dg3umheryfd32" path="res://UI_theme.tres" id="1_87vmq"]
+[ext_resource type="Script" uid="uid://j73e7wccy6gi" path="res://scene_change.gd" id="2_g44xs"]
+[ext_resource type="AudioStream" uid="uid://q1ft48kc1v2f" path="res://Music/DigitalClick.mp3" id="3_vj8vg"]
+[ext_resource type="Script" uid="uid://1jkkyq4ks5ua" path="res://scenes/end_label.gd" id="4_g44xs"]
+[ext_resource type="Texture2D" uid="uid://dp2yjijlpc0c8" path="res://Art/star.png" id="4_plosh"]
 
 [sub_resource type="Curve" id="Curve_6x1xr"]
 _data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
@@ -35,7 +36,7 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 0, 0, 1)
 
-[node name="PlayButton" type="Button" parent="." unique_id=373178044]
+[node name="BackButton" type="Button" parent="." unique_id=373178044]
 anchors_preset = 7
 anchor_left = 0.5
 anchor_top = 1.0
@@ -49,13 +50,13 @@ grow_horizontal = 2
 grow_vertical = 0
 size_flags_horizontal = 4
 size_flags_vertical = 4
-theme = ExtResource("1_jau5q")
-text = "Play"
-script = ExtResource("2_iiq27")
-scene_to_load = "res://Level/Level.tscn"
-click_sound = ExtResource("3_wv7dd")
+theme = ExtResource("1_87vmq")
+text = "Back"
+script = ExtResource("2_g44xs")
+scene_to_load = "res://scenes/Title_screen.tscn"
+click_sound = ExtResource("3_vj8vg")
 
-[node name="Title" type="Label" parent="." unique_id=828828634]
+[node name="EndLabel" type="Label" parent="." unique_id=828828634]
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
@@ -64,15 +65,16 @@ offset_top = 443.0
 offset_right = 98.5
 offset_bottom = 469.0
 grow_horizontal = 2
-theme = ExtResource("1_jau5q")
-text = "Janitors from outer space"
+theme = ExtResource("1_87vmq")
+text = "kjsfdhguoihguoi"
+script = ExtResource("4_g44xs")
 
 [node name="GPUParticles2D" type="GPUParticles2D" parent="." unique_id=2136858020]
 position = Vector2(960, 540)
 amount = 200
-texture = ExtResource("2_6x1xr")
+texture = ExtResource("4_plosh")
 lifetime = 3.0
 preprocess = 3.0
 process_material = SubResource("ParticleProcessMaterial_wv7dd")
 
-[connection signal="pressed" from="PlayButton" to="PlayButton" method="_on_pressed"]
+[connection signal="pressed" from="BackButton" to="BackButton" method="_on_pressed"]

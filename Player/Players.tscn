@@ -67,6 +67,7 @@ body_b = NodePath("../PlayerRigidBody2")
 stiffness = 5.0
 damping = 1.0
 air_tank_max_velocity = 9999999999999.0
+tube_length = 1.9
 
 [node name="Air Tank" parent="Tether" unique_id=1918810815 instance=ExtResource("4_a1q3i")]
 

@@ -2,7 +2,7 @@
 
 [ext_resource type="FontFile" uid="uid://dmvi1bt1pvrvi" path="res://UI/Bayon/Bayon-Regular.ttf" id="1_o320q"]
 [ext_resource type="Texture2D" uid="uid://celck32gm17ws" path="res://UI/Vectors/Slider_Oxygen.png" id="2_b3kxw"]
-[ext_resource type="Script" path="res://Level/oxygen_gauge.gd" id="3_tienu"]
+[ext_resource type="Script" uid="uid://b8e2qwgglpmid" path="res://Level/oxygen_gauge.gd" id="3_tienu"]
 [ext_resource type="Texture2D" uid="uid://o7mbwc0vs6nt" path="res://UI/Vectors/Frame_Oxygen.png" id="3_upy20"]
 [ext_resource type="Script" uid="uid://d0h27lw1wfoai" path="res://Level/distance_label.gd" id="4_b3kxw"]
 
@@ -82,5 +82,5 @@ offset_right = -1566.0
 offset_bottom = 187.0
 theme_override_fonts/font = ExtResource("1_o320q")
 theme_override_font_sizes/font_size = 90
-text = "1000m"
+text = "1000 M"
 script = ExtResource("4_b3kxw")

@@ -1,6 +1,7 @@
 extends Node
 
 
+@export var scene_to_load: String
 @export var click_sound: AudioStream
 
 
@@ -11,4 +12,4 @@ func _process(delta: float) -> void:
 
 func _on_pressed():
 	Sound.play(click_sound)
-	SceneTransition.change_scene("res://Level/Level.tscn")
+	SceneTransition.change_scene(scene_to_load)

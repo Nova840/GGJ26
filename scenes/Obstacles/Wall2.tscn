@@ -6,6 +6,7 @@
 size = Vector3(3.8477478, 3.894043, 1)
 
 [node name="Wall2" type="RigidBody3D" unique_id=1110115923]
+axis_lock_linear_y = true
 
 [node name="Wall_Panel_2" parent="." unique_id=1667262108 instance=ExtResource("1_g3m6e")]
 

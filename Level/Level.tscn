@@ -37,12 +37,6 @@ sky = SubResource("Sky_r3cbp")
 tonemap_mode = 2
 glow_enabled = true
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_2gduj"]
-size = Vector3(1.215332, 1, 20)
-
-[sub_resource type="BoxMesh" id="BoxMesh_2gduj"]
-size = Vector3(1, 1, 20)
-
 [sub_resource type="BoxShape3D" id="BoxShape3D_a526m"]
 size = Vector3(10, 10, 10)
 
@@ -59,45 +53,6 @@ transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545
 shadow_enabled = true
 
 [node name="Player" parent="." unique_id=138146089 instance=ExtResource("1_a526m")]
-
-[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=1197772549]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.385357, 0, -0.22429466)
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=2142908743]
-shape = SubResource("BoxShape3D_2gduj")
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D" unique_id=746943864]
-transform = Transform3D(0.9131973, 0, 0.25400636, 0, 1, 0, -0.40751776, 0, 0.56919706, 0, 0, -2.431139)
-mesh = SubResource("BoxMesh_2gduj")
-
-[node name="StaticBody3D2" type="StaticBody3D" parent="." unique_id=1871868851]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.392651, 0, 0.07848549)
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D2" unique_id=8410022]
-shape = SubResource("BoxShape3D_2gduj")
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D2" unique_id=632369127]
-transform = Transform3D(0.8925465, 0, 0.2696589, 0, 1, 0, -0.45095545, 0, 0.5337181, 0, 0, 0)
-mesh = SubResource("BoxMesh_2gduj")
-
-[node name="StaticBody3D3" type="StaticBody3D" parent="." unique_id=1863504797]
-transform = Transform3D(-4.371139e-08, 0, 0.74986124, 0, 1, 0, -1, 0, -3.2777475e-08, -0.53723526, 0, 8.694114)
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D3" unique_id=101723705]
-shape = SubResource("BoxShape3D_2gduj")
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D3" unique_id=689218060]
-mesh = SubResource("BoxMesh_2gduj")
-
-[node name="StaticBody3D4" type="StaticBody3D" parent="." unique_id=326248823]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 8.369681, -1.9073486e-06, -5.6263876)
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D4" unique_id=1032526646]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.107666016, 0, 0)
-shape = SubResource("BoxShape3D_2gduj")
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D4" unique_id=637018672]
-mesh = SubResource("BoxMesh_2gduj")
 
 [node name="Finish" type="Area3D" parent="." unique_id=605422326]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -209.1803)
@@ -1535,6 +1490,97 @@ freeze = true
 [node name="SteelBeam6" parent="Obstacles" unique_id=1432203926 instance=ExtResource("20_t67x2")]
 transform = Transform3D(-0.39943722, 0, -0.91676056, 0, 1, 0, 0.91676056, 0, -0.39943722, 14.164216, -1.64149, -1.1641731)
 freeze = true
+
+[node name="Walls" type="Node3D" parent="." unique_id=116988649]
+
+[node name="Wall1" parent="Walls" unique_id=1000503565 instance=ExtResource("21_kmry4")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -8, 0, 0)
+disable_mode = 1
+axis_lock_linear_x = true
+axis_lock_linear_z = true
+axis_lock_angular_x = true
+axis_lock_angular_y = true
+axis_lock_angular_z = true
+
+[node name="Wall2" parent="Walls" unique_id=751417869 instance=ExtResource("21_kmry4")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -8, 0, -4)
+axis_lock_linear_x = true
+axis_lock_linear_z = true
+axis_lock_angular_x = true
+axis_lock_angular_y = true
+axis_lock_angular_z = true
+
+[node name="Wall5" parent="Walls" unique_id=191754426 instance=ExtResource("22_ag07g")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -8, 0, 4)
+axis_lock_linear_x = true
+axis_lock_linear_z = true
+axis_lock_angular_x = true
+axis_lock_angular_y = true
+axis_lock_angular_z = true
+
+[node name="Wall3" parent="Walls" unique_id=1972180810 instance=ExtResource("21_kmry4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 8)
+axis_lock_linear_x = true
+axis_lock_linear_z = true
+axis_lock_angular_x = true
+axis_lock_angular_y = true
+axis_lock_angular_z = true
+
+[node name="Wall4" parent="Walls" unique_id=1154436023 instance=ExtResource("21_kmry4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 8)
+axis_lock_linear_x = true
+axis_lock_linear_z = true
+axis_lock_angular_x = true
+axis_lock_angular_y = true
+axis_lock_angular_z = true
+
+[node name="Wall6" parent="Walls" unique_id=1273417551 instance=ExtResource("23_ag07g")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, 8)
+axis_lock_linear_x = true
+axis_lock_linear_z = true
+axis_lock_angular_x = true
+axis_lock_angular_y = true
+axis_lock_angular_z = true
+
+[node name="Wall7" parent="Walls" unique_id=1267741589 instance=ExtResource("22_ag07g")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, 8)
+axis_lock_linear_x = true
+axis_lock_linear_z = true
+axis_lock_angular_x = true
+axis_lock_angular_y = true
+axis_lock_angular_z = true
+
+[node name="Wall8" parent="Walls" unique_id=1173216820 instance=ExtResource("21_kmry4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -8)
+axis_lock_linear_x = true
+axis_lock_linear_z = true
+axis_lock_angular_x = true
+axis_lock_angular_y = true
+axis_lock_angular_z = true
+
+[node name="Wall9" parent="Walls" unique_id=506347966 instance=ExtResource("21_kmry4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -8)
+axis_lock_linear_x = true
+axis_lock_linear_z = true
+axis_lock_angular_x = true
+axis_lock_angular_y = true
+axis_lock_angular_z = true
+
+[node name="Wall10" parent="Walls" unique_id=1359042749 instance=ExtResource("22_ag07g")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, -8)
+axis_lock_linear_x = true
+axis_lock_linear_z = true
+axis_lock_angular_x = true
+axis_lock_angular_y = true
+axis_lock_angular_z = true
+
+[node name="Wall11" parent="Walls" unique_id=2031671018 instance=ExtResource("23_ag07g")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 0, -8)
+axis_lock_linear_x = true
+axis_lock_linear_z = true
+axis_lock_angular_x = true
+axis_lock_angular_y = true
+axis_lock_angular_z = true
 
 [connection signal="body_entered" from="Finish" to="Finish" method="_on_body_entered"]
 

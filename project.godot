@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="GGJ26"
-run/main_scene="uid://b7cuij4ir5lg2"
+run/main_scene="uid://dph261e1bojt5"
 config/features=PackedStringArray("4.6")
 
 [autoload]

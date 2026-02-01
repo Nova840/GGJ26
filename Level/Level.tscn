@@ -82,9 +82,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -44.007523, 0, -155.099)
 
 [node name="ObstacleGenerator" parent="MovingObstacles/MovingObstacles" index="0" unique_id=231334155]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -26.77282, 0, 0)
-speed = 4.0
+speed = 8.0
 scenes = Array[PackedScene]([ExtResource("5_6fg3j"), ExtResource("6_2ld0w"), ExtResource("7_32x38"), ExtResource("8_66v8m"), ExtResource("9_ul75j"), ExtResource("10_4jlx7"), ExtResource("11_s8y5b")])
-delay_seconds = 5.0
+delay_seconds = 3.0
 
 [node name="ObstacleDestroyer" parent="MovingObstacles/MovingObstacles" index="1" unique_id=731762659]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 142.97256, 0, 0)
@@ -94,9 +94,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -44.007523, 0, -179.75111)
 
 [node name="ObstacleGenerator" parent="MovingObstacles/MovingObstacles2" index="0" unique_id=231334155]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -26.77282, 0, 0)
-speed = 4.0
+speed = 7.0
 scenes = Array[PackedScene]([ExtResource("5_6fg3j"), ExtResource("6_2ld0w"), ExtResource("7_32x38"), ExtResource("8_66v8m"), ExtResource("9_ul75j"), ExtResource("10_4jlx7"), ExtResource("11_s8y5b")])
-delay_seconds = 4.0
+delay_seconds = 3.0
 
 [node name="ObstacleDestroyer" parent="MovingObstacles/MovingObstacles2" index="1" unique_id=731762659]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 142.97256, 0, 0)
@@ -106,7 +106,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -44.007523, 0, -171.02849)
 
 [node name="ObstacleGenerator" parent="MovingObstacles/MovingObstacles3" index="0" unique_id=231334155]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -26.77282, 0, 0)
-speed = 5.0
+speed = 10.0
 scenes = Array[PackedScene]([ExtResource("5_6fg3j"), ExtResource("6_2ld0w"), ExtResource("7_32x38"), ExtResource("8_66v8m"), ExtResource("9_ul75j"), ExtResource("10_4jlx7"), ExtResource("11_s8y5b")])
 delay_seconds = 3.0
 

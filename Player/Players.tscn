@@ -7,6 +7,7 @@
 [ext_resource type="Script" uid="uid://cy6iwl5cvohu2" path="res://Player/camera_point.gd" id="3_ow8rm"]
 [ext_resource type="Material" uid="uid://bo7q5qm7hr5ea" path="res://Player/Player_2_Mat.tres" id="4_3wvmt"]
 [ext_resource type="PackedScene" uid="uid://cpajenxkvx0y" path="res://Models/Air Tank.fbx" id="4_a1q3i"]
+[ext_resource type="Material" path="res://Textures/Player_2_Mat.tres" id="5_6nogq"]
 [ext_resource type="PackedScene" uid="uid://bqyyoahhxdux6" path="res://Models/Tube Segment.fbx" id="5_i4cbt"]
 [ext_resource type="Texture2D" uid="uid://cof310insy8mv" path="res://Textures/top.png" id="9_61e7j"]
 
@@ -42,6 +43,9 @@ material_override = ExtResource("4_3wvmt")
 
 [node name="MeshInstance3D" parent="PlayerRigidBody2/MeshInstance3D" index="0" unique_id=188329183]
 material_override = ExtResource("4_3wvmt")
+
+[node name="Janitor_Low" parent="PlayerRigidBody2/Janitor Model/Janitor/Janitor_Armature/Skeleton3D" parent_id_path=PackedInt32Array(763412840, 1088671623, 798683936) index="0" unique_id=1484124027]
+material_override = ExtResource("5_6nogq")
 
 [node name="Tether" type="RigidBody3D" parent="." unique_id=375111991 node_paths=PackedStringArray("body_a", "body_b")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.49, 0)
@@ -120,3 +124,4 @@ texture = ExtResource("9_61e7j")
 
 [editable path="PlayerRigidBody1"]
 [editable path="PlayerRigidBody2"]
+[editable path="PlayerRigidBody2/Janitor Model"]

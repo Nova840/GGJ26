@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://iojpkvet4pfu"]
+
+[ext_resource type="AudioStream" uid="uid://b7l0wngguiv7q" path="res://Music/Janitors_Odyssey.wav" id="1_y04ot"]
+
+[node name="Music" type="AudioStreamPlayer" unique_id=1484570864]
+stream = ExtResource("1_y04ot")

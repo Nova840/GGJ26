@@ -43,7 +43,7 @@ glow_enabled = true
 size = Vector3(400, 10, 10)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_4jlx7"]
-size = Vector3(1, 1, 133.08868)
+size = Vector3(2, 2, 856)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_ynnpp"]
 size = Vector3(1, 15.182648, 304.50046)
@@ -60,7 +60,7 @@ shadow_enabled = true
 [node name="Player" parent="." unique_id=138146089 instance=ExtResource("1_a526m")]
 
 [node name="Finish" type="Area3D" parent="." unique_id=605422326]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -240.18)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -307.71103)
 script = ExtResource("2_r3cbp")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Finish" unique_id=285719030]
@@ -73,14 +73,14 @@ shape = SubResource("BoxShape3D_a526m")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -30.71568, 0, 0)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="InvisibleWall1" unique_id=78754367]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.1767387, 0, -66.04434)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.6767387, -0.5, -327.5895)
 shape = SubResource("BoxShape3D_4jlx7")
 
 [node name="InvisibleWall2" type="StaticBody3D" parent="." unique_id=2132254653]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 60, 0, 0)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="InvisibleWall2" unique_id=444039618]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.1767387, 0, -66.04434)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.1767387, 0, -165.9548)
 shape = SubResource("BoxShape3D_4jlx7")
 
 [node name="MovingObstacles" type="Node" parent="." unique_id=1026078093]
@@ -95,6 +95,30 @@ scenes = Array[PackedScene]([ExtResource("5_6fg3j"), ExtResource("6_2ld0w"), Ext
 delay_seconds = 3.0
 
 [node name="ObstacleDestroyer" parent="MovingObstacles/MovingObstacles" index="1" unique_id=731762659]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 142.97256, 0, 0)
+
+[node name="MovingObstacles4" parent="MovingObstacles" unique_id=1456795881 instance=ExtResource("16_4jlx7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -44.007523, 0, -196.099)
+
+[node name="ObstacleGenerator" parent="MovingObstacles/MovingObstacles4" index="0" unique_id=231334155]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -26.77282, 0, 0)
+speed = 8.0
+scenes = Array[PackedScene]([ExtResource("5_6fg3j"), ExtResource("6_2ld0w"), ExtResource("7_32x38"), ExtResource("8_66v8m"), ExtResource("9_ul75j"), ExtResource("10_4jlx7"), ExtResource("11_s8y5b")])
+delay_seconds = 3.0
+
+[node name="ObstacleDestroyer" parent="MovingObstacles/MovingObstacles4" index="1" unique_id=731762659]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 142.97256, 0, 0)
+
+[node name="MovingObstacles5" parent="MovingObstacles" unique_id=2018374830 instance=ExtResource("16_4jlx7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -44.007523, 0, -220.099)
+
+[node name="ObstacleGenerator" parent="MovingObstacles/MovingObstacles5" index="0" unique_id=231334155]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -26.77282, 0, 0)
+speed = 8.0
+scenes = Array[PackedScene]([ExtResource("5_6fg3j"), ExtResource("6_2ld0w"), ExtResource("7_32x38"), ExtResource("8_66v8m"), ExtResource("9_ul75j"), ExtResource("10_4jlx7"), ExtResource("11_s8y5b")])
+delay_seconds = 3.0
+
+[node name="ObstacleDestroyer" parent="MovingObstacles/MovingObstacles5" index="1" unique_id=731762659]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 142.97256, 0, 0)
 
 [node name="MovingObstacles2" parent="MovingObstacles" unique_id=693080781 instance=ExtResource("16_4jlx7")]
@@ -277,7 +301,7 @@ transform = Transform3D(-0.68964475, -0.5670544, 0.45037705, -6.535144e-09, 0.62
 freeze = true
 
 [node name="RadarDish17" parent="Obstacles" unique_id=657966055 instance=ExtResource("6_2ld0w")]
-transform = Transform3D(-0.68964475, -0.5670544, 0.45037705, -6.535144e-09, 0.6219408, 0.7830643, -0.7241479, 0.5400362, -0.42891818, 49.44768, 0, -124.87892)
+transform = Transform3D(-0.68964475, -0.5670544, 0.45037705, -6.535144e-09, 0.6219408, 0.7830643, -0.7241479, 0.5400362, -0.42891818, 62.44768, 0, -118.87892)
 freeze = true
 
 [node name="RadarDish20" parent="Obstacles" unique_id=2019581156 instance=ExtResource("6_2ld0w")]
@@ -357,6 +381,24 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.1689034, 1.9073486e-06, -12
 
 [node name="RadarDish12" parent="Obstacles" unique_id=1466719013 instance=ExtResource("6_2ld0w")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.39211082, 0, -127.743454)
+
+[node name="RadarDish80" parent="Obstacles" unique_id=977169094 instance=ExtResource("6_2ld0w")]
+transform = Transform3D(-0.9910532, 0, 0.13346724, 0, 1, 0, -0.13346724, 0, -0.9910532, -3.3155622, 0, -202.17252)
+
+[node name="TubeSegment48" parent="Obstacles" unique_id=1402245374 instance=ExtResource("10_4jlx7")]
+transform = Transform3D(-0.9910532, 0, 0.13346724, 0, 1, 0, -0.13346724, 0, -0.9910532, -1.4735556, 0, -199.58551)
+
+[node name="RadarDish81" parent="Obstacles" unique_id=16252383 instance=ExtResource("6_2ld0w")]
+transform = Transform3D(0.81002927, 0.096918374, 0.5783246, 0.18195978, 0.8960184, -0.40502056, -0.55744344, 0.43331036, 0.7081659, 3.4798489, 0, -205.2875)
+
+[node name="SolarPanel11" parent="Obstacles" unique_id=785919461 instance=ExtResource("7_32x38")]
+transform = Transform3D(1, 0, 0, 0, 0.9710593, 0.23883854, 0, -0.23883854, 0.9710593, 4.9549866, 0, -208.54909)
+
+[node name="Tpipe97" parent="Obstacles" unique_id=692801321 instance=ExtResource("9_ul75j")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.1689034, 1.9073486e-06, -205.31833)
+
+[node name="RadarDish82" parent="Obstacles" unique_id=1364347397 instance=ExtResource("6_2ld0w")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.39211082, 0, -208.74345)
 
 [node name="AirTank4" parent="Obstacles" unique_id=1491392300 instance=ExtResource("4_wp1u0")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.545559, 0, -53.912254)
@@ -516,7 +558,7 @@ transform = Transform3D(-0.87679386, 0, 0.48086637, 0, 1, 0, -0.48086637, 0, -0.
 freeze = true
 
 [node name="SolarPanel21" parent="Obstacles" unique_id=628821577 instance=ExtResource("7_32x38")]
-transform = Transform3D(-0.83598906, 0.26806042, 0.47881716, 0.2975331, 0.95459455, -0.014942222, -0.46108165, 0.12997241, -0.8777875, 39.457405, -1.5422697, -129.78362)
+transform = Transform3D(-0.83598906, 0.26806042, 0.47881716, 0.2975331, 0.95459455, -0.014942222, -0.46108165, 0.12997241, -0.8777875, 52.457405, -1.5422697, -123.783615)
 freeze = true
 
 [node name="RadarDish27" parent="Obstacles" unique_id=1371657917 instance=ExtResource("6_2ld0w")]
@@ -527,6 +569,43 @@ transform = Transform3D(-0.87679386, 0, 0.48086637, 0, 1, 0, -0.48086637, 0, -0.
 
 [node name="AirTank31" parent="Obstacles" unique_id=157562234 instance=ExtResource("4_wp1u0")]
 transform = Transform3D(-0.92296195, 0, -0.38489133, 0, 1, 0, 0.38489133, 0, -0.92296195, 33.800095, 0, -128.23239)
+
+[node name="Lpipe37" parent="Obstacles" unique_id=250123550 instance=ExtResource("5_6fg3j")]
+transform = Transform3D(-0.92979133, 0.13707507, -0.3416116, 0.14647347, 0.989213, -0.0017368753, 0.33768857, -0.051651966, -0.9398395, 14.996799, 0.184271, -240.40091)
+freeze = true
+
+[node name="Tpipe103" parent="Obstacles" unique_id=1128536156 instance=ExtResource("9_ul75j")]
+transform = Transform3D(-0.9082309, 0, -0.41846934, 0, 1, 0, 0.41846934, 0, -0.9082309, 12.835949, 0, -239.91225)
+freeze = true
+
+[node name="AirTank117" parent="Obstacles" unique_id=1929928245 instance=ExtResource("4_wp1u0")]
+transform = Transform3D(-0.9185914, 0, -0.3952087, 0, 1, 0, 0.3952087, 0, -0.9185914, 15.24955, 0, -238.25665)
+freeze = true
+
+[node name="Tpipe104" parent="Obstacles" unique_id=313304633 instance=ExtResource("9_ul75j")]
+transform = Transform3D(-0.5961454, 0.642945, 0.48086637, 0.7332909, 0.679915, -2.0572026e-08, -0.3269483, 0.3526149, -0.8767938, 14.59626, 0, -233.42557)
+freeze = true
+
+[node name="Tpipe105" parent="Obstacles" unique_id=850742391 instance=ExtResource("9_ul75j")]
+transform = Transform3D(-0.5961454, 0.642945, 0.48086637, 0.7332909, 0.679915, -2.0572026e-08, -0.3269483, 0.3526149, -0.8767938, 13.572811, 0, -237.89598)
+freeze = true
+
+[node name="TubeSegment51" parent="Obstacles" unique_id=391284964 instance=ExtResource("10_4jlx7")]
+transform = Transform3D(-0.98101604, 0, 0.19392619, 0, 1, 0, -0.19392619, 0, -0.98101604, 15.167328, 0, -235.24117)
+freeze = true
+
+[node name="Tpipe106" parent="Obstacles" unique_id=1730336959 instance=ExtResource("9_ul75j")]
+transform = Transform3D(-0.87679386, 0, 0.48086637, 0, 1, 0, -0.48086637, 0, -0.87679386, 15.749863, 0, -236.52)
+freeze = true
+
+[node name="RadarDish87" parent="Obstacles" unique_id=880328679 instance=ExtResource("6_2ld0w")]
+transform = Transform3D(0.7407932, 0.65729773, 0.13851029, 0.5349423, -0.70197433, 0.47017935, 0.40627858, -0.27421063, -0.87163424, 13.360558, 0, -235.20871)
+
+[node name="AirTank118" parent="Obstacles" unique_id=1316129429 instance=ExtResource("4_wp1u0")]
+transform = Transform3D(-0.87679386, 0, 0.48086637, 0, 1, 0, -0.48086637, 0, -0.87679386, 12.460182, 0, -233.42725)
+
+[node name="AirTank119" parent="Obstacles" unique_id=1842225070 instance=ExtResource("4_wp1u0")]
+transform = Transform3D(-0.92296195, 0, -0.38489133, 0, 1, 0, 0.38489133, 0, -0.92296195, 12.800095, 0, -232.23239)
 
 [node name="Tpipe18" parent="Obstacles" unique_id=657879609 instance=ExtResource("9_ul75j")]
 transform = Transform3D(0.5509542, -0.5942062, 0.5859764, 0.733291, 0.6799151, -2.5504496e-08, -0.3984142, 0.42969126, 0.81032825, 4.454751, 0, -140.49942)
@@ -564,6 +643,27 @@ transform = Transform3D(1, 0, 0, 0, 0.16912587, 0.98559445, 0, -0.98559445, 0.16
 
 [node name="Tpipe21" parent="Obstacles" unique_id=341586901 instance=ExtResource("9_ul75j")]
 transform = Transform3D(0.44350925, 0.8962698, 0, -0.8962698, 0.44350925, 0, 0, 0, 1, -12.977216, 0, -61.464607)
+
+[node name="Tpipe99" parent="Obstacles" unique_id=41647232 instance=ExtResource("9_ul75j")]
+transform = Transform3D(0.679915, -0.7332909, 0, 0.7332909, 0.679915, 0, 0, 0, 1, 29.811413, 0, -175.2542)
+
+[node name="TubeSegment49" parent="Obstacles" unique_id=1584803747 instance=ExtResource("10_4jlx7")]
+transform = Transform3D(0.9534015, 0, 0.30170435, 0, 1, 0, -0.30170435, 0, 0.9534015, 30.183762, 0, -173.3877)
+
+[node name="Tpipe100" parent="Obstacles" unique_id=99928602 instance=ExtResource("9_ul75j")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30.287949, 0, -171.98628)
+
+[node name="RadarDish84" parent="Obstacles" unique_id=1812180872 instance=ExtResource("6_2ld0w")]
+transform = Transform3D(-0.84488857, -0.44445598, 0.29769465, 0.53494227, -0.7019744, 0.47017935, 0, 0.55649865, 0.8308485, 31.752312, 0, -174.28497)
+
+[node name="AirTank112" parent="Obstacles" unique_id=673073532 instance=ExtResource("4_wp1u0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 31.685104, 0, -176.27989)
+
+[node name="AirTank113" parent="Obstacles" unique_id=1021652587 instance=ExtResource("4_wp1u0")]
+transform = Transform3D(0.624166, 0, 0.7812917, 0, 1, 0, -0.7812917, 0, 0.624166, 30.812508, 0, -177.1641)
+
+[node name="Tpipe101" parent="Obstacles" unique_id=526791654 instance=ExtResource("9_ul75j")]
+transform = Transform3D(0.44350925, 0.8962698, 0, -0.8962698, 0.44350925, 0, 0, 0, 1, 32.022785, 0, -165.4646)
 
 [node name="Tpipe22" parent="Obstacles" unique_id=1043591552 instance=ExtResource("9_ul75j")]
 transform = Transform3D(0.78437597, 0, -0.6202857, 0, 1, 0, 0.6202857, 0, 0.78437597, 37.072895, 0, -53.745983)
@@ -654,6 +754,75 @@ transform = Transform3D(0.9050573, 0, -0.42528966, 0, 1, 0, 0.42528966, 0, 0.905
 
 [node name="RadarDish29" parent="Obstacles" unique_id=1900139704 instance=ExtResource("6_2ld0w")]
 transform = Transform3D(0.65251875, -0.4731702, -0.5918861, 0.69721514, 0.068919875, 0.7135412, -0.29683366, -0.878271, 0.37487292, 2.862427, 0, -75.024414)
+
+[node name="Tpipe116" parent="Obstacles" unique_id=645339646 instance=ExtResource("9_ul75j")]
+transform = Transform3D(0.62406576, -0.08284587, 0.7769676, -0.4701957, 0.754361, 0.45809984, -0.62406576, -0.65121126, 0.4318171, 23.88135, -0.62341404, -179.75992)
+
+[node name="StraightPipe77" parent="Obstacles" unique_id=413711664 instance=ExtResource("8_66v8m")]
+transform = Transform3D(0.70710677, 0, 0.70710677, 0, 1, 0, -0.70710677, 0, 0.70710677, 23.566488, 0.52678967, -173.91768)
+
+[node name="2xLpipe6" parent="Obstacles" unique_id=1399332303 instance=ExtResource("12_66v8m")]
+transform = Transform3D(0.70710677, -0.7040264, 0.06593031, 0, 0.09323953, 0.99564373, -0.70710677, -0.7040264, 0.06593031, 27.51064, -1.0048318, -175.15898)
+
+[node name="2xRadarDish42" parent="Obstacles" unique_id=170333470 instance=ExtResource("13_ul75j")]
+transform = Transform3D(0.9404472, -0.14541975, 0.3072657, -0.26109424, 0.26983145, 0.92683375, -0.21768993, -0.9518634, 0.21579401, 28.001945, -1.5407724, -179.79442)
+
+[node name="RadarDish93" parent="Obstacles" unique_id=2076677256 instance=ExtResource("6_2ld0w")]
+transform = Transform3D(0.25150728, -0.95561314, -0.15345141, 0.6972151, 0.068919934, 0.71354127, -0.6712935, -0.28644958, 0.68360186, 24.419752, 0, -172.09007)
+
+[node name="Tpipe107" parent="Obstacles" unique_id=101554492 instance=ExtResource("9_ul75j")]
+transform = Transform3D(0.88256216, 0.401895, 0.24405825, -0.4701957, 0.754361, 0.45809984, 0, -0.51905674, 0.8547398, -2.094883, -0.62341404, -222.82852)
+
+[node name="StraightPipe74" parent="Obstacles" unique_id=1342474018 instance=ExtResource("8_66v8m")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.4486103, 0.52678967, -218.92007)
+
+[node name="2XAirTank52" parent="Obstacles" unique_id=51405836 instance=ExtResource("11_32x38")]
+transform = Transform3D(0.9075504, 0, 0.41994318, 0, 1, 0, -0.41994318, 0, 0.9075504, -6.333913, -0.7483597, -223.21921)
+
+[node name="2xLpipe5" parent="Obstacles" unique_id=1998319566 instance=ExtResource("12_66v8m")]
+transform = Transform3D(1, 0, 0, 0, 0.09323953, 0.99564373, 0, -0.99564373, 0.09323953, -2.7819462, -1.0048318, -217.00887)
+
+[node name="2xRadarDish40" parent="Obstacles" unique_id=1172320492 instance=ExtResource("13_ul75j")]
+transform = Transform3D(0.8189266, 0.57024175, 0.06468026, -0.26109424, 0.26983145, 0.92683375, 0.51106656, -0.77589643, 0.36985904, 0.8432083, -1.5407724, -219.93921)
+
+[node name="2xStraightPipe5" parent="Obstacles" unique_id=1171347351 instance=ExtResource("14_ul75j")]
+transform = Transform3D(0.68635166, 0.7272698, 0, -0.7272698, 0.68635166, 0, 0, 0, 1, -4.526389, -1.3237925, -221.01514)
+
+[node name="StraightPipe75" parent="Obstacles" unique_id=1324984800 instance=ExtResource("8_66v8m")]
+transform = Transform3D(0.7621827, 0.647362, 0, -0.647362, 0.7621827, 0, 0, 0, 1, -3.89615, 0, -226.41699)
+
+[node name="AirTank120" parent="Obstacles" unique_id=944437592 instance=ExtResource("4_wp1u0")]
+transform = Transform3D(0.9050573, 0, -0.42528966, 0, 1, 0, 0.42528966, 0, 0.9050573, -5.980072, 0, -224.6343)
+
+[node name="RadarDish88" parent="Obstacles" unique_id=1111295168 instance=ExtResource("6_2ld0w")]
+transform = Transform3D(0.65251875, -0.4731702, -0.5918861, 0.69721514, 0.068919875, 0.7135412, -0.29683366, -0.878271, 0.37487292, -7.1375732, 0, -217.02441)
+
+[node name="Tpipe98" parent="Obstacles" unique_id=1718224950 instance=ExtResource("9_ul75j")]
+transform = Transform3D(0.88256216, 0.401895, 0.24405825, -0.4701957, 0.754361, 0.45809984, 0, -0.51905674, 0.8547398, -14.094883, -0.62341404, -214.82852)
+
+[node name="StraightPipe71" parent="Obstacles" unique_id=568276251 instance=ExtResource("8_66v8m")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18.44861, 0.52678967, -210.92007)
+
+[node name="2XAirTank51" parent="Obstacles" unique_id=1519574438 instance=ExtResource("11_32x38")]
+transform = Transform3D(0.9075504, 0, 0.41994318, 0, 1, 0, -0.41994318, 0, 0.9075504, -18.333912, -0.7483597, -215.21921)
+
+[node name="2xLpipe4" parent="Obstacles" unique_id=775774229 instance=ExtResource("12_66v8m")]
+transform = Transform3D(1, 0, 0, 0, 0.09323953, 0.99564373, 0, -0.99564373, 0.09323953, -14.781946, -1.0048318, -209.00887)
+
+[node name="2xRadarDish39" parent="Obstacles" unique_id=692804607 instance=ExtResource("13_ul75j")]
+transform = Transform3D(0.8189266, 0.57024175, 0.06468026, -0.26109424, 0.26983145, 0.92683375, 0.51106656, -0.77589643, 0.36985904, -11.156792, -1.5407724, -211.93921)
+
+[node name="2xStraightPipe4" parent="Obstacles" unique_id=1949365859 instance=ExtResource("14_ul75j")]
+transform = Transform3D(0.68635166, 0.7272698, 0, -0.7272698, 0.68635166, 0, 0, 0, 1, -16.52639, -1.3237925, -213.01514)
+
+[node name="StraightPipe72" parent="Obstacles" unique_id=1022136287 instance=ExtResource("8_66v8m")]
+transform = Transform3D(0.7621827, 0.647362, 0, -0.647362, 0.7621827, 0, 0, 0, 1, -15.896151, 0, -218.41699)
+
+[node name="AirTank111" parent="Obstacles" unique_id=1112266244 instance=ExtResource("4_wp1u0")]
+transform = Transform3D(0.9050573, 0, -0.42528966, 0, 1, 0, 0.42528966, 0, 0.9050573, -17.980072, 0, -216.6343)
+
+[node name="RadarDish83" parent="Obstacles" unique_id=45404965 instance=ExtResource("6_2ld0w")]
+transform = Transform3D(0.65251875, -0.4731702, -0.5918861, 0.69721514, 0.068919875, 0.7135412, -0.29683366, -0.878271, 0.37487292, -19.137573, 0, -209.02441)
 
 [node name="Tpipe32" parent="Obstacles" unique_id=1699306381 instance=ExtResource("9_ul75j")]
 transform = Transform3D(0.7087568, 0.013448715, 0.70532495, -0.4701957, 0.754361, 0.45809984, -0.52590877, -0.6563221, 0.540982, 22.331175, -0.62341404, -142.44058)
@@ -991,19 +1160,19 @@ transform = Transform3D(-0.6814876, 0, 0.7318297, 0, 1, 0, -0.7318297, 0, -0.681
 freeze = true
 
 [node name="AirTank37" parent="Obstacles" unique_id=1881111602 instance=ExtResource("4_wp1u0")]
-transform = Transform3D(-0.6896448, 0, 0.7241479, 0, 1, 0, -0.7241479, 0, -0.6896448, 48.298706, 0, -127.45053)
+transform = Transform3D(-0.6896448, 0, 0.7241479, 0, 1, 0, -0.7241479, 0, -0.6896448, 61.298706, 0, -121.45053)
 freeze = true
 
 [node name="Tpipe40" parent="Obstacles" unique_id=1993351201 instance=ExtResource("9_ul75j")]
-transform = Transform3D(0.099547096, -0.10736185, 0.98922396, 0.7332909, 0.679915, -2.3387418e-08, -0.6725882, 0.72538877, 0.14641106, 43.54147, 0, -126.385254)
+transform = Transform3D(0.099547096, -0.10736185, 0.98922396, 0.7332909, 0.679915, -2.3387418e-08, -0.6725882, 0.72538877, 0.14641106, 56.54147, 0, -120.385254)
 freeze = true
 
 [node name="TubeSegment16" parent="Obstacles" unique_id=1346922694 instance=ExtResource("10_4jlx7")]
-transform = Transform3D(-0.15886462, 0, 0.98730034, 0, 1, 0, -0.98730034, 0, -0.15886462, 45.44237, 0, -126.480316)
+transform = Transform3D(-0.15886462, 0, 0.98730034, 0, 1, 0, -0.98730034, 0, -0.15886462, 58.44237, 0, -120.480316)
 freeze = true
 
 [node name="Tpipe41" parent="Obstacles" unique_id=602411487 instance=ExtResource("9_ul75j")]
-transform = Transform3D(0.14641105, 0, 0.98922384, 0, 1, 0, -0.98922384, 0, 0.14641105, 46.843937, 0, -126.378204)
+transform = Transform3D(0.14641105, 0, 0.98922384, 0, 1, 0, -0.98922384, 0, 0.14641105, 59.843937, 0, -120.378204)
 freeze = true
 
 [node name="2XAirTank16" parent="Obstacles" unique_id=1204254940 instance=ExtResource("11_32x38")]
@@ -1065,15 +1234,15 @@ transform = Transform3D(0.65009356, -0.19111302, 0.7354281, 0.29753312, 0.954594
 freeze = true
 
 [node name="RadarDish35" parent="Obstacles" unique_id=980948000 instance=ExtResource("6_2ld0w")]
-transform = Transform3D(-0.12370104, 0.48542842, 0.8654809, 0.5349424, -0.7019744, 0.4701794, 0.83578414, 0.52114403, -0.17284125, 44.784428, 0, -128.16335)
+transform = Transform3D(-0.12370104, 0.48542842, 0.8654809, 0.5349424, -0.7019744, 0.4701794, 0.83578414, 0.52114403, -0.17284125, 57.784428, 0, -122.163345)
 freeze = true
 
 [node name="AirTank43" parent="Obstacles" unique_id=642551091 instance=ExtResource("4_wp1u0")]
-transform = Transform3D(0.14641105, 0, 0.98922384, 0, 1, 0, -0.98922384, 0, 0.14641105, 42.801155, 0, -128.38893)
+transform = Transform3D(0.14641105, 0, 0.98922384, 0, 1, 0, -0.98922384, 0, 0.14641105, 55.801155, 0, -122.38893)
 freeze = true
 
 [node name="AirTank44" parent="Obstacles" unique_id=2114446793 instance=ExtResource("4_wp1u0")]
-transform = Transform3D(-0.6814876, 0, 0.7318297, 0, 1, 0, -0.7318297, 0, -0.6814876, 41.798737, 0, -127.6552)
+transform = Transform3D(-0.6814876, 0, 0.7318297, 0, 1, 0, -0.7318297, 0, -0.6814876, 54.798737, 0, -121.6552)
 freeze = true
 
 [node name="SolarPanel42" parent="Obstacles" unique_id=1448968648 instance=ExtResource("7_32x38")]
@@ -1082,6 +1251,33 @@ freeze = true
 
 [node name="Engine" parent="Obstacles" unique_id=141423551 instance=ExtResource("17_mdaqt")]
 transform = Transform3D(-0.13184874, -0.94244844, 0.30725697, 0.9903553, -0.13855092, 0, 0.042570736, 0.30429357, 0.9516266, 1.1987085, 0.19387913, -58.709335)
+
+[node name="StraightPipe73" parent="Obstacles" unique_id=1195448444 instance=ExtResource("8_66v8m")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -23.888134, 0, -230.28925)
+
+[node name="RadarDish85" parent="Obstacles" unique_id=2006465203 instance=ExtResource("6_2ld0w")]
+transform = Transform3D(0.81002927, 0.096918374, 0.5783246, 0.18195978, 0.8960184, -0.40502056, -0.55744344, 0.43331036, 0.7081659, -29, 0, -228.6906)
+
+[node name="TubeSegment50" parent="Obstacles" unique_id=1142086005 instance=ExtResource("10_4jlx7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24.630716, 0, -225.61201)
+
+[node name="Tpipe102" parent="Obstacles" unique_id=399451789 instance=ExtResource("9_ul75j")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -31.310946, 1.9073486e-06, -228.7214)
+
+[node name="RadarDish86" parent="Obstacles" unique_id=1457185553 instance=ExtResource("6_2ld0w")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -32.087738, 0, -232.14653)
+
+[node name="AirTank116" parent="Obstacles" unique_id=866138360 instance=ExtResource("4_wp1u0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20.454441, 0, -224.91226)
+
+[node name="Engine6" parent="Obstacles" unique_id=619067352 instance=ExtResource("17_mdaqt")]
+transform = Transform3D(-0.13184874, -0.94244844, 0.30725697, 0.9903553, -0.13855092, 0, 0.042570736, 0.30429357, 0.9516266, -27.801292, 0.19387913, -229.70934)
+
+[node name="Engine4" parent="Obstacles" unique_id=1500102624 instance=ExtResource("17_mdaqt")]
+transform = Transform3D(-0.13184874, -0.94244844, 0.30725697, 0.9903553, -0.13855092, 0, 0.042570736, 0.30429357, 0.9516266, -4.8012915, 0.19387913, -182.70934)
+
+[node name="Engine5" parent="Obstacles" unique_id=1494713820 instance=ExtResource("17_mdaqt")]
+transform = Transform3D(0.07524513, 0.5378486, 0.8396768, 0.9903553, -0.13855092, 0, 0.11633798, 0.83157825, -0.5430865, -16.801292, 0.19387913, -184.70934)
 
 [node name="StraightPipe32" parent="Obstacles" unique_id=1367274210 instance=ExtResource("8_66v8m")]
 transform = Transform3D(0.75861746, 0.6443338, -0.09661013, -0.647362, 0.7621827, -1.31351365e-08, 0.07363458, 0.062541716, 0.9953224, 42.640995, 0, -72.20836)
@@ -1324,6 +1520,69 @@ freeze = true
 transform = Transform3D(0.811829, 0, 0.58389544, 0, 1, 0, -0.58389544, 0, 0.811829, 8.666208, 0, -138.03201)
 freeze = true
 
+[node name="Tpipe61" parent="Obstacles" unique_id=503062858 instance=ExtResource("9_ul75j")]
+transform = Transform3D(-0.527436, 0.5688418, 0.6310551, 0.7332909, 0.679915, -2.6859327e-08, -0.42906374, 0.46274683, -0.7757381, 13.890152, 0, -148.81015)
+freeze = true
+
+[node name="TubeSegment29" parent="Obstacles" unique_id=196310879 instance=ExtResource("10_4jlx7")]
+transform = Transform3D(-0.9299819, 0, 0.3676052, 0, 1, 0, -0.3676052, 0, -0.9299819, 14.779175, 0, -150.49304)
+freeze = true
+
+[node name="Tpipe62" parent="Obstacles" unique_id=2111841118 instance=ExtResource("9_ul75j")]
+transform = Transform3D(-0.7757381, 0, 0.631055, 0, 1, 0, -0.631055, 0, -0.7757381, 15.582711, 0, -151.6459)
+freeze = true
+
+[node name="SolarPanel33" parent="Obstacles" unique_id=1343537726 instance=ExtResource("7_32x38")]
+transform = Transform3D(-0.7757381, 0, 0.631055, 0, 1, 0, -0.631055, 0, -0.7757381, 17.752588, 0, -148.46623)
+freeze = true
+
+[node name="RadarDish50" parent="Obstacles" unique_id=293799750 instance=ExtResource("6_2ld0w")]
+transform = Transform3D(0.65541226, 0.69596267, 0.293378, 0.53494227, -0.70197433, 0.47017935, 0.53317106, -0.15122104, -0.8323824, 12.996157, 0, -150.78683)
+freeze = true
+
+[node name="AirTank72" parent="Obstacles" unique_id=2056909204 instance=ExtResource("4_wp1u0")]
+transform = Transform3D(-0.7757381, 0, 0.631055, 0, 1, 0, -0.631055, 0, -0.7757381, 12.661492, 0, -153.97845)
+freeze = true
+
+[node name="AirTank73" parent="Obstacles" unique_id=1673291063 instance=ExtResource("4_wp1u0")]
+transform = Transform3D(-0.9772274, 0, -0.21219467, 0, 1, 0, 0.21219467, 0, -0.9772274, 14.356843, 0, -154.67975)
+freeze = true
+
+[node name="2xRadarDish23" parent="Obstacles" unique_id=1331067129 instance=ExtResource("13_ul75j")]
+transform = Transform3D(0.28169864, -0.8970479, 0.340516, -0.26109424, 0.26983145, 0.92683375, -0.92329603, -0.34999448, -0.15820286, 14.535223, -2.1319828, -157.74243)
+
+[node name="StraightPipe46" parent="Obstacles" unique_id=25483693 instance=ExtResource("8_66v8m")]
+transform = Transform3D(-0.7834332, 0, 0.621476, 0, 1, 0, -0.621476, 0, -0.7834332, 10.3801, 0.52678967, -160.58559)
+freeze = true
+
+[node name="2XAirTank33" parent="Obstacles" unique_id=522965104 instance=ExtResource("11_32x38")]
+transform = Transform3D(-0.69063, 0, 0.72320825, 0, 1, 0, -0.72320825, 0, -0.69063, 15.605895, -0.7483597, -161.36745)
+freeze = true
+
+[node name="AirTank74" parent="Obstacles" unique_id=1561587183 instance=ExtResource("4_wp1u0")]
+transform = Transform3D(0.110081255, 0, 0.9939226, 0, 1, 0, -0.9939226, 0, 0.110081255, 14.152356, 0, -161.24512)
+freeze = true
+
+[node name="Tpipe63" parent="Obstacles" unique_id=28314399 instance=ExtResource("9_ul75j")]
+transform = Transform3D(-0.6689099, -0.6432102, 0.3726132, -0.47019577, 0.754361, 0.4580998, -0.5757393, 0.13122642, -0.8070342, 11.862705, -0.62341404, -159.6256)
+freeze = true
+
+[node name="StraightPipe47" parent="Obstacles" unique_id=214094202 instance=ExtResource("8_66v8m")]
+transform = Transform3D(-0.75478, -0.64107454, 0.13903472, -0.647362, 0.7621827, 2.1800322e-08, -0.10596992, -0.090005875, -0.9902875, 11.339156, 0, -153.34998)
+freeze = true
+
+[node name="AirTank75" parent="Obstacles" unique_id=684717892 instance=ExtResource("4_wp1u0")]
+transform = Transform3D(-0.40852168, 0, 0.9127487, 0, 1, 0, -0.9127487, 0, -0.40852168, 16.923262, 0, -162.04518)
+freeze = true
+
+[node name="RadarDish51" parent="Obstacles" unique_id=636876779 instance=ExtResource("6_2ld0w")]
+transform = Transform3D(-0.6956798, -0.17512716, 0.6966777, 0.6972151, 0.068919934, 0.71354127, -0.17297539, 0.98213065, 0.07415508, 12.097967, 0, -161.64253)
+freeze = true
+
+[node name="Lpipe22" parent="Obstacles" unique_id=1887072810 instance=ExtResource("5_6fg3j")]
+transform = Transform3D(-0.7741164, 0, 0.63304335, 0, 1, 0, -0.63304335, 0, -0.7741164, 15.183479, 0, -153.51671)
+freeze = true
+
 [node name="ShipModel" parent="Obstacles" unique_id=1274093933 instance=ExtResource("18_06k41")]
 transform = Transform3D(0.80800015, -0.56017697, 0.18258558, 0, 0.30989662, 0.95077026, -0.58918226, -0.7682225, 0.25039652, -28.439919, 1.3023224, -43.01992)
 
@@ -1373,7 +1632,19 @@ transform = Transform3D(0.46554697, 0.86588204, 0.18306983, 0.215617, 0.08965313
 freeze = true
 
 [node name="HullPiece7" parent="Obstacles" unique_id=1581474790 instance=ExtResource("19_06k41")]
-transform = Transform3D(0.8702185, 0.48265105, 0.098833114, 0.13923007, -0.04849745, -0.989072, -0.47258338, 0.87446916, -0.10940289, 45.290783, -1.3859129, -123.61006)
+transform = Transform3D(0.8702185, 0.48265105, 0.098833114, 0.13923007, -0.04849745, -0.989072, -0.47258338, 0.87446916, -0.10940289, 58.290783, -1.3859129, -117.61006)
+freeze = true
+
+[node name="HullPiece24" parent="Obstacles" unique_id=1979126778 instance=ExtResource("19_06k41")]
+transform = Transform3D(0.2811705, 0.9596288, -0.0074739456, 0.13923006, -0.048497435, -0.98907197, -0.94950426, 0.2770572, -0.14724508, 64.29079, -1.3859129, -144.61006)
+freeze = true
+
+[node name="HullPiece44" parent="Obstacles" unique_id=2064152424 instance=ExtResource("19_06k41")]
+transform = Transform3D(0.02584003, 0.99863786, -0.04532911, 0.13923006, -0.048497435, -0.98907197, -0.9899229, 0.019246504, -0.14029342, 59.290787, -1.3859129, -172.61006)
+freeze = true
+
+[node name="HullPiece36" parent="Obstacles" unique_id=1342612313 instance=ExtResource("19_06k41")]
+transform = Transform3D(-0.6817095, 0.7197529, -0.13125496, 0.13923006, -0.048497435, -0.98907197, -0.71825284, -0.6925343, -0.06714991, -25.709213, -1.3859129, -182.61006)
 freeze = true
 
 [node name="HullPiece17" parent="Obstacles" unique_id=2044228777 instance=ExtResource("19_06k41")]
@@ -1392,8 +1663,81 @@ freeze = true
 transform = Transform3D(0.86948323, 0.25949743, -0.42030963, -0.34243402, -0.2965928, -0.89149964, -0.3560027, 0.91907233, -0.16902171, -20.845451, 0.30418587, -34.449646)
 freeze = true
 
+[node name="RadarDish52" parent="Obstacles" unique_id=1164430158 instance=ExtResource("6_2ld0w")]
+transform = Transform3D(-0.70958304, 0, -0.70462173, 0, 1, 0, 0.70462173, 0, -0.70958304, 5.761463, 0, -174.19977)
+freeze = true
+
+[node name="StraightPipe48" parent="Obstacles" unique_id=1442879917 instance=ExtResource("8_66v8m")]
+transform = Transform3D(-0.70958304, 0, -0.70462173, 0, 1, 0, 0.70462173, 0, -0.70958304, 1.9539051, 0, -177.14612)
+freeze = true
+
+[node name="SolarPanel34" parent="Obstacles" unique_id=1382783164 instance=ExtResource("7_32x38")]
+transform = Transform3D(-0.70958304, 0, -0.70462173, 0, 1, 0, 0.70462173, 0, -0.70958304, -0.49611855, 0, -168.31624)
+freeze = true
+
+[node name="2XAirTank34" parent="Obstacles" unique_id=1512197869 instance=ExtResource("11_32x38")]
+transform = Transform3D(-0.3480814, 0, -0.93746465, 0, 1, 0, 0.93746465, 0, -0.3480814, 4.5485687, -0.7483597, -172.75546)
+freeze = true
+
+[node name="StraightPipe49" parent="Obstacles" unique_id=578486738 instance=ExtResource("8_66v8m")]
+transform = Transform3D(-0.540832, -0.4593571, -0.70462185, -0.647362, 0.7621827, -1.9170507e-08, 0.5370505, 0.45614535, -0.70958304, 5.072006, 0, -168.76866)
+freeze = true
+
+[node name="AirTank76" parent="Obstacles" unique_id=731838578 instance=ExtResource("4_wp1u0")]
+transform = Transform3D(-0.94188166, 0, -0.3359448, 0, 1, 0, 0.3359448, 0, -0.94188166, 5.2945957, 0, -171.50201)
+freeze = true
+
+[node name="2XAirTank35" parent="Obstacles" unique_id=1845804916 instance=ExtResource("11_32x38")]
+transform = Transform3D(-0.70958304, 0, -0.70462173, 0, 1, 0, 0.70462173, 0, -0.70958304, 10.320398, 0.37651825, -167.94768)
+freeze = true
+
+[node name="2xRadarDish24" parent="Obstacles" unique_id=822623179 instance=ExtResource("13_ul75j")]
+transform = Transform3D(-0.67161953, 0.6046639, -0.42814544, -0.73849773, -0.49989018, 0.45247203, 0.059567872, 0.62007374, 0.782279, 13.374477, 0, -169.61282)
+freeze = true
+
+[node name="2xRadarDish25" parent="Obstacles" unique_id=936714344 instance=ExtResource("13_ul75j")]
+transform = Transform3D(0.05604296, 0.38949862, 0.91932064, -0.9982111, 0.041082364, 0.043446418, -0.020845525, -0.92011034, 0.39110407, 2.411068, 0, -186.41035)
+freeze = true
+
+[node name="Lpipe23" parent="Obstacles" unique_id=1185001716 instance=ExtResource("5_6fg3j")]
+transform = Transform3D(-0.3551395, 0, 0.93481344, 0, 1, 0, -0.93481344, 0, -0.3551395, -6.0589485, 0, -182.06882)
+freeze = true
+
+[node name="TubeSegment30" parent="Obstacles" unique_id=915531043 instance=ExtResource("10_4jlx7")]
+transform = Transform3D(-0.70958304, 0, -0.70462173, 0, 1, 0, 0.70462173, 0, -0.70958304, 3.2695522, 0.35092735, -166.93506)
+freeze = true
+
+[node name="Tpipe64" parent="Obstacles" unique_id=1192422180 instance=ExtResource("9_ul75j")]
+transform = Transform3D(0.78437597, 0, -0.6202857, 0, 1, 0, 0.6202857, 0, 0.78437597, -10.3279, 0, -189.74597)
+
+[node name="StraightPipe50" parent="Obstacles" unique_id=1705908469 instance=ExtResource("8_66v8m")]
+transform = Transform3D(1, 0, 0, 0, 0.16912587, 0.98559445, 0, -0.98559445, 0.16912587, -12.279808, 0, -189.74194)
+
+[node name="Lpipe24" parent="Obstacles" unique_id=1498212476 instance=ExtResource("5_6fg3j")]
+transform = Transform3D(-0.49304634, 0, -0.8700031, 0, 1, 0, 0.8700031, 0, -0.49304634, -7.895645, 0, -191.15082)
+freeze = true
+
+[node name="ShipModel7" parent="Obstacles" unique_id=80229251 instance=ExtResource("18_06k41")]
+transform = Transform3D(0.80800015, -0.56017697, 0.18258558, 0, 0.30989662, 0.95077026, -0.58918226, -0.7682225, 0.25039652, 0.5600815, 1.3023224, -179.01993)
+
+[node name="ShipModel8" parent="Obstacles" unique_id=67639295 instance=ExtResource("18_06k41")]
+transform = Transform3D(0.9286931, 0.3676588, -0.048540287, 0, 0.13088955, 0.99139696, 0.37084922, -0.92070353, 0.12155622, 3.3993511, 1.3426971, -173.92091)
+freeze = true
+
+[node name="HullPiece25" parent="Obstacles" unique_id=617471616 instance=ExtResource("19_06k41")]
+transform = Transform3D(0.47464135, 0, 0.8801793, 0, 1, 0, -0.8801793, 0, 0.47464135, 2.4618454, -1.3859129, -181.2882)
+freeze = true
+
+[node name="HullPiece26" parent="Obstacles" unique_id=782510559 instance=ExtResource("19_06k41")]
+transform = Transform3D(-0.4055264, -0.094528064, -0.9091824, -0.5117019, -0.8007106, 0.31148666, -0.75743616, 0.59154636, 0.27633908, -1.5627518, -1.3859129, -186.94574)
+freeze = true
+
+[node name="HullPiece27" parent="Obstacles" unique_id=954244410 instance=ExtResource("19_06k41")]
+transform = Transform3D(0.86948323, 0.25949743, -0.42030963, -0.34243402, -0.2965928, -0.89149964, -0.3560027, 0.91907233, -0.16902171, 8.154549, 0.30418587, -170.44965)
+freeze = true
+
 [node name="HullPiece8" parent="Obstacles" unique_id=777690966 instance=ExtResource("19_06k41")]
-transform = Transform3D(0.8702185, 0.48265105, 0.098833114, 0.13923007, -0.04849745, -0.989072, -0.47258338, 0.87446916, -0.10940289, 45.290783, -1.3859129, -123.61006)
+transform = Transform3D(0.8702185, 0.48265105, 0.098833114, 0.13923007, -0.04849745, -0.989072, -0.47258338, 0.87446916, -0.10940289, 58.290783, -1.3859129, -117.61006)
 freeze = true
 
 [node name="HullPiece5" parent="Obstacles" unique_id=611077804 instance=ExtResource("19_06k41")]
@@ -1452,12 +1796,894 @@ freeze = true
 transform = Transform3D(-0.12077795, 0.9184696, -0.37659818, 0, -0.37937537, -0.92524284, -0.99267954, -0.111748934, 0.04582018, 49.301697, -1.9073486e-06, -72.14142)
 freeze = true
 
+[node name="RadarDish70" parent="Obstacles" unique_id=2078338818 instance=ExtResource("6_2ld0w")]
+transform = Transform3D(-0.7563788, 0, 0.65413386, 0, 1, 0, -0.65413386, 0, -0.7563788, 36.57444, 0, -250.34616)
+freeze = true
+
+[node name="RadarDish71" parent="Obstacles" unique_id=446804647 instance=ExtResource("6_2ld0w")]
+transform = Transform3D(-0.7563788, -0.51222885, 0.40683252, 0, 0.6219408, 0.7830643, -0.65413386, 0.59229326, -0.47042283, 31.964024, 0, -233.75075)
+freeze = true
+
+[node name="StraightPipe63" parent="Obstacles" unique_id=1892342992 instance=ExtResource("8_66v8m")]
+transform = Transform3D(-0.7563788, 0, 0.65413386, 0, 1, 0, -0.65413386, 0, -0.7563788, 39.514687, -0.07101059, -244.96466)
+freeze = true
+
+[node name="Tpipe85" parent="Obstacles" unique_id=1856066270 instance=ExtResource("9_ul75j")]
+transform = Transform3D(-0.14702995, 0.6818608, 0.7165529, 0.92970884, -0.15204096, 0.33544758, 0.33767402, 0.71550626, -0.61157763, 33.474644, 0, -236.34192)
+freeze = true
+
+[node name="StraightPipe64" parent="Obstacles" unique_id=1979217057 instance=ExtResource("8_66v8m")]
+transform = Transform3D(0.9953223, 0, -0.09661013, 0, 1, 0, 0.09661013, 0, 0.9953223, 38.18131, 0, -256.46136)
+freeze = true
+
+[node name="SolarPanel10" parent="Obstacles" unique_id=744792382 instance=ExtResource("7_32x38")]
+transform = Transform3D(-0.80352885, 0.2672206, 0.53191596, -0.31556624, -0.94890356, 0, 0.50473696, -0.16785473, 0.84679717, 40.835167, -1.6195784, -257.7618)
+freeze = true
+
+[node name="Lpipe30" parent="Obstacles" unique_id=1955693645 instance=ExtResource("5_6fg3j")]
+transform = Transform3D(-0.70950806, 0.106280535, 0.6966367, 0.14647348, 0.989213, -0.0017368605, -0.6893068, 0.10080651, -0.7174219, 32.391144, 0.18427098, -237.36226)
+freeze = true
+
+[node name="AirTank99" parent="Obstacles" unique_id=1762158034 instance=ExtResource("4_wp1u0")]
+transform = Transform3D(-0.98779184, 0, 0.15577951, 0, 1, 0, -0.15577951, 0, -0.98779184, 34.017437, 9.536743e-07, -237.67148)
+freeze = true
+
+[node name="Tpipe86" parent="Obstacles" unique_id=1796244215 instance=ExtResource("9_ul75j")]
+transform = Transform3D(-0.7727889, 0, 0.63466316, 0, 1, 0, -0.63466316, 0, -0.7727889, 31.008694, 0, -239.09341)
+freeze = true
+
+[node name="AirTank100" parent="Obstacles" unique_id=529678439 instance=ExtResource("4_wp1u0")]
+transform = Transform3D(-0.7563788, 0, 0.65413386, 0, 1, 0, -0.65413386, 0, -0.7563788, 30.571987, 0, -236.19933)
+freeze = true
+
+[node name="Tpipe87" parent="Obstacles" unique_id=260711075 instance=ExtResource("9_ul75j")]
+transform = Transform3D(0.03410259, -0.03677976, 0.9987413, 0.7332909, 0.679915, -2.4055517e-08, -0.67905927, 0.73236793, 0.05015716, 25.939919, 0, -234.67944)
+freeze = true
+
+[node name="TubeSegment42" parent="Obstacles" unique_id=450058393 instance=ExtResource("10_4jlx7")]
+transform = Transform3D(-0.25350472, 0, 0.9673341, 0, 1, 0, -0.9673341, 0, -0.25350472, 27.822748, 0, -234.9577)
+freeze = true
+
+[node name="Tpipe88" parent="Obstacles" unique_id=388772405 instance=ExtResource("9_ul75j")]
+transform = Transform3D(0.05015716, 0, 0.9987413, 0, 1, 0, -0.9987413, 0, 0.05015716, 29.22762, 0, -234.99147)
+freeze = true
+
+[node name="SolarPanel41" parent="Obstacles" unique_id=1864673125 instance=ExtResource("7_32x38")]
+transform = Transform3D(0.05015716, 0, 0.9987413, 0.2975331, 0.95459455, -0.014942222, -0.95339304, 0.29790807, 0.04787975, 27.946651, -1.5422697, -231.36136)
+freeze = true
+
+[node name="RadarDish72" parent="Obstacles" unique_id=1633556141 instance=ExtResource("6_2ld0w")]
+transform = Transform3D(-0.042377234, 0.5335055, 0.84473425, 0.5349423, -0.70197433, 0.47017935, 0.8438252, 0.47180897, -0.25564697, 27.005281, 0, -236.56929)
+freeze = true
+
+[node name="AirTank101" parent="Obstacles" unique_id=970829568 instance=ExtResource("4_wp1u0")]
+transform = Transform3D(0.05015716, 0, 0.9987413, 0, 1, 0, -0.9987413, 0, 0.05015716, 25.009493, 0, -236.60223)
+freeze = true
+
+[node name="AirTank102" parent="Obstacles" unique_id=1150128404 instance=ExtResource("4_wp1u0")]
+transform = Transform3D(-0.749002, 0, 0.6625678, 0, 1, 0, -0.6625678, 0, -0.749002, 24.082647, 0, -235.77509)
+freeze = true
+
+[node name="Tpipe89" parent="Obstacles" unique_id=1213091072 instance=ExtResource("9_ul75j")]
+transform = Transform3D(0.78437597, 0, -0.6202857, 0, 1, 0, 0.6202857, 0, 0.78437597, 37.072895, 0, -245.74599)
+
+[node name="StraightPipe65" parent="Obstacles" unique_id=714832489 instance=ExtResource("8_66v8m")]
+transform = Transform3D(1, 0, 0, 0, 0.16912587, 0.98559445, 0, -0.98559445, 0.16912587, 35.120987, 0, -245.74194)
+
+[node name="Tpipe90" parent="Obstacles" unique_id=1514789139 instance=ExtResource("9_ul75j")]
+transform = Transform3D(0.44350925, 0.8962698, 0, -0.8962698, 0.44350925, 0, 0, 0, 1, 35.629234, 0, -248.42087)
+
+[node name="2XAirTank45" parent="Obstacles" unique_id=552935661 instance=ExtResource("11_32x38")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.398012, 0.37651825, -256.12064)
+
+[node name="2xRadarDish33" parent="Obstacles" unique_id=870339948 instance=ExtResource("13_ul75j")]
+transform = Transform3D(1, 0, 0, 0, 0.68706214, 0.7265987, 0, -0.7265987, 0.68706214, 17.778015, 0, -253.3293)
+
+[node name="2xSolarPanel13" parent="Obstacles" unique_id=691434600 instance=ExtResource("15_4jlx7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 23.846825, -0.9389887, -257.35556)
+
+[node name="SolarPanel49" parent="Obstacles" unique_id=48240744 instance=ExtResource("7_32x38")]
+transform = Transform3D(0.55150026, 0, 0.83417463, 0, 1, 0, -0.83417463, 0, 0.55150026, 35.25618, -1.0043507, -254.45984)
+freeze = true
+
+[node name="StraightPipe66" parent="Obstacles" unique_id=1408516875 instance=ExtResource("8_66v8m")]
+transform = Transform3D(0.75861746, 0.6443338, -0.09661013, -0.647362, 0.7621827, -1.31351365e-08, 0.07363458, 0.062541716, 0.9953224, 42.640995, 0, -264.20837)
+freeze = true
+
+[node name="AirTank103" parent="Obstacles" unique_id=1550872738 instance=ExtResource("4_wp1u0")]
+transform = Transform3D(0.85973644, 0, -0.510738, 0, 1, 0, 0.510738, 0, 0.85973644, 40.39459, 0, -262.6353)
+freeze = true
+
+[node name="2xRadarDish34" parent="Obstacles" unique_id=325192170 instance=ExtResource("13_ul75j")]
+transform = Transform3D(0.042542785, -0.022619724, 0.9988386, -0.9982107, 0.04108235, 0.0434464, -0.042017374, -0.9988997, -0.020831555, 40.09963, 0, -265.95135)
+freeze = true
+
+[node name="Lpipe31" parent="Obstacles" unique_id=1835916855 instance=ExtResource("5_6fg3j")]
+transform = Transform3D(-0.49304634, 0, -0.8700031, 0, 1, 0, 0.8700031, 0, -0.49304634, 39.50515, 0, -247.15083)
+freeze = true
+
+[node name="TubeSegment43" parent="Obstacles" unique_id=1887191122 instance=ExtResource("10_4jlx7")]
+transform = Transform3D(0.9953223, 0, -0.09661013, 0, 1, 0, 0.09661013, 0, 0.9953223, 45.20294, 0.35092735, -263.99084)
+freeze = true
+
+[node name="SolarPanel50" parent="Obstacles" unique_id=1586876664 instance=ExtResource("7_32x38")]
+transform = Transform3D(-0.8235183, -0.095811, 0.5591402, 0.107590385, -0.9941244, -0.011885066, 0.55699366, 0.050370537, 0.82898796, 38.625618, -0.4761839, -233.98627)
+freeze = true
+
+[node name="RadarDish73" parent="Obstacles" unique_id=513360702 instance=ExtResource("6_2ld0w")]
+transform = Transform3D(-0.36973047, -0.7275757, 0.5778694, -6.535143e-09, 0.62194073, 0.7830642, -0.92913914, 0.2895227, -0.22995044, 45.108368, 0, -239.79297)
+freeze = true
+
+[node name="AirTank104" parent="Obstacles" unique_id=797423501 instance=ExtResource("4_wp1u0")]
+transform = Transform3D(-0.3697305, 0, 0.92913914, 0, 1, 0, -0.92913914, 0, -0.3697305, 45.001633, 0, -242.60756)
+freeze = true
+
+[node name="SolarPanel51" parent="Obstacles" unique_id=2042611183 instance=ExtResource("7_32x38")]
+transform = Transform3D(0.48395684, -0.13731417, 0.8642517, 0.29753312, 0.9545947, -0.014942217, -0.8229581, 0.26437488, 0.50283813, 40.44185, -1.5422697, -239.52423)
+freeze = true
+
+[node name="2XAirTank46" parent="Obstacles" unique_id=1015742869 instance=ExtResource("11_32x38")]
+transform = Transform3D(-0.92844707, 0, 0.3714651, 0, 1, 0, -0.3714651, 0, -0.92844707, 50.64858, -0.7483597, -251.87576)
+
+[node name="2XAirTank47" parent="Obstacles" unique_id=1998287495 instance=ExtResource("11_32x38")]
+transform = Transform3D(-0.9089817, 0, -0.41683605, 0, 1, 0, 0.41683605, 0, -0.9089817, 48.092785, -0.7483597, -253.06021)
+
+[node name="StraightPipe67" parent="Obstacles" unique_id=262000299 instance=ExtResource("8_66v8m")]
+transform = Transform3D(-0.5233285, -0.4444905, 0.72701824, -0.647362, 0.7621827, 1.8630306e-08, -0.55412084, -0.470644, -0.6866182, 46.64992, 0, -251.45241)
+freeze = true
+
+[node name="AirTank105" parent="Obstacles" unique_id=1671210293 instance=ExtResource("4_wp1u0")]
+transform = Transform3D(-0.31223553, 0, 0.9500048, 0, 1, 0, -0.9500048, 0, -0.31223553, 49.376823, 0, -251.16138)
+freeze = true
+
+[node name="2xRadarDish35" parent="Obstacles" unique_id=1959002055 instance=ExtResource("13_ul75j")]
+transform = Transform3D(-0.05967942, -0.6395127, -0.76646066, -0.9982107, 0.04108235, 0.0434464, 0.0037034657, 0.76768196, -0.6408204, 47.95531, 0, -247.08847)
+freeze = true
+
+[node name="TubeSegment44" parent="Obstacles" unique_id=544319972 instance=ExtResource("10_4jlx7")]
+transform = Transform3D(-0.6866182, 0, 0.72701824, 0, 1, 0, -0.72701824, 0, -0.6866182, 44.862064, 0.35092735, -253.30023)
+freeze = true
+
+[node name="RadarDish74" parent="Obstacles" unique_id=695091596 instance=ExtResource("6_2ld0w")]
+transform = Transform3D(-0.8434408, -0.4762618, 0.24856123, 0.5349423, -0.7019744, 0.47017944, -0.049444795, 0.5295343, 0.84684616, 50.260098, 0, -256.61224)
+freeze = true
+
+[node name="AirTank106" parent="Obstacles" unique_id=392603965 instance=ExtResource("4_wp1u0")]
+transform = Transform3D(0.9982862, 0, -0.058522403, 0, 1, 0, 0.058522403, 0, 0.9982862, 50.30974, 0, -258.60767)
+freeze = true
+
+[node name="ShipModel9" parent="Obstacles" unique_id=1871284706 instance=ExtResource("18_06k41")]
+transform = Transform3D(0.69921434, 0.67971724, -0.2215489, -1.204014e-08, 0.30989665, 0.9507704, 0.71491224, -0.6647922, 0.21668418, 20.61343, 1.3023224, -260.8449)
+
+[node name="2xRadarDish36" parent="Obstacles" unique_id=967777175 instance=ExtResource("13_ul75j")]
+transform = Transform3D(0.05604296, 0.38949862, 0.91932064, -0.9982111, 0.041082364, 0.043446418, -0.020845525, -0.92011034, 0.39110407, 34.48468, 0, -242.41035)
+freeze = true
+
+[node name="ShipModel10" parent="Obstacles" unique_id=1964641911 instance=ExtResource("18_06k41")]
+transform = Transform3D(0.80800015, -0.56017697, 0.18258558, 0, 0.30989662, 0.95077026, -0.58918226, -0.7682225, 0.25039652, 28.507004, 1.3023224, -235.01993)
+
+[node name="HullPiece37" parent="Obstacles" unique_id=1401740285 instance=ExtResource("19_06k41")]
+transform = Transform3D(-0.03722605, -0.34154332, -0.9391285, -0.51170194, -0.80071074, 0.3114867, -0.8583563, 0.49214917, -0.14496101, 38.81858, -1.3859129, -263.28543)
+freeze = true
+
+[node name="HullPiece38" parent="Obstacles" unique_id=2111585713 instance=ExtResource("19_06k41")]
+transform = Transform3D(0.46554697, 0.86588204, 0.18306983, 0.215617, 0.08965313, -0.9723538, -0.8583563, 0.4921492, -0.14496103, 44.47983, -1.3859129, -262.49097)
+freeze = true
+
+[node name="HullPiece39" parent="Obstacles" unique_id=738594224 instance=ExtResource("19_06k41")]
+transform = Transform3D(0.4747942, 0.7895649, -0.38879025, -0.4481751, -0.16327968, -0.8789078, -0.75743616, 0.59154636, 0.27633905, 31.46935, -1.3859129, -246.47375)
+freeze = true
+
+[node name="Wall19" parent="Obstacles" unique_id=1162212905 instance=ExtResource("22_ag07g")]
+transform = Transform3D(-0.12077795, 0.9184696, -0.37659818, 0, -0.37937537, -0.92524284, -0.99267954, -0.111748934, 0.04582018, 49.301697, -1.9073486e-06, -264.14142)
+freeze = true
+
 [node name="Wall9" parent="Obstacles" unique_id=102500605 instance=ExtResource("22_ag07g")]
 transform = Transform3D(-0.12077795, 0.9184696, -0.37659818, 0, -0.37937537, -0.92524284, -0.99267954, -0.111748934, 0.04582018, 19.447052, -1.9073486e-06, -8.532627)
 freeze = true
 
+[node name="RadarDish53" parent="Obstacles" unique_id=1951113295 instance=ExtResource("6_2ld0w")]
+transform = Transform3D(-0.99738306, 0, -0.07229811, 0, 1, 0, 0.07229811, 0, -0.99738306, 36.079964, 0, -208.38068)
+freeze = true
+
+[node name="RadarDish54" parent="Obstacles" unique_id=1476289391 instance=ExtResource("6_2ld0w")]
+transform = Transform3D(-0.997383, 0.05661404, -0.044965148, -1.9494708e-08, 0.6219408, 0.7830643, 0.07229811, 0.7810151, -0.62031317, 31.554634, 0, -193.3859)
+freeze = true
+
+[node name="StraightPipe51" parent="Obstacles" unique_id=1064920106 instance=ExtResource("8_66v8m")]
+transform = Transform3D(-0.99738306, 0, -0.07229811, 0, 1, 0, 0.07229811, 0, -0.99738306, 26.964325, -0.07101059, -206.65445)
+freeze = true
+
+[node name="Tpipe65" parent="Obstacles" unique_id=1165922 instance=ExtResource("9_ul75j")]
+transform = Transform3D(0.13480568, 0.98808765, 0.074228734, 0.92970884, -0.15204093, 0.33544755, 0.3427375, 0.023790926, -0.93913007, 30.79057, 0, -196.2863)
+freeze = true
+
+[node name="StraightPipe52" parent="Obstacles" unique_id=249996399 instance=ExtResource("8_66v8m")]
+transform = Transform3D(0.77211285, 0, 0.63548553, 0, 1, 0, -0.63548553, 0, 0.77211285, 32.89208, 0, -213.84102)
+freeze = true
+
+[node name="Lpipe25" parent="Obstacles" unique_id=1420496152 instance=ExtResource("5_6fg3j")]
+transform = Transform3D(-0.9891114, 0.14643264, -0.014697373, 0.14647347, 0.989213, -0.0017368753, 0.014284432, -0.0038707182, -0.9998903, 29.302933, 0.18427098, -196.24164)
+freeze = true
+
+[node name="AirTank77" parent="Obstacles" unique_id=1901222081 instance=ExtResource("4_wp1u0")]
+transform = Transform3D(-0.8086271, 0, -0.58832157, 0, 1, 0, 0.58832157, 0, -0.8086271, 30.234241, 9.536743e-07, -197.61024)
+freeze = true
+
+[node name="Tpipe66" parent="Obstacles" unique_id=552935115 instance=ExtResource("9_ul75j")]
+transform = Transform3D(-0.9952189, 0, -0.09766963, 0, 1, 0, 0.09766963, 0, -0.9952189, 27.10128, 0, -196.4882)
+freeze = true
+
+[node name="AirTank78" parent="Obstacles" unique_id=2147154578 instance=ExtResource("4_wp1u0")]
+transform = Transform3D(-0.99738306, 0, -0.07229811, 0, 1, 0, 0.07229811, 0, -0.99738306, 28.838913, 0, -194.13298)
+freeze = true
+
+[node name="Tpipe67" parent="Obstacles" unique_id=875978907 instance=ExtResource("9_ul75j")]
+transform = Transform3D(-0.45605326, 0.49185508, 0.74168324, 0.7332909, 0.679915, -2.0572024e-08, -0.5042815, 0.54386944, -0.67075026, 26.638264, 0, -189.7829)
+freeze = true
+
+[node name="TubeSegment31" parent="Obstacles" unique_id=1402945758 instance=ExtResource("10_4jlx7")]
+transform = Transform3D(-0.86326337, 0, 0.5047536, 0, 1, 0, -0.5047536, 0, -0.86326337, 27.772865, 0, -191.31102)
+freeze = true
+
+[node name="Tpipe68" parent="Obstacles" unique_id=2137117524 instance=ExtResource("9_ul75j")]
+transform = Transform3D(-0.67075026, 0, 0.74168324, 0, 1, 0, -0.74168324, 0, -0.67075026, 28.742382, 0, -192.32828)
+freeze = true
+
+[node name="SolarPanel36" parent="Obstacles" unique_id=990797155 instance=ExtResource("7_32x38")]
+transform = Transform3D(-0.63868415, 0.21065281, 0.74007285, 0.2975331, 0.95459455, -0.014942222, -0.70961714, 0.21065281, -0.67236066, 30.403477, -1.5422697, -188.85562)
+freeze = true
+
+[node name="RadarDish55" parent="Obstacles" unique_id=1965744910 instance=ExtResource("6_2ld0w")]
+transform = Transform3D(0.5667093, 0.71086466, 0.41654757, 0.5349423, -0.70197433, 0.47017935, 0.6266397, -0.04362604, -0.778087, 26.055267, 0, -191.87254)
+freeze = true
+
+[node name="Tpipe69" parent="Obstacles" unique_id=1131913067 instance=ExtResource("9_ul75j")]
+transform = Transform3D(0.27890593, 0.88548446, -0.37165666, 0.92970884, -0.15204091, 0.33544755, 0.24052662, -0.43909058, -0.86564803, 59.921703, -1.7100611, -172.61223)
+freeze = true
+
+[node name="Tpipe70" parent="Obstacles" unique_id=379702217 instance=ExtResource("9_ul75j")]
+transform = Transform3D(-0.93897426, 0, 0.3439875, 0, 1, 0, -0.3439875, 0, -0.93897426, 59.952377, -1.7100611, -168.15576)
+freeze = true
+
+[node name="RadarDish56" parent="Obstacles" unique_id=1418317866 instance=ExtResource("6_2ld0w")]
+transform = Transform3D(0.79332864, 0.60876125, 0.0062738955, 0.53494227, -0.7019743, 0.47017926, 0.29063115, -0.3696505, -0.88254845, 57.78665, -1.7100611, -166.5011)
+freeze = true
+
+[node name="AirTank79" parent="Obstacles" unique_id=181200434 instance=ExtResource("4_wp1u0")]
+transform = Transform3D(-0.67075026, 0, 0.74168324, 0, 1, 0, -0.74168324, 0, -0.67075026, 24.620735, 0, -190.4846)
+freeze = true
+
+[node name="AirTank80" parent="Obstacles" unique_id=1102279366 instance=ExtResource("4_wp1u0")]
+transform = Transform3D(-0.99813056, 0, -0.061118156, 0, 1, 0, 0.061118156, 0, -0.99813056, 24.55024, 0, -189.24434)
+freeze = true
+
+[node name="Tpipe71" parent="Obstacles" unique_id=1565390710 instance=ExtResource("9_ul75j")]
+transform = Transform3D(0.9932457, 0, 0.11602935, 0, 1, 0, -0.11602935, 0, 0.9932457, 39.685238, 0, -205.48032)
+
+[node name="StraightPipe53" parent="Obstacles" unique_id=459374688 instance=ExtResource("8_66v8m")]
+transform = Transform3D(0.70710677, -0.6969205, 0.119590044, 0, 0.16912587, 0.98559445, -0.70710677, -0.6969205, 0.119590044, 25.307892, 0, -204.09726)
+
+[node name="Tpipe72" parent="Obstacles" unique_id=656536372 instance=ExtResource("9_ul75j")]
+transform = Transform3D(0.3136084, 0.6337584, 0.70710677, -0.8962698, 0.44350925, 0, -0.3136084, -0.6337584, 0.70710677, 36.77299, 0, -206.35092)
+
+[node name="SolarPanel37" parent="Obstacles" unique_id=637657760 instance=ExtResource("7_32x38")]
+transform = Transform3D(0.70710677, 0, 0.70710677, 0, 1, 0, -0.70710677, 0, 0.70710677, 57.277985, 0, -177.59384)
+freeze = true
+
+[node name="2XAirTank36" parent="Obstacles" unique_id=875888521 instance=ExtResource("11_32x38")]
+transform = Transform3D(0.34479034, 0, 0.9386797, 0, 1, 0, -0.9386797, 0, 0.34479034, 52.248905, -0.7483597, -173.13695)
+freeze = true
+
+[node name="StraightPipe54" parent="Obstacles" unique_id=130630187 instance=ExtResource("8_66v8m")]
+transform = Transform3D(0.53894454, 0.45775405, 0.70710677, -0.647362, 0.7621827, 0, -0.53894454, -0.45775405, 0.70710677, 51.711487, 0, -177.12189)
+freeze = true
+
+[node name="AirTank81" parent="Obstacles" unique_id=2101323898 instance=ExtResource("4_wp1u0")]
+transform = Transform3D(0.9406973, 0, 0.33924696, 0, 1, 0, -0.33924696, 0, 0.9406973, 51.49848, 0, -174.38779)
+freeze = true
+
+[node name="2XAirTank37" parent="Obstacles" unique_id=691039390 instance=ExtResource("11_32x38")]
+transform = Transform3D(0.70710677, 0, 0.70710677, 0, 1, 0, -0.70710677, 0, 0.70710677, 46.46025, 0.37651825, -177.92444)
+freeze = true
+
+[node name="2xRadarDish26" parent="Obstacles" unique_id=1098932230 instance=ExtResource("13_ul75j")]
+transform = Transform3D(-0.0054068323, -0.7856378, 0.61866313, -0.9982107, 0.04108235, 0.0434464, -0.059549265, -0.61732125, -0.7844542, 48.75069, 0, -176.26732)
+freeze = true
+
+[node name="2xSolarPanel5" parent="Obstacles" unique_id=295501258 instance=ExtResource("15_4jlx7")]
+transform = Transform3D(0.70710677, -0.07325002, -0.7033025, 0, -0.99461997, 0.103591174, -0.70710677, -0.07325002, -0.7033025, 40.490086, -0.9389887, -188.48979)
+freeze = true
+
+[node name="TubeSegment32" parent="Obstacles" unique_id=1864720786 instance=ExtResource("10_4jlx7")]
+transform = Transform3D(0.70710677, 0, 0.70710677, 0, 1, 0, -0.70710677, 0, 0.70710677, 53.5075, 0.35092735, -178.96179)
+freeze = true
+
+[node name="Lpipe26" parent="Obstacles" unique_id=94593634 instance=ExtResource("5_6fg3j")]
+transform = Transform3D(0.26654866, 0, -0.96382153, 0, 1, 0, 0.96382153, 0, 0.26654866, 40.411728, 0, -208.19356)
+freeze = true
+
+[node name="TubeSegment33" parent="Obstacles" unique_id=389021413 instance=ExtResource("10_4jlx7")]
+transform = Transform3D(0.77211285, 0, 0.63548553, 0, 1, 0, -0.63548553, 0, 0.77211285, 32.532974, 0.35092735, -224.1302)
+freeze = true
+
+[node name="SolarPanel17" parent="Obstacles" unique_id=887199849 instance=ExtResource("7_32x38")]
+transform = Transform3D(-0.18846133, -0.03213126, 0.98155487, 0.10759038, -0.99412435, -0.011885066, 0.9761693, 0.103365935, 0.19081116, 36.098557, -0.4761839, -198.2629)
+freeze = true
+
+[node name="RadarDish57" parent="Obstacles" unique_id=1610046745 instance=ExtResource("6_2ld0w")]
+transform = Transform3D(-0.9184395, -0.30975026, 0.24601586, 7.310109e-09, 0.62194073, 0.7830642, -0.3955617, 0.7191972, -0.5712149, 34.576595, 0, -206.95284)
+freeze = true
+
+[node name="AirTank82" parent="Obstacles" unique_id=682019822 instance=ExtResource("4_wp1u0")]
+transform = Transform3D(-0.91843945, 0, 0.39556164, 0, 1, 0, -0.39556164, 0, -0.91843945, 32.510906, 0, -208.86758)
+freeze = true
+
+[node name="SolarPanel44" parent="Obstacles" unique_id=1077113603 instance=ExtResource("7_32x38")]
+transform = Transform3D(-0.23971009, 0.0898455, 0.96667844, 0.2975331, 0.9545946, -0.014942204, -0.9241283, 0.28403702, -0.25555792, 31.466896, -1.5422697, -203.46309)
+freeze = true
+
+[node name="2XAirTank38" parent="Obstacles" unique_id=764847333 instance=ExtResource("11_32x38")]
+transform = Transform3D(-0.9191767, 0, -0.3938457, 0, 1, 0, 0.3938457, 0, -0.9191767, 44.95029, -0.7483597, -219.41418)
+
+[node name="2XAirTank39" parent="Obstacles" unique_id=1575382283 instance=ExtResource("11_32x38")]
+transform = Transform3D(-0.3479995, 0, -0.9374947, 0, 1, 0, 0.9374947, 0, -0.3479995, 42.305542, -0.7483597, -218.4445)
+
+[node name="StraightPipe55" parent="Obstacles" unique_id=2092891289 instance=ExtResource("8_66v8m")]
+transform = Transform3D(-0.7618717, -0.6470977, 0.028567106, -0.64736193, 0.7621826, 5.892744e-08, -0.021773487, -0.018493325, -0.9995918, 42.42217, 0, -216.28735)
+freeze = true
+
+[node name="AirTank83" parent="Obstacles" unique_id=2130045282 instance=ExtResource("4_wp1u0")]
+transform = Transform3D(-0.8925386, 0, 0.45097095, 0, 1, 0, -0.45097095, 0, -0.8925386, 44.55617, 0, -218.00977)
+freeze = true
+
+[node name="2xRadarDish27" parent="Obstacles" unique_id=1951178947 instance=ExtResource("13_ul75j")]
+transform = Transform3D(-0.039580975, 0.09062931, -0.995098, -0.99821067, 0.041082345, 0.043446396, 0.04481846, 0.99503684, 0.08884108, 31.430988, 0, -214.12463)
+freeze = true
+
+[node name="TubeSegment34" parent="Obstacles" unique_id=1489074505 instance=ExtResource("10_4jlx7")]
+transform = Transform3D(-0.9995919, 0, 0.028567135, 0, 1, 0, -0.028567135, 0, -0.9995919, 39.851357, 0.35092735, -216.32976)
+freeze = true
+
+[node name="RadarDish58" parent="Obstacles" unique_id=1413874578 instance=ExtResource("6_2ld0w")]
+transform = Transform3D(-0.6313655, 0.0376693, 0.77457, 0.5349424, -0.70197445, 0.47017947, 0.56143993, 0.71120524, 0.42305136, 41.326393, 0, -222.4887)
+freeze = true
+
+[node name="AirTank84" parent="Obstacles" unique_id=1428113178 instance=ExtResource("4_wp1u0")]
+transform = Transform3D(0.74727654, 0, 0.66451335, 0, 1, 0, -0.66451335, 0, 0.74727654, 39.95052, 0, -223.93477)
+freeze = true
+
+[node name="2xRadarDish28" parent="Obstacles" unique_id=1478097438 instance=ExtResource("13_ul75j")]
+transform = Transform3D(0.024888344, -0.3751991, 0.92661023, -0.9982111, 0.041082364, 0.043446418, -0.05436837, -0.92603326, -0.37350547, 27.213741, 0, -201.29153)
+freeze = true
+
+[node name="HullPiece28" parent="Obstacles" unique_id=251119569 instance=ExtResource("19_06k41")]
+transform = Transform3D(-0.27775815, 0.96027315, 0.026946992, 0.21561699, 0.08965312, -0.97235376, -0.936141, -0.26426902, -0.23195283, 33.082245, -1.3859129, -222.5583)
+freeze = true
+
+[node name="HullPiece29" parent="Obstacles" unique_id=1269000199 instance=ExtResource("19_06k41")]
+transform = Transform3D(0.24002993, 0.8897621, -0.38821283, -0.34243402, -0.2965928, -0.89149964, -0.9083636, 0.34692395, 0.23349379, 59.320366, -0.6554127, -166.46223)
+freeze = true
+
+[node name="HullPiece30" parent="Obstacles" unique_id=1278919395 instance=ExtResource("19_06k41")]
+transform = Transform3D(-0.19985804, 0.976593, -0.079514995, -0.44817507, -0.16327962, -0.87890774, -0.87131834, -0.14002025, 0.47031742, 22.208324, -1.3859129, -202.03262)
+freeze = true
+
+[node name="Wall14" parent="Obstacles" unique_id=614971739 instance=ExtResource("22_ag07g")]
+transform = Transform3D(-0.7873333, 0.57043767, -0.23389538, -3.5994634e-09, -0.3793754, -0.92524296, -0.61652756, -0.72847456, 0.29869488, 35.32477, -1.9073486e-06, -227.13492)
+freeze = true
+
+[node name="Wall15" parent="Obstacles" unique_id=1062535416 instance=ExtResource("22_ag07g")]
+transform = Transform3D(-0.7873333, 0.57043767, -0.23389538, -3.5994634e-09, -0.3793754, -0.92524296, -0.61652756, -0.72847456, 0.29869488, 59.192562, -1.9073486e-06, -161.0463)
+freeze = true
+
+[node name="RadarDish59" parent="Obstacles" unique_id=1804825334 instance=ExtResource("6_2ld0w")]
+transform = Transform3D(0.997383, 0, 0.072298035, 0, 1, 0, -0.072298035, 0, 0.997383, -33.38462, 0, -199.93472)
+freeze = true
+
+[node name="RadarDish60" parent="Obstacles" unique_id=926838108 instance=ExtResource("6_2ld0w")]
+transform = Transform3D(0.98211014, 0.14745668, -0.117115885, -4.6314057e-08, 0.6219408, 0.7830643, 0.18830714, -0.7690555, 0.6108143, -45.76697, 0, -222.78404)
+freeze = true
+
+[node name="StraightPipe56" parent="Obstacles" unique_id=1536916761 instance=ExtResource("8_66v8m")]
+transform = Transform3D(0.997383, 0, 0.072298035, 0, 1, 0, -0.072298035, 0, 0.997383, -39.26898, -0.07101059, -201.66093)
+freeze = true
+
+[node name="Tpipe73" parent="Obstacles" unique_id=615495491 instance=ExtResource("9_ul75j")]
+transform = Transform3D(-0.04150533, -0.94826174, -0.3147642, 0.9297088, -0.15204093, 0.3354475, -0.3659492, -0.2787162, 0.88791806, -45.779617, 0, -219.7847)
+freeze = true
+
+[node name="StraightPipe57" parent="Obstacles" unique_id=1543358917 instance=ExtResource("8_66v8m")]
+transform = Transform3D(-0.772113, 0, -0.63548553, 0, 1, 0, 0.63548553, 0, -0.772113, -30.196732, 0, -194.47437)
+freeze = true
+
+[node name="Lpipe27" parent="Obstacles" unique_id=1413141133 instance=ExtResource("5_6fg3j")]
+transform = Transform3D(0.9591054, -0.1424449, -0.24459405, 0.14647347, 0.98921293, -0.0017368782, 0.24220325, -0.034160722, 0.96962386, -44.331116, 0.18427098, -219.44281)
+freeze = true
+
+[node name="AirTank85" parent="Obstacles" unique_id=2106753126 instance=ExtResource("4_wp1u0")]
+transform = Transform3D(0.8086272, 0, 0.58832145, 0, 1, 0, -0.58832145, 0, 0.8086272, -40.538895, 9.536743e-07, -210.70515)
+freeze = true
+
+[node name="Tpipe74" parent="Obstacles" unique_id=1570186654 instance=ExtResource("9_ul75j")]
+transform = Transform3D(0.9865864, 0, -0.16324003, 0, 1, 0, 0.16324003, 0, 0.9865864, -42.268303, 0, -218.63484)
+freeze = true
+
+[node name="AirTank86" parent="Obstacles" unique_id=228579502 instance=ExtResource("4_wp1u0")]
+transform = Transform3D(0.98211014, 0, -0.18830718, 0, 1, 0, 0.18830718, 0, 0.98211014, -43.337147, 0, -221.35953)
+freeze = true
+
+[node name="Tpipe75" parent="Obstacles" unique_id=195121948 instance=ExtResource("9_ul75j")]
+transform = Transform3D(0.3099959, -0.33433175, -0.89001393, 0.733291, 0.6799151, -2.6714995e-08, 0.60513383, -0.6526392, 0.45593324, -40.0856, 0, -224.99182)
+freeze = true
+
+[node name="TubeSegment35" parent="Obstacles" unique_id=1780404141 instance=ExtResource("10_4jlx7")]
+transform = Transform3D(0.7032085, 0, -0.7109836, 0, 1, 0, 0.7109836, 0, 0.7032085, -41.57705, 0, -223.80943)
+freeze = true
+
+[node name="Tpipe76" parent="Obstacles" unique_id=767235340 instance=ExtResource("9_ul75j")]
+transform = Transform3D(0.45593324, 0, -0.89001393, 0, 1, 0, 0.89001393, 0, 0.45593324, -42.77681, 0, -223.07776)
+freeze = true
+
+[node name="SolarPanel38" parent="Obstacles" unique_id=1380387915 instance=ExtResource("7_32x38")]
+transform = Transform3D(0.43325904, -0.148954, -0.8888753, 0.29753312, 0.95459455, -0.014942217, 0.85074115, -0.25799596, 0.45790556, -43.48252, -1.5422697, -226.86201)
+freeze = true
+
+[node name="RadarDish61" parent="Obstacles" unique_id=129283723 instance=ExtResource("6_2ld0w")]
+transform = Transform3D(-0.38521284, -0.69793385, -0.6037379, 0.53494227, -0.7019743, 0.47017932, -0.7519627, -0.14184579, 0.6437638, -40.06331, 0, -222.8225)
+freeze = true
+
+[node name="Tpipe77" parent="Obstacles" unique_id=1615798832 instance=ExtResource("9_ul75j")]
+transform = Transform3D(-0.2071496, -0.96895725, 0.13494647, 0.92970896, -0.15204094, 0.33544764, -0.3045171, 0.19494863, 0.9323436, -49.233795, -1.7100611, -246.82715)
+freeze = true
+
+[node name="Tpipe78" parent="Obstacles" unique_id=1977603302 instance=ExtResource("9_ul75j")]
+transform = Transform3D(0.81794894, 0, -0.5752908, 0, 1, 0, 0.5752908, 0, 0.81794894, -48.11001, -1.7100611, -251.13971)
+freeze = true
+
+[node name="RadarDish62" parent="Obstacles" unique_id=1120781519 instance=ExtResource("6_2ld0w")]
+transform = Transform3D(-0.69107586, -0.68369085, -0.23448057, 0.5349423, -0.70197433, 0.47017932, -0.4860568, 0.19949593, 0.8508526, -45.58982, -1.7100611, -252.17746)
+freeze = true
+
+[node name="AirTank87" parent="Obstacles" unique_id=1500654715 instance=ExtResource("4_wp1u0")]
+transform = Transform3D(0.45593324, 0, -0.89001393, 0, 1, 0, 0.89001393, 0, 0.45593324, -38.318428, 0, -223.79184)
+freeze = true
+
+[node name="AirTank88" parent="Obstacles" unique_id=2052912457 instance=ExtResource("4_wp1u0")]
+transform = Transform3D(0.9799385, 0, -0.19929962, 0, 1, 0, 0.19929962, 0, 0.9799385, -37.929333, 0, -224.97162)
+freeze = true
+
+[node name="Tpipe79" parent="Obstacles" unique_id=101415684 instance=ExtResource("9_ul75j")]
+transform = Transform3D(-0.99324584, 0, -0.11602932, 0, 1, 0, 0.11602932, 0, -0.99324584, -36.989887, 0, -202.83507)
+
+[node name="StraightPipe58" parent="Obstacles" unique_id=1134263544 instance=ExtResource("8_66v8m")]
+transform = Transform3D(-0.8660254, 0.49279717, -0.08456293, -3.598354e-09, 0.1691259, 0.9855947, 0.49999994, 0.85354984, -0.1464673, -42.505386, 0, -210.82088)
+
+[node name="Tpipe80" parent="Obstacles" unique_id=929683575 instance=ExtResource("9_ul75j")]
+transform = Transform3D(-0.3840902, -0.7761923, -0.49999988, -0.89626986, 0.44350922, 0, 0.22175455, 0.44813484, -0.8660253, -41.60608, 0, -208.24675)
+
+[node name="SolarPanel39" parent="Obstacles" unique_id=1943771002 instance=ExtResource("7_32x38")]
+transform = Transform3D(-0.8660254, 0, -0.49999994, 0, 1, 0, 0.49999994, 0, -0.8660254, -47.969498, 0, -241.33104)
+freeze = true
+
+[node name="2XAirTank40" parent="Obstacles" unique_id=1767293512 instance=ExtResource("11_32x38")]
+transform = Transform3D(-0.5759901, 0, -0.81745666, 0, 1, 0, 0.81745666, 0, -0.5759901, -41.958252, -0.7483597, -244.33444)
+freeze = true
+
+[node name="StraightPipe59" parent="Obstacles" unique_id=1150639285 instance=ExtResource("8_66v8m")]
+transform = Transform3D(-0.6600695, -0.560632, -0.49999994, -0.647362, 0.7621827, -6.6800094e-09, 0.38109124, 0.32368094, -0.8660253, -42.470528, 0, -240.3462)
+freeze = true
+
+[node name="AirTank89" parent="Obstacles" unique_id=1015480859 instance=ExtResource("4_wp1u0")]
+transform = Transform3D(-0.9964475, 0, -0.08421697, 0, 1, 0, 0.08421697, 0, -0.9964475, -41.55714, 0, -242.932)
+freeze = true
+
+[node name="2XAirTank41" parent="Obstacles" unique_id=881907693 instance=ExtResource("11_32x38")]
+transform = Transform3D(-0.8660254, 0, -0.49999994, 0, 1, 0, 0.49999994, 0, -0.8660254, -54.605938, 0.37651825, -238.21188)
+freeze = true
+
+[node name="2xRadarDish29" parent="Obstacles" unique_id=1558611932 instance=ExtResource("13_ul75j")]
+transform = Transform3D(-0.010189897, 0.59909326, -0.8006144, -0.99821085, 0.041082352, 0.043446407, 0.058919575, 0.7996245, 0.5976027, -28.389439, 0, -240.40533)
+freeze = true
+
+[node name="TubeSegment36" parent="Obstacles" unique_id=332719058 instance=ExtResource("10_4jlx7")]
+transform = Transform3D(-0.8660254, 0, -0.49999994, 0, 1, 0, 0.49999994, 0, -0.8660254, -44.68154, 0.35092735, -239.03383)
+freeze = true
+
+[node name="Lpipe28" parent="Obstacles" unique_id=1922282459 instance=ExtResource("5_6fg3j")]
+transform = Transform3D(-0.26654857, 0, 0.9638215, 0, 1, 0, -0.9638215, 0, -0.26654857, -37.716377, 0, -200.12184)
+freeze = true
+
+[node name="TubeSegment37" parent="Obstacles" unique_id=1488970136 instance=ExtResource("10_4jlx7")]
+transform = Transform3D(-0.9102796, 0, -0.4139943, 0, 1, 0, 0.4139943, 0, -0.9102796, -25.112158, 0.35092735, -189.97589)
+freeze = true
+
+[node name="SolarPanel19" parent="Obstacles" unique_id=47236810 instance=ExtResource("7_32x38")]
+transform = Transform3D(0.18846132, 0.03213126, -0.981555, 0.10759039, -0.9941245, -0.011885067, -0.9761692, -0.10336593, -0.19081129, -46.403206, -0.4761839, -210.05249)
+freeze = true
+
+[node name="RadarDish63" parent="Obstacles" unique_id=1275569557 instance=ExtResource("6_2ld0w")]
+transform = Transform3D(0.91843957, 0.30975035, -0.2460159, -6.414785e-08, 0.62194073, 0.78306425, 0.39556175, -0.719197, 0.57121485, -46.88125, 0, -201.36256)
+freeze = true
+
+[node name="AirTank90" parent="Obstacles" unique_id=803019052 instance=ExtResource("4_wp1u0")]
+transform = Transform3D(0.9184394, 0, -0.39556164, 0, 1, 0, 0.39556164, 0, 0.9184394, -44.81556, 0, -199.4478)
+freeze = true
+
+[node name="SolarPanel45" parent="Obstacles" unique_id=945697704 instance=ExtResource("7_32x38")]
+transform = Transform3D(0.23971012, -0.08984554, -0.9666785, 0.29753318, 0.95459473, -0.014942209, 0.92412835, -0.28403705, 0.25555784, -43.771545, -1.5422697, -204.85231)
+freeze = true
+
+[node name="2XAirTank42" parent="Obstacles" unique_id=1090054364 instance=ExtResource("11_32x38")]
+transform = Transform3D(0.9191768, 0, 0.39384568, 0, 1, 0, -0.39384568, 0, 0.9191768, -42.254944, -0.7483597, -188.90121)
+
+[node name="2XAirTank43" parent="Obstacles" unique_id=355132949 instance=ExtResource("11_32x38")]
+transform = Transform3D(0.34799957, 0, 0.9374949, 0, 1, 0, -0.9374949, 0, 0.34799957, -39.610195, -0.7483597, -189.8709)
+
+[node name="StraightPipe60" parent="Obstacles" unique_id=1733677539 instance=ExtResource("8_66v8m")]
+transform = Transform3D(0.7618716, 0.6470977, -0.02856727, -0.6473621, 0.7621824, 1.3646583e-07, 0.021773547, 0.018493295, 0.9995917, -39.726818, 0, -192.02803)
+freeze = true
+
+[node name="AirTank91" parent="Obstacles" unique_id=101116776 instance=ExtResource("4_wp1u0")]
+transform = Transform3D(0.8925388, 0, -0.45097113, 0, 1, 0, 0.45097113, 0, 0.8925388, -41.86082, 0, -190.30562)
+freeze = true
+
+[node name="2xRadarDish30" parent="Obstacles" unique_id=1621108919 instance=ExtResource("13_ul75j")]
+transform = Transform3D(0.039580986, -0.090629175, 0.99509794, -0.99821067, 0.041082345, 0.0434464, -0.044818453, -0.99503666, -0.088841006, -43.73564, 0, -194.19077)
+freeze = true
+
+[node name="2xRadarDish32" parent="Obstacles" unique_id=26414134 instance=ExtResource("13_ul75j")]
+transform = Transform3D(0.039580986, -0.090629175, 0.99509794, -0.99821067, 0.041082345, 0.0434464, -0.044818453, -0.99503666, -0.088841006, -45.73564, 0, -216.19077)
+freeze = true
+
+[node name="RadarDish91" parent="Obstacles" unique_id=1728933034 instance=ExtResource("6_2ld0w")]
+transform = Transform3D(0.98211014, 0.14745668, -0.117115885, -4.6314057e-08, 0.6219408, 0.7830643, 0.18830714, -0.7690555, 0.6108143, -53.76697, 0, -231.78404)
+freeze = true
+
+[node name="Tpipe112" parent="Obstacles" unique_id=1954215615 instance=ExtResource("9_ul75j")]
+transform = Transform3D(-0.04150533, -0.94826174, -0.3147642, 0.9297088, -0.15204093, 0.3354475, -0.3659492, -0.2787162, 0.88791806, -53.779617, 0, -228.7847)
+freeze = true
+
+[node name="Lpipe40" parent="Obstacles" unique_id=1848857967 instance=ExtResource("5_6fg3j")]
+transform = Transform3D(0.9591054, -0.1424449, -0.24459405, 0.14647347, 0.98921293, -0.0017368782, 0.24220325, -0.034160722, 0.96962386, -52.331116, 0.18427098, -228.44281)
+freeze = true
+
+[node name="Tpipe113" parent="Obstacles" unique_id=1912606012 instance=ExtResource("9_ul75j")]
+transform = Transform3D(0.9865864, 0, -0.16324003, 0, 1, 0, 0.16324003, 0, 0.9865864, -50.268303, 0, -227.63484)
+freeze = true
+
+[node name="AirTank124" parent="Obstacles" unique_id=1147215512 instance=ExtResource("4_wp1u0")]
+transform = Transform3D(0.98211014, 0, -0.18830718, 0, 1, 0, 0.18830718, 0, 0.98211014, -51.337147, 0, -230.35953)
+freeze = true
+
+[node name="Tpipe114" parent="Obstacles" unique_id=501100804 instance=ExtResource("9_ul75j")]
+transform = Transform3D(0.3099959, -0.33433175, -0.89001393, 0.733291, 0.6799151, -2.6714995e-08, 0.60513383, -0.6526392, 0.45593324, -48.0856, 0, -233.99182)
+freeze = true
+
+[node name="TubeSegment52" parent="Obstacles" unique_id=697552721 instance=ExtResource("10_4jlx7")]
+transform = Transform3D(0.7032085, 0, -0.7109836, 0, 1, 0, 0.7109836, 0, 0.7032085, -49.57705, 0, -232.80943)
+freeze = true
+
+[node name="Tpipe115" parent="Obstacles" unique_id=1576768889 instance=ExtResource("9_ul75j")]
+transform = Transform3D(0.45593324, 0, -0.89001393, 0, 1, 0, 0.89001393, 0, 0.45593324, -50.77681, 0, -232.07776)
+freeze = true
+
+[node name="RadarDish92" parent="Obstacles" unique_id=1889027363 instance=ExtResource("6_2ld0w")]
+transform = Transform3D(-0.38521284, -0.69793385, -0.6037379, 0.53494227, -0.7019743, 0.47017932, -0.7519627, -0.14184579, 0.6437638, -48.06331, 0, -231.8225)
+freeze = true
+
+[node name="AirTank125" parent="Obstacles" unique_id=1017532778 instance=ExtResource("4_wp1u0")]
+transform = Transform3D(0.45593324, 0, -0.89001393, 0, 1, 0, 0.89001393, 0, 0.45593324, -46.318428, 0, -232.79184)
+freeze = true
+
+[node name="AirTank126" parent="Obstacles" unique_id=503022674 instance=ExtResource("4_wp1u0")]
+transform = Transform3D(0.9799385, 0, -0.19929962, 0, 1, 0, 0.19929962, 0, 0.9799385, -45.929333, 0, -233.97162)
+freeze = true
+
+[node name="2xRadarDish41" parent="Obstacles" unique_id=1161723928 instance=ExtResource("13_ul75j")]
+transform = Transform3D(0.039580986, -0.090629175, 0.99509794, -0.99821067, 0.041082345, 0.0434464, -0.044818453, -0.99503666, -0.088841006, -53.73564, 0, -225.19077)
+freeze = true
+
+[node name="TubeSegment38" parent="Obstacles" unique_id=2062012431 instance=ExtResource("10_4jlx7")]
+transform = Transform3D(0.9995918, 0, -0.028567255, 0, 1, 0, 0.028567255, 0, 0.9995918, -37.156006, 0.35092735, -191.98564)
+freeze = true
+
+[node name="RadarDish64" parent="Obstacles" unique_id=1272365823 instance=ExtResource("6_2ld0w")]
+transform = Transform3D(0.75516355, 0.14768764, -0.6386833, 0.5349422, -0.7019744, 0.47017953, -0.37889975, -0.69672096, -0.6091098, -33.18109, 0, -193.83737)
+freeze = true
+
+[node name="AirTank92" parent="Obstacles" unique_id=1886200257 instance=ExtResource("4_wp1u0")]
+transform = Transform3D(-0.89380246, 0, -0.44846112, 0, 1, 0, 0.44846112, 0, -0.89380246, -32.22637, 0, -192.08447)
+freeze = true
+
+[node name="2xRadarDish31" parent="Obstacles" unique_id=1385695444 instance=ExtResource("13_ul75j")]
+transform = Transform3D(-0.024888346, 0.37519902, -0.9266102, -0.998211, 0.041082364, 0.043446414, 0.054368377, 0.9260333, 0.37350538, -37.518394, 0, -207.02386)
+freeze = true
+
+[node name="HullPiece31" parent="Obstacles" unique_id=1035803173 instance=ExtResource("19_06k41")]
+transform = Transform3D(0.026002586, -0.99595034, -0.08606261, 0.21561694, 0.08965311, -0.97235364, 0.9761316, 0.0067272186, 0.21707478, -25.23587, -1.3859129, -191.63638)
+freeze = true
+
+[node name="HullPiece32" parent="Obstacles" unique_id=1101489994 instance=ExtResource("19_06k41")]
+transform = Transform3D(-0.46695298, -0.7696537, 0.4354174, -0.34243396, -0.2965928, -0.8914996, 0.8152875, -0.56539035, -0.12506077, -54.06122, -0.6554127, -252.61195)
+freeze = true
+
+[node name="HullPiece33" parent="Obstacles" unique_id=1978926750 instance=ExtResource("19_06k41")]
+transform = Transform3D(-0.03246583, -0.9795564, 0.19853279, -0.44817507, -0.16327965, -0.87890786, 0.89335597, -0.11751169, -0.4337117, -38.977066, -1.3859129, -212.01294)
+freeze = true
+
+[node name="Wall16" parent="Obstacles" unique_id=24563285 instance=ExtResource("22_ag07g")]
+transform = Transform3D(0.6009364, -0.7395435, 0.3032335, -2.1973415e-08, -0.3793754, -0.9252429, 0.79929686, 0.55601215, -0.2279805, -28.586502, -1.9073486e-06, -187.79613)
+freeze = true
+
+[node name="Wall17" parent="Obstacles" unique_id=420266731 instance=ExtResource("22_ag07g")]
+transform = Transform3D(0.6009364, -0.7395435, 0.3032335, -2.1973415e-08, -0.3793754, -0.9252429, 0.79929686, 0.55601215, -0.2279805, -53.53602, -1.9073486e-06, -246.81027)
+freeze = true
+
 [node name="Wall1" parent="Obstacles" unique_id=1529364582 instance=ExtResource("21_kmry4")]
 transform = Transform3D(1, 0, 0, 0, 0.4633889, 0.886155, 0, -0.886155, 0.4633889, -34.62393, 0.49507523, -59.249813)
+
+[node name="SolarPanel4" parent="Obstacles" unique_id=83611438 instance=ExtResource("7_32x38")]
+transform = Transform3D(0.49999997, 0, 0.86602545, 0, 1, 0, -0.86602545, 0, 0.49999997, -21.680792, 0, -170.70728)
+
+[node name="TubeSegment45" parent="Obstacles" unique_id=1660578137 instance=ExtResource("10_4jlx7")]
+transform = Transform3D(0.49999997, 0, 0.86602545, 0, 1, 0, -0.86602545, 0, 0.49999997, -7.352417, 0, -176.86777)
+
+[node name="Lpipe32" parent="Obstacles" unique_id=793661023 instance=ExtResource("5_6fg3j")]
+transform = Transform3D(0.49999997, 0, 0.86602545, 0, 1, 0, -0.86602545, 0, 0.49999997, -7.352417, 0, -176.86777)
+
+[node name="RadarDish75" parent="Obstacles" unique_id=1209557756 instance=ExtResource("6_2ld0w")]
+transform = Transform3D(0.49999997, 0, 0.86602545, 0, 1, 0, -0.86602545, 0, 0.49999997, -7.352417, 0, -176.86777)
+
+[node name="RadarDish76" parent="Obstacles" unique_id=1625480659 instance=ExtResource("6_2ld0w")]
+transform = Transform3D(0.25542888, 0, -0.9668278, 0, 1, 0, 0.9668278, 0, 0.25542888, -39.926918, 0, -135.28215)
+freeze = true
+
+[node name="StraightPipe68" parent="Obstacles" unique_id=438674722 instance=ExtResource("8_66v8m")]
+transform = Transform3D(0.25542888, 0, -0.9668278, 0, 1, 0, 0.9668278, 0, 0.25542888, -44.382313, 0, -133.45787)
+freeze = true
+
+[node name="RadarDish77" parent="Obstacles" unique_id=758586441 instance=ExtResource("6_2ld0w")]
+transform = Transform3D(0.43923387, -0.70348364, 0.5587347, -3.667004e-08, 0.6219408, 0.7830643, -0.89837277, -0.34394822, 0.2731774, -14.786911, -5.364418e-07, -161.68198)
+freeze = true
+
+[node name="Tpipe91" parent="Obstacles" unique_id=1771266372 instance=ExtResource("9_ul75j")]
+transform = Transform3D(-0.36402816, -0.51760453, 0.77431864, 0.9297089, -0.15204091, 0.33544755, -0.05590096, 0.842003, 0.5365685, -25.5513, 15.805052, -146.56131)
+freeze = true
+
+[node name="Lpipe33" parent="Obstacles" unique_id=958626611 instance=ExtResource("5_6fg3j")]
+transform = Transform3D(0.4852122, -0.07031539, 0.8715647, 0.14647348, 0.9892131, -0.0017368763, -0.8620412, 0.12850393, 0.49027756, -10.404461, 2.6743197, -161.57387)
+freeze = true
+
+[node name="AirTank107" parent="Obstacles" unique_id=1286469739 instance=ExtResource("4_wp1u0")]
+transform = Transform3D(-0.10169861, 0, 0.99481523, 0, 1, 0, -0.99481523, 0, -0.10169861, -19.667587, 9.536743e-07, -162.33768)
+freeze = true
+
+[node name="Tpipe92" parent="Obstacles" unique_id=1804847615 instance=ExtResource("9_ul75j")]
+transform = Transform3D(0.41621745, 0, 0.90926516, 0, 1, 0, -0.90926516, 0, 0.41621745, -10.256767, 0, -164.15546)
+freeze = true
+
+[node name="AirTank108" parent="Obstacles" unique_id=1537168497 instance=ExtResource("4_wp1u0")]
+transform = Transform3D(0.43923375, 0, 0.8983728, 0, 1, 0, -0.8983728, 0, 0.43923375, -12.775139, 0, -163.65327)
+freeze = true
+
+[node name="Tpipe93" parent="Obstacles" unique_id=1449449567 instance=ExtResource("9_ul75j")]
+transform = Transform3D(0.6652442, -0.71746826, 0.20661393, 0.7332909, 0.679915, -5.704343e-08, -0.14048019, 0.15150824, 0.97842246, -11.585575, 12.465945, -154.85928)
+freeze = true
+
+[node name="TubeSegment46" parent="Obstacles" unique_id=538362241 instance=ExtResource("10_4jlx7")]
+transform = Transform3D(0.87049323, 0, 0.49218062, 0, 1, 0, -0.49218062, 0, 0.87049323, -7.3463707, 0, -159.0889)
+freeze = true
+
+[node name="Tpipe94" parent="Obstacles" unique_id=1416408795 instance=ExtResource("9_ul75j")]
+transform = Transform3D(0.9784226, 0, 0.2066141, 0, 1, 0, -0.2066141, 0, 0.9784226, -5.1200905, 0, -152.88461)
+freeze = true
+
+[node name="SolarPanel52" parent="Obstacles" unique_id=803897118 instance=ExtResource("7_32x38")]
+transform = Transform3D(0.9345786, -0.28802583, 0.2088159, 0.29753312, 0.95459455, -0.014942203, -0.19503087, 0.07609437, 0.9778409, -9.702343, 3.5157936, -152.99895)
+freeze = true
+
+[node name="RadarDish78" parent="Obstacles" unique_id=1899951179 instance=ExtResource("6_2ld0w")]
+transform = Transform3D(-0.8266581, -0.31988534, 0.46293622, 0.5349423, -0.7019744, 0.47017923, 0.17456573, 0.6363217, 0.7514131, -34.848644, 9.09402, -148.9562)
+freeze = true
+
+[node name="AirTank109" parent="Obstacles" unique_id=432576285 instance=ExtResource("4_wp1u0")]
+transform = Transform3D(0.9784226, 0, 0.2066141, 0, 1, 0, -0.2066141, 0, 0.9784226, -4.6402016, 0, -157.37425)
+freeze = true
+
+[node name="SolarPanel53" parent="Obstacles" unique_id=1780401645 instance=ExtResource("7_32x38")]
+transform = Transform3D(0.25542888, 0, -0.9668278, 0, 1, 0, 0.9668278, 0, 0.25542888, -37.960434, 0, -126.921165)
+freeze = true
+
+[node name="2XAirTank48" parent="Obstacles" unique_id=1306098182 instance=ExtResource("11_32x38")]
+transform = Transform3D(0.63782763, 0, -0.77017975, 0, 1, 0, 0.77017975, 0, 0.63782763, -32.781784, -0.7483597, -136.85262)
+freeze = true
+
+[node name="StraightPipe69" parent="Obstacles" unique_id=1151454721 instance=ExtResource("8_66v8m")]
+transform = Transform3D(0.19468343, 0.16535495, -0.96682787, -0.647362, 0.7621827, -3.8341014e-08, 0.73689955, 0.62588763, 0.25542903, -36.600857, -11.005154, -135.8783)
+freeze = true
+
+[node name="AirTank110" parent="Obstacles" unique_id=177432959 instance=ExtResource("4_wp1u0")]
+transform = Transform3D(-0.18000403, 0, -0.983666, 0, 1, 0, 0.983666, 0, -0.18000403, -45.226395, 0, -133.2427)
+freeze = true
+
+[node name="2XAirTank49" parent="Obstacles" unique_id=1522656827 instance=ExtResource("11_32x38")]
+transform = Transform3D(0.25542888, 0, -0.9668278, 0, 1, 0, 0.9668278, 0, 0.25542888, -32.232998, 0.37651825, -136.10426)
+freeze = true
+
+[node name="2xRadarDish37" parent="Obstacles" unique_id=305904373 instance=ExtResource("13_ul75j")]
+transform = Transform3D(-0.28422245, 0.83933157, 0.46340087, -0.7384977, -0.49989018, 0.45247197, 0.6114235, -0.2136175, 0.7619243, -41.322083, -12.5544615, -145.62361)
+freeze = true
+
+[node name="2xRadarDish38" parent="Obstacles" unique_id=1143229964 instance=ExtResource("13_ul75j")]
+transform = Transform3D(0.009968726, -0.6020897, 0.79836637, -0.9982111, 0.041082364, 0.043446418, -0.05895739, -0.7973708, -0.600603, -56.349617, -16.96959, -155.92426)
+freeze = true
+
+[node name="2xSolarPanel14" parent="Obstacles" unique_id=1100576872 instance=ExtResource("15_4jlx7")]
+transform = Transform3D(0.25542894, 0.10015482, 0.9616263, 1.2533581e-09, -0.99462014, 0.1035912, 0.96682775, -0.02646019, -0.25405484, -28.947166, -0.9389887, -130.68611)
+freeze = true
+
+[node name="Lpipe34" parent="Obstacles" unique_id=2122977818 instance=ExtResource("5_6fg3j")]
+transform = Transform3D(-0.9871419, 0, 0.15984684, 0, 1, 0, -0.15984684, 0, -0.9871419, -73.775635, 0, -148.13336)
+freeze = true
+
+[node name="TubeSegment47" parent="Obstacles" unique_id=82095667 instance=ExtResource("10_4jlx7")]
+transform = Transform3D(0.25542888, 0, -0.9668278, 0, 1, 0, 0.9668278, 0, 0.25542888, -34.88145, 0.35092735, -129.49173)
+freeze = true
+
+[node name="2XAirTank50" parent="Obstacles" unique_id=1787284911 instance=ExtResource("11_32x38")]
+transform = Transform3D(0.09009367, 0, 0.9959333, 0, 1, 0, -0.9959333, 0, 0.09009367, -70.071945, -0.7483597, -171.16132)
+
+[node name="RadarDish79" parent="Obstacles" unique_id=781117907 instance=ExtResource("6_2ld0w")]
+transform = Transform3D(-0.94468594, 0, -0.3279764, 0, 1, 0, 0.3279764, 0, -0.94468594, -86.07007, 0, -141.85034)
+freeze = true
+
+[node name="Tpipe95" parent="Obstacles" unique_id=710089028 instance=ExtResource("9_ul75j")]
+transform = Transform3D(0.9293711, 0, 0.3691467, 0, 1, 0, -0.3691467, 0, 0.9293711, -49.978004, 0, -151.83302)
+
+[node name="StraightPipe70" parent="Obstacles" unique_id=348328590 instance=ExtResource("8_66v8m")]
+transform = Transform3D(0.49999997, -0.8535499, 0.14646731, 0, 0.16912587, 0.98559445, -0.86602545, -0.4927972, 0.08456293, -58.24977, 0, -158.58754)
+
+[node name="Tpipe96" parent="Obstacles" unique_id=2067912373 instance=ExtResource("9_ul75j")]
+transform = Transform3D(0.22175461, 0.44813487, 0.86602545, -0.8962698, 0.44350925, 0, -0.3840903, -0.7761924, 0.49999997, -65.04584, -15.236587, -152.17426)
+
+[node name="Lpipe35" parent="Obstacles" unique_id=1473479084 instance=ExtResource("5_6fg3j")]
+transform = Transform3D(0.5069217, 0, -0.86199224, 0, 1, 0, 0.86199224, 0, 0.5069217, -57.160156, 0, -133.71248)
+freeze = true
+
+[node name="ShipModel11" parent="Obstacles" unique_id=2135752037 instance=ExtResource("18_06k41")]
+transform = Transform3D(-0.1062468, -0.9453888, 0.30814257, -1.204014e-08, 0.30989665, 0.9507704, -0.99433994, 0.10101631, -0.032925516, -52.85048, 1.3023224, -166.52756)
+
+[node name="ShipModel12" parent="Obstacles" unique_id=1441776385 instance=ExtResource("18_06k41")]
+transform = Transform3D(0.7855114, -0.61352324, 0.08100063, 3.4596515e-09, 0.13088953, 0.9913969, -0.61884725, -0.7787535, 0.102815226, -31.855076, 1.3426971, -160.05354)
+freeze = true
+
+[node name="HullPiece40" parent="Obstacles" unique_id=87448713 instance=ExtResource("19_06k41")]
+transform = Transform3D(-0.524937, 0, 0.8511411, 0, 1, 0, -0.8511411, 0, -0.524937, -60.981705, -1.3859129, -166.87427)
+freeze = true
+
+[node name="HullPiece41" parent="Obstacles" unique_id=2008076543 instance=ExtResource("19_06k41")]
+transform = Transform3D(-0.8587222, 0.46503016, -0.21527454, -0.51170194, -0.80071074, 0.3114867, -0.027521908, 0.37763688, 0.9255446, -73.56794, -10.084845, -152.21613)
+freeze = true
+
+[node name="HullPiece42" parent="Obstacles" unique_id=768241837 instance=ExtResource("19_06k41")]
+transform = Transform3D(0.1264342, 0.9256886, -0.35653186, -0.34243396, -0.29659277, -0.8914995, -0.9309958, 0.23480472, 0.27948797, -37.67559, -5.517192, -167.74257)
+freeze = true
+
+[node name="Wall20" parent="Obstacles" unique_id=1064849197 instance=ExtResource("21_kmry4")]
+transform = Transform3D(0.49999997, -0.7674328, 0.40130657, 0, 0.46338895, 0.8861551, -0.86602557, -0.4430775, 0.23169445, -59.691788, 0.49507523, -167.10564)
+
+[node name="Wall18" parent="Obstacles" unique_id=1606677818 instance=ExtResource("21_kmry4")]
+transform = Transform3D(1, 0, 0, 0, 0.4633889, 0.886155, 0, -0.886155, 0.4633889, -21.623932, 0.49507523, -187.24982)
+
+[node name="Tpipe58" parent="Obstacles" unique_id=56041252 instance=ExtResource("9_ul75j")]
+transform = Transform3D(0.679915, -0.7332909, 0, 0.7332909, 0.679915, 0, 0, 0, 1, 80.81142, 0, -164.2542)
+
+[node name="TubeSegment27" parent="Obstacles" unique_id=670098995 instance=ExtResource("10_4jlx7")]
+transform = Transform3D(0.9534015, 0, 0.30170435, 0, 1, 0, -0.30170435, 0, 0.9534015, 81.18376, 0, -162.3877)
+
+[node name="RadarDish47" parent="Obstacles" unique_id=1883662374 instance=ExtResource("6_2ld0w")]
+transform = Transform3D(-0.84488857, -0.44445598, 0.29769465, 0.53494227, -0.7019744, 0.47017935, 0, 0.55649865, 0.8308485, 82.75231, 0, -163.28497)
+
+[node name="AirTank67" parent="Obstacles" unique_id=795318392 instance=ExtResource("4_wp1u0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 82.685104, 0, -165.27989)
+
+[node name="AirTank68" parent="Obstacles" unique_id=937001950 instance=ExtResource("4_wp1u0")]
+transform = Transform3D(0.624166, 0, 0.7812917, 0, 1, 0, -0.7812917, 0, 0.624166, 81.81251, 0, -166.1641)
+
+[node name="Lpipe20" parent="Obstacles" unique_id=1766664937 instance=ExtResource("5_6fg3j")]
+transform = Transform3D(-0.3551395, 0, 0.93481344, 0, 1, 0, -0.93481344, 0, -0.3551395, 60.94105, 0, -139.06882)
+freeze = true
+
+[node name="2XAirTank30" parent="Obstacles" unique_id=1800004442 instance=ExtResource("11_32x38")]
+transform = Transform3D(0.9075504, 0, 0.41994318, 0, 1, 0, -0.41994318, 0, 0.9075504, 61.269955, -0.7483597, -156.1281)
+
+[node name="2XAirTank31" parent="Obstacles" unique_id=125643745 instance=ExtResource("11_32x38")]
+transform = Transform3D(0.32107586, 0, 0.94705343, 0, 1, 0, -0.94705343, 0, 0.32107586, 63.885925, -0.7483597, -157.17294)
+
+[node name="StraightPipe44" parent="Obstacles" unique_id=1423777898 instance=ExtResource("8_66v8m")]
+transform = Transform3D(0.7621827, 0.647362, 0, -0.647362, 0.7621827, 0, 0, 0, 1, 63.707718, 0, -159.32588)
+freeze = true
+
+[node name="AirTank69" parent="Obstacles" unique_id=1565133981 instance=ExtResource("4_wp1u0")]
+transform = Transform3D(0.9050573, 0, -0.42528966, 0, 1, 0, 0.42528966, 0, 0.9050573, 61.623795, 0, -157.5432)
+freeze = true
+
+[node name="2XAirTank32" parent="Obstacles" unique_id=169413759 instance=ExtResource("11_32x38")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 59.190926, 0.37651825, -164.16455)
+freeze = true
+
+[node name="2xRadarDish22" parent="Obstacles" unique_id=1038055061 instance=ExtResource("13_ul75j")]
+transform = Transform3D(0.03828448, -0.11901778, 0.99215376, -0.9982107, 0.041082345, 0.0434464, -0.045930896, -0.9920418, -0.117231995, 59.63875, 0, -161.3732)
+freeze = true
+
+[node name="2xSolarPanel11" parent="Obstacles" unique_id=190434369 instance=ExtResource("15_4jlx7")]
+transform = Transform3D(1, 0, 0, 0, -0.99746567, 0.07114938, 0, -0.07114938, -0.99746567, 66.63974, -0.9389887, -165.39944)
+freeze = true
+
+[node name="TubeSegment28" parent="Obstacles" unique_id=1689631976 instance=ExtResource("10_4jlx7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 66.2787, 0.35092735, -159.35693)
+freeze = true
+
+[node name="AirTank70" parent="Obstacles" unique_id=1244438710 instance=ExtResource("4_wp1u0")]
+transform = Transform3D(-0.96812147, 0, 0.25048155, 0, 1, 0, -0.25048155, 0, -0.96812147, 70.00731, 9.536743e-07, -146.61476)
+freeze = true
+
+[node name="RadarDish48" parent="Obstacles" unique_id=620951442 instance=ExtResource("6_2ld0w")]
+transform = Transform3D(0.61506903, -0.05797103, -0.7863393, 0.53494227, -0.7019743, 0.47017932, -0.579247, -0.7098388, -0.40075135, 64.980194, 0, -153.15839)
+freeze = true
+
+[node name="AirTank71" parent="Obstacles" unique_id=1065211355 instance=ExtResource("4_wp1u0")]
+transform = Transform3D(-0.7279883, 0, -0.68558973, 0, 1, 0, 0.68558973, 0, -0.7279883, 66.396835, 0, -151.75218)
+freeze = true
+
+[node name="RadarDish49" parent="Obstacles" unique_id=65275120 instance=ExtResource("6_2ld0w")]
+transform = Transform3D(-0.7563788, 0, 0.65413386, 0, 1, 0, -0.65413386, 0, -0.7563788, 56.173645, 0, -151.34616)
+freeze = true
+
+[node name="Tpipe59" parent="Obstacles" unique_id=1054537280 instance=ExtResource("9_ul75j")]
+transform = Transform3D(0.78437597, 0, -0.6202857, 0, 1, 0, 0.6202857, 0, 0.78437597, 56.6721, 0, -146.74599)
+
+[node name="StraightPipe45" parent="Obstacles" unique_id=77346973 instance=ExtResource("8_66v8m")]
+transform = Transform3D(1, 0, 0, 0, 0.16912587, 0.98559445, 0, -0.98559445, 0.16912587, 54.720192, 0, -146.74194)
+
+[node name="Tpipe60" parent="Obstacles" unique_id=1708136683 instance=ExtResource("9_ul75j")]
+transform = Transform3D(0.44350925, 0.8962698, 0, -0.8962698, 0.44350925, 0, 0, 0, 1, 55.22844, 0, -149.42087)
+
+[node name="Lpipe21" parent="Obstacles" unique_id=650396307 instance=ExtResource("5_6fg3j")]
+transform = Transform3D(-0.49304634, 0, -0.8700031, 0, 1, 0, 0.8700031, 0, -0.49304634, 59.104355, 0, -148.15083)
+freeze = true
+
+[node name="SteelBeam8" parent="Obstacles" unique_id=1168279954 instance=ExtResource("20_t67x2")]
+transform = Transform3D(0.88075024, 0, -0.47358102, 0, 1, 0, 0.47358102, 0, 0.88075024, 67.44491, 0, -149.4206)
+freeze = true
+
+[node name="SteelBeam9" parent="Obstacles" unique_id=1461947583 instance=ExtResource("20_t67x2")]
+transform = Transform3D(0.47358105, 0, 0.88075036, 0, 1, 0, -0.88075036, 0, 0.47358105, 66.44491, 0, -138.4206)
+freeze = true
+
+[node name="HullPiece43" parent="Obstacles" unique_id=443491076 instance=ExtResource("19_06k41")]
+transform = Transform3D(-0.4725833, 0.874469, -0.109402865, 0.13923006, -0.048497435, -0.98907197, -0.8702184, -0.48265094, -0.09883311, 47.686848, -1.3859129, -181.80559)
+freeze = true
+
+[node name="Lpipe36" parent="Obstacles" unique_id=1230782286 instance=ExtResource("5_6fg3j")]
+transform = Transform3D(-0.91213435, 0, 0.4098913, 0, 1, 0, -0.4098913, 0, -0.91213435, 49.23648, 0, -175.51872)
+freeze = true
+
+[node name="AirTank114" parent="Obstacles" unique_id=1325976260 instance=ExtResource("4_wp1u0")]
+transform = Transform3D(-0.86168236, 0, -0.507448, 0, 1, 0, 0.507448, 0, -0.86168236, 50.311504, 9.536743e-07, -187.26532)
+freeze = true
+
+[node name="AirTank115" parent="Obstacles" unique_id=1723913169 instance=ExtResource("4_wp1u0")]
+transform = Transform3D(-0.029980302, 0, -0.9995506, 0, 1, 0, 0.9995506, 0, -0.029980302, 44.12581, 0, -188.34503)
+freeze = true
+
+[node name="SteelBeam11" parent="Obstacles" unique_id=74007223 instance=ExtResource("20_t67x2")]
+transform = Transform3D(-0.28791216, 0, 0.95765686, 0, 1, 0, -0.95765686, 0, -0.28791216, 53.58666, 0, -178.95216)
+freeze = true
+
+[node name="Wall13" parent="Obstacles" unique_id=1777802946 instance=ExtResource("21_kmry4")]
+transform = Transform3D(1, 0, 0, 0, 0.4633889, 0.886155, 0, -0.886155, 0.4633889, 61.37607, 0.49507523, -152.24982)
 
 [node name="Wall11" parent="Obstacles" unique_id=1370039262 instance=ExtResource("21_kmry4")]
 transform = Transform3D(0.75835055, -0.57763743, 0.30205864, 0, 0.46338895, 0.8861551, -0.651847, -0.67201626, 0.35141128, 7.415394, 0.49507523, 11.469017)
@@ -1483,14 +2709,259 @@ transform = Transform3D(0.89896345, -0.21343678, 0.3825045, -0.3394569, 0.212419
 freeze = true
 
 [node name="Engine2" parent="Obstacles" unique_id=2065982021 instance=ExtResource("17_mdaqt")]
-transform = Transform3D(0.31578907, 0.8597246, -0.4014364, -0.9386798, 0.34479043, 0, 0.13841139, 0.37682012, 0.91588694, 40.84748, 0, -123.259384)
+transform = Transform3D(0.31578907, 0.8597246, -0.4014364, -0.9386798, 0.34479043, 0, 0.13841139, 0.37682012, 0.91588694, 53.84748, 0, -117.259384)
+freeze = true
+
+[node name="RadarDish44" parent="Obstacles" unique_id=1886522668 instance=ExtResource("6_2ld0w")]
+transform = Transform3D(-0.86648756, -0.39090478, 0.310472, 9.492989e-09, 0.62194073, 0.7830642, -0.49919876, 0.6785154, -0.53890383, 39.175434, 0, -158.13834)
+freeze = true
+
+[node name="SolarPanel28" parent="Obstacles" unique_id=73608147 instance=ExtResource("7_32x38")]
+transform = Transform3D(-0.9323418, 0.2938943, 0.21063025, 0.29753312, 0.9545947, -0.014942223, -0.20545788, 0.048738215, -0.97745174, 28.205154, -1.5422697, -160.01303)
+freeze = true
+
+[node name="SolarPanel32" parent="Obstacles" unique_id=416250035 instance=ExtResource("7_32x38")]
+transform = Transform3D(0.95906234, 0, 0.28319526, 0, 1, 0, -0.28319526, 0, 0.95906234, 60.148056, 0, -129.47186)
+freeze = true
+
+[node name="2XAirTank27" parent="Obstacles" unique_id=1926513239 instance=ExtResource("11_32x38")]
+transform = Transform3D(0.75147146, 0, 0.6597656, 0, 1, 0, -0.6597656, 0, 0.75147146, 53.953903, -0.7483597, -128.0647)
+
+[node name="2XAirTank28" parent="Obstacles" unique_id=116714965 instance=ExtResource("11_32x38")]
+transform = Transform3D(0.03973069, 0, 0.99921054, 0, 1, 0, -0.99921054, 0, 0.03973069, 56.16689, -0.7483597, -129.80759)
+
+[node name="StraightPipe43" parent="Obstacles" unique_id=46619357 instance=ExtResource("8_66v8m")]
+transform = Transform3D(0.7309807, 0.62086046, 0.28319526, -0.647362, 0.7621827, -1.4374225e-08, -0.21584651, -0.18332985, 0.9590622, 55.386272, 0, -131.82195)
+freeze = true
+
+[node name="AirTank62" parent="Obstacles" unique_id=1656497488 instance=ExtResource("4_wp1u0")]
+transform = Transform3D(0.9884463, 0, -0.15157132, 0, 1, 0, 0.15157132, 0, 0.9884463, 53.892506, 0, -129.52208)
+freeze = true
+
+[node name="2XAirTank29" parent="Obstacles" unique_id=1078721000 instance=ExtResource("11_32x38")]
+transform = Transform3D(0.95906234, 0, 0.28319526, 0, 1, 0, -0.28319526, 0, 0.95906234, 36.684105, 0.37651828, -141.18338)
+freeze = true
+
+[node name="2xRadarDish21" parent="Obstacles" unique_id=436284140 instance=ExtResource("13_ul75j")]
+transform = Transform3D(0.02370979, -0.39508697, 0.91833764, -0.99821085, 0.04108235, 0.0434464, -0.05489258, -0.9177247, -0.39340606, 37.904087, 0, -138.63312)
+freeze = true
+
+[node name="2xSolarPanel10" parent="Obstacles" unique_id=406896286 instance=ExtResource("15_4jlx7")]
+transform = Transform3D(0.9590622, -0.020149166, -0.28247756, 1.7851676e-09, -0.9974656, 0.07114938, -0.28319526, -0.06823668, -0.9566317, 43.478264, -0.9389887, -144.47719)
+freeze = true
+
+[node name="2xSolarPanel12" parent="Obstacles" unique_id=1510371182 instance=ExtResource("15_4jlx7")]
+transform = Transform3D(0.9590622, -0.020149166, -0.28247756, 1.7851676e-09, -0.9974656, 0.07114938, -0.28319526, -0.06823668, -0.9566317, 6.478264, -0.9389887, -234.47719)
+freeze = true
+
+[node name="TubeSegment25" parent="Obstacles" unique_id=539315668 instance=ExtResource("10_4jlx7")]
+transform = Transform3D(0.95906234, 0, 0.28319526, 0, 1, 0, -0.28319526, 0, 0.95906234, 57.843212, 0.35092738, -132.57979)
+freeze = true
+
+[node name="RadarDish45" parent="Obstacles" unique_id=1414230349 instance=ExtResource("6_2ld0w")]
+transform = Transform3D(0.42584947, -0.25662073, -0.86763924, 0.53494227, -0.7019743, 0.47017935, -0.7297185, -0.66436243, -0.16165797, 58.353256, 0, -126.26727)
+freeze = true
+
+[node name="AirTank63" parent="Obstacles" unique_id=3758901 instance=ExtResource("4_wp1u0")]
+transform = Transform3D(-0.50403035, 0, -0.863686, 0, 1, 0, 0.863686, 0, -0.50403035, 60.110138, 0, -125.319824)
+freeze = true
+
+[node name="AirTank64" parent="Obstacles" unique_id=1058317140 instance=ExtResource("4_wp1u0")]
+transform = Transform3D(-0.8664875, 0, 0.49919873, 0, 1, 0, -0.49919873, 0, -0.8664875, 37.345226, 0, -160.2793)
+freeze = true
+
+[node name="Tpipe56" parent="Obstacles" unique_id=160636790 instance=ExtResource("9_ul75j")]
+transform = Transform3D(-0.09500192, 0.10245992, 0.99019027, 0.7332909, 0.679915, -3.0785483e-08, -0.6732452, 0.7260973, -0.1397262, 33.084423, 0, -157.9104)
+freeze = true
+
+[node name="TubeSegment26" parent="Obstacles" unique_id=624362111 instance=ExtResource("10_4jlx7")]
+transform = Transform3D(-0.43195984, 0, 0.9018928, 0, 1, 0, -0.9018928, 0, -0.43195984, 34.880585, 0, -158.5399)
+freeze = true
+
+[node name="Tpipe57" parent="Obstacles" unique_id=238754759 instance=ExtResource("9_ul75j")]
+transform = Transform3D(-0.13972619, 0, 0.99019015, 0, 1, 0, -0.99019015, 0, -0.13972619, 36.25369, 0, -158.83888)
+freeze = true
+
+[node name="RadarDish46" parent="Obstacles" unique_id=611905254 instance=ExtResource("6_2ld0w")]
+transform = Transform3D(0.11805308, 0.61314166, 0.78110236, 0.5349423, -0.70197433, 0.4701794, 0.83660066, 0.36233854, -0.41086558, 33.772953, 0, -159.96768)
+freeze = true
+
+[node name="AirTank65" parent="Obstacles" unique_id=444187398 instance=ExtResource("4_wp1u0")]
+transform = Transform3D(-0.13972619, 0, 0.99019015, 0, 1, 0, -0.99019015, 0, -0.13972619, 31.806988, 0, -159.62239)
+freeze = true
+
+[node name="AirTank66" parent="Obstacles" unique_id=1009388400 instance=ExtResource("4_wp1u0")]
+transform = Transform3D(-0.8608397, 0, 0.5088762, 0, 1, 0, -0.5088762, 0, -0.8608397, 31.053392, 0, -158.63481)
+freeze = true
+
+[node name="HullPiece21" parent="Obstacles" unique_id=2077006562 instance=ExtResource("19_06k41")]
+transform = Transform3D(-0.27878448, -0.18818697, -0.94173485, -0.51170194, -0.8007109, 0.31148672, -0.8126748, 0.5687251, 0.12693009, 36.65966, 0.6140871, -149.11604)
+freeze = true
+
+[node name="HullPiece22" parent="Obstacles" unique_id=313007466 instance=ExtResource("19_06k41")]
+transform = Transform3D(0.70076036, 0.7105378, 0.063804746, 0.13923004, -0.04849743, -0.98907185, -0.6996785, 0.7019858, -0.13291323, 35.548046, -1.3859129, -155.7442)
+freeze = true
+
+[node name="HullPiece23" parent="Obstacles" unique_id=488627429 instance=ExtResource("19_06k41")]
+transform = Transform3D(0.70076036, 0.7105378, 0.063804746, 0.13923004, -0.04849743, -0.98907185, -0.6996785, 0.7019858, -0.13291323, 35.548046, -1.3859129, -155.7442)
+freeze = true
+
+[node name="Wall12" parent="Obstacles" unique_id=1476938833 instance=ExtResource("23_ag07g")]
+transform = Transform3D(0.8431852, -0.5335195, 0.06630212, 0, 0.123324424, 0.9923665, -0.53762347, -0.83674854, 0.1039853, 63.269035, 0.58880615, -134.3209)
+freeze = true
+
+[node name="Engine3" parent="Obstacles" unique_id=419504706 instance=ExtResource("17_mdaqt")]
+transform = Transform3D(0.3420588, 0.931243, -0.12562765, -0.9386798, 0.34479046, 3.3680845e-09, 0.04331516, 0.117924064, 0.99207747, 31.385954, 0, -154.14955)
 freeze = true
 
 [node name="StraightPipe41" parent="Obstacles" unique_id=530787596 instance=ExtResource("8_66v8m")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -22.258615, 0, -108.96178)
 
+[node name="RadarDish65" parent="Obstacles" unique_id=795565577 instance=ExtResource("6_2ld0w")]
+transform = Transform3D(0.32338887, 0.7409874, -0.5885215, -6.184459e-09, 0.62194073, 0.7830642, 0.94626623, -0.25323427, 0.20112869, -16.19042, 0, -181.64413)
+freeze = true
+
+[node name="Tpipe81" parent="Obstacles" unique_id=1893659455 instance=ExtResource("9_ul75j")]
+transform = Transform3D(0.29722738, -0.22809212, -0.92716235, 0.92970896, -0.15204096, 0.33544755, -0.21747977, -0.9616951, 0.16686867, -18.801424, 0, -180.16808)
+freeze = true
+
+[node name="RadarDish66" parent="Obstacles" unique_id=1437320931 instance=ExtResource("6_2ld0w")]
+transform = Transform3D(-0.9649067, 0, 0.26259333, 0, 1, 0, -0.26259333, 0, -0.9649067, -6.0863667, 0, -179.1133)
+
+[node name="Lpipe29" parent="Obstacles" unique_id=1786921892 instance=ExtResource("5_6fg3j")]
+transform = Transform3D(0.26517776, -0.04095649, -0.9633293, 0.14647347, 0.98921305, -0.0017368858, 0.9530091, -0.14064163, 0.2683162, -18.380186, 0.18427096, -178.74062)
+freeze = true
+
+[node name="AirTank93" parent="Obstacles" unique_id=1973276995 instance=ExtResource("4_wp1u0")]
+transform = Transform3D(0.774503, 0, -0.63257027, 0, 1, 0, 0.63257027, 0, 0.774503, -19.940536, 9.536743e-07, -179.29355)
+freeze = true
+
+[node name="Tpipe82" parent="Obstacles" unique_id=1396096551 instance=ExtResource("9_ul75j")]
+transform = Transform3D(0.3473775, 0, -0.9377254, 0, 1, 0, 0.9377254, 0, 0.3473775, -18.059156, 0, -176.54858)
+freeze = true
+
+[node name="AirTank94" parent="Obstacles" unique_id=970809374 instance=ExtResource("4_wp1u0")]
+transform = Transform3D(0.32338893, 0, -0.94626623, 0, 1, 0, 0.94626623, 0, 0.32338893, -16.222826, 0, -178.8277)
+freeze = true
+
+[node name="Tpipe83" parent="Obstacles" unique_id=917824640 instance=ExtResource("9_ul75j")]
+transform = Transform3D(-0.37182966, 0.40101957, -0.83721334, 0.7332909, 0.679915, -6.4909784e-08, 0.5692339, -0.6139208, -0.5468767, -11.456305, 0, -177.8048)
+freeze = true
+
+[node name="TubeSegment39" parent="Obstacles" unique_id=1430521234 instance=ExtResource("10_4jlx7")]
+transform = Transform3D(-0.2688021, 0, -0.9631953, 0, 1, 0, 0.9631953, 0, -0.2688021, -13.222586, 0, -178.5138)
+freeze = true
+
+[node name="Tpipe84" parent="Obstacles" unique_id=1537051251 instance=ExtResource("9_ul75j")]
+transform = Transform3D(-0.5468766, 0, -0.83721316, 0, 1, 0, 0.83721316, 0, -0.5468766, -14.452848, 0, -179.19296)
+freeze = true
+
+[node name="RadarDish67" parent="Obstacles" unique_id=533061728 instance=ExtResource("6_2ld0w")]
+transform = Transform3D(0.46205, -0.2228454, -0.85839957, 0.5349423, -0.70197433, 0.47017938, -0.707352, -0.67644054, -0.20513767, -13.329199, 0, -176.70988)
+freeze = true
+
+[node name="AirTank95" parent="Obstacles" unique_id=1659510465 instance=ExtResource("4_wp1u0")]
+transform = Transform3D(-0.5468766, 0, -0.83721316, 0, 1, 0, 0.83721316, 0, -0.5468766, -11.622255, 0, -175.67517)
+freeze = true
+
+[node name="RadarDish68" parent="Obstacles" unique_id=553327999 instance=ExtResource("6_2ld0w")]
+transform = Transform3D(-0.80100316, -0.24434812, 0.5465237, 0.53494227, -0.70197433, 0.47017938, 0.2687583, 0.6689737, 0.69299567, -18.112505, 0, -171.24686)
+freeze = true
+
+[node name="AirTank96" parent="Obstacles" unique_id=1225210147 instance=ExtResource("4_wp1u0")]
+transform = Transform3D(0.9480577, 0, 0.31809902, 0, 1, 0, -0.31809902, 0, 0.9480577, -18.810816, 0, -173.11678)
+freeze = true
+
+[node name="SolarPanel48" parent="Obstacles" unique_id=1936554861 instance=ExtResource("7_32x38")]
+transform = Transform3D(0.9953223, 0, -0.09661013, 0, 1, 0, 0.09661013, 0, 0.9953223, -36.418087, 0, -172.59639)
+freeze = true
+
+[node name="StraightPipe61" parent="Obstacles" unique_id=1089542840 instance=ExtResource("8_66v8m")]
+transform = Transform3D(0.75861746, 0.6443338, -0.09661013, -0.647362, 0.7621827, -1.31351365e-08, 0.07363458, 0.062541716, 0.9953224, -40.319912, 0, -176.59444)
+freeze = true
+
+[node name="TubeSegment40" parent="Obstacles" unique_id=929808169 instance=ExtResource("10_4jlx7")]
+transform = Transform3D(0.9953223, 0, -0.09661013, 0, 1, 0, 0.09661013, 0, 0.9953223, -37.757965, 0.35092735, -176.37694)
+freeze = true
+
+[node name="2XAirTank44" parent="Obstacles" unique_id=1888836453 instance=ExtResource("11_32x38")]
+transform = Transform3D(-0.9089817, 0, -0.41683605, 0, 1, 0, 0.41683605, 0, -0.9089817, -34.868122, -0.7483597, -165.44629)
+
+[node name="TubeSegment41" parent="Obstacles" unique_id=806667428 instance=ExtResource("10_4jlx7")]
+transform = Transform3D(-0.6866182, 0, 0.72701824, 0, 1, 0, -0.72701824, 0, -0.6866182, -38.098843, 0.35092735, -165.68631)
+freeze = true
+
+[node name="RadarDish69" parent="Obstacles" unique_id=1070720590 instance=ExtResource("6_2ld0w")]
+transform = Transform3D(-0.8434408, -0.4762618, 0.24856123, 0.5349423, -0.7019744, 0.47017944, -0.049444795, 0.5295343, 0.84684616, -32.70081, 0, -168.99832)
+freeze = true
+
+[node name="AirTank97" parent="Obstacles" unique_id=1608024180 instance=ExtResource("4_wp1u0")]
+transform = Transform3D(0.9982862, 0, -0.058522403, 0, 1, 0, 0.058522403, 0, 0.9982862, -32.65117, 0, -170.99374)
+freeze = true
+
+[node name="AirTank98" parent="Obstacles" unique_id=1280555107 instance=ExtResource("4_wp1u0")]
+transform = Transform3D(0.31276593, 0, -0.9498303, 0, 1, 0, 0.9498303, 0, 0.31276593, -10.4047985, 0, -175.92218)
+freeze = true
+
+[node name="HullPiece34" parent="Obstacles" unique_id=1546763442 instance=ExtResource("19_06k41")]
+transform = Transform3D(0.7833898, 0, 0.62153065, 0, 1, 0, -0.62153065, 0, 0.7833898, -9.779505, -1.3859129, -181.57031)
+freeze = true
+
+[node name="HullPiece35" parent="Obstacles" unique_id=469127114 instance=ExtResource("19_06k41")]
+transform = Transform3D(-0.07380992, -0.32023713, -0.9444576, -0.51170194, -0.80071074, 0.3114867, -0.8559867, 0.5062715, -0.104765534, -11.2456455, -1.3859129, -188.35675)
+freeze = true
+
+[node name="SteelBeam10" parent="Obstacles" unique_id=676498324 instance=ExtResource("20_t67x2")]
+transform = Transform3D(-0.76540464, 0, -0.6435494, 0, 1, 0, 0.6435494, 0, -0.76540464, -16.10615, 0, -192.59546)
+freeze = true
+
+[node name="StraightPipe62" parent="Obstacles" unique_id=1522701404 instance=ExtResource("8_66v8m")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.2586155, 0, -175.96178)
+
 [node name="ShipModel5" parent="Obstacles" unique_id=290453115 instance=ExtResource("18_06k41")]
 transform = Transform3D(1, 0, 0, 0, -0.13374405, -0.9910159, 0, 0.9910159, -0.13374405, 28.683918, -2.212246, -94.022675)
+
+[node name="RadarDish89" parent="Obstacles" unique_id=1358132766 instance=ExtResource("6_2ld0w")]
+transform = Transform3D(0.98625684, 0, 0.16521984, 0, 1, 0, -0.16521984, 0, 0.98625684, -8.585453, 0, -243.14085)
+
+[node name="RadarDish90" parent="Obstacles" unique_id=1241376809 instance=ExtResource("6_2ld0w")]
+transform = Transform3D(0.9862567, -0.12937771, 0.10275693, -4.5955644e-09, 0.62194073, 0.7830643, -0.16521981, -0.7723025, 0.6133933, -18.09048, 0, -251.9947)
+
+[node name="Tpipe108" parent="Obstacles" unique_id=1518831741 instance=ExtResource("9_ul75j")]
+transform = Transform3D(-0.16625553, -0.98598474, 0.013888948, 0.9297091, -0.15204096, 0.3354477, -0.3286346, 0.06868259, 0.94195664, -17.058626, 0, -249.17844)
+
+[node name="Lpipe38" parent="Obstacles" unique_id=1252594172 instance=ExtResource("5_6fg3j")]
+transform = Transform3D(0.9834446, -0.14542955, 0.10810556, 0.14647353, 0.9892131, -0.0017368533, -0.10668692, 0.017542705, 0.99413776, -15.581665, 0.18427098, -249.36195)
+
+[node name="AirTank121" parent="Obstacles" unique_id=17622870 instance=ExtResource("4_wp1u0")]
+transform = Transform3D(0.750088, 0, 0.66133803, 0, 1, 0, -0.66133803, 0, 0.750088, -16.380959, 9.536743e-07, -247.91226)
+
+[node name="Tpipe109" parent="Obstacles" unique_id=108169328 instance=ExtResource("9_ul75j")]
+transform = Transform3D(0.98173046, 0, 0.19027784, 0, 1, 0, -0.19027784, 0, 0.98173046, -13.366619, 0, -249.3223)
+
+[node name="SolarPanel54" parent="Obstacles" unique_id=563255454 instance=ExtResource("7_32x38")]
+transform = Transform3D(0.98625684, 0, 0.16521984, 0, 1, 0, -0.16521984, 0, 0.98625684, -13.507755, 0, -245.75513)
+
+[node name="AirTank122" parent="Obstacles" unique_id=1751512381 instance=ExtResource("4_wp1u0")]
+transform = Transform3D(0.98625684, 0, 0.16521984, 0, 1, 0, -0.16521984, 0, 0.98625684, -15.316811, 0, -251.50476)
+
+[node name="Tpipe110" parent="Obstacles" unique_id=1887098166 instance=ExtResource("9_ul75j")]
+transform = Transform3D(0.8121751, 0, -0.5834137, 0, 1, 0, 0.5834137, 0, 0.8121751, -16.424767, 0, -243.58824)
+
+[node name="StraightPipe76" parent="Obstacles" unique_id=1404487612 instance=ExtResource("8_66v8m")]
+transform = Transform3D(0.9989338, -0.04549992, 0.0078076962, -4.7117226e-09, 0.1691259, 0.9855947, -0.046164885, -0.98454356, 0.16894558, -18.374413, 0, -243.4941)
+
+[node name="Tpipe111" parent="Obstacles" unique_id=341894370 instance=ExtResource("9_ul75j")]
+transform = Transform3D(0.44303647, 0.8953143, 0.04616493, -0.89627, 0.4435093, -2.7395933e-08, -0.020474523, -0.04137616, 0.9989339, -17.990377, 0, -246.19362)
+
+[node name="Lpipe39" parent="Obstacles" unique_id=612912575 instance=ExtResource("5_6fg3j")]
+transform = Transform3D(-0.40668887, 0, -0.91356665, 0, 1, 0, 0.91356665, 0, -0.40668887, -24.948952, 0, -253.6395)
+
+[node name="AirTank123" parent="Obstacles" unique_id=741590157 instance=ExtResource("4_wp1u0")]
+transform = Transform3D(-0.40668887, 0, -0.91356665, 0, 1, 0, 0.91356665, 0, -0.40668887, -23.977352, 0, -252.44678)
+
+[node name="ShipModel13" parent="Obstacles" unique_id=134892401 instance=ExtResource("18_06k41")]
+transform = Transform3D(1, 0, 0, 0, -0.13374405, -0.9910159, 0, 0.9910159, -0.13374405, -20.316082, -2.212246, -251.02267)
 
 [node name="SteelBeam4" parent="Obstacles" unique_id=926758246 instance=ExtResource("20_t67x2")]
 transform = Transform3D(0.618038, 0, -0.78614825, 0, 1, 0, 0.78614825, 0, 0.618038, -12.1380415, -1.64149, -1.1641731)
@@ -1507,6 +2978,15 @@ freeze = true
 [node name="SteelBeam6" parent="Obstacles" unique_id=1432203926 instance=ExtResource("20_t67x2")]
 transform = Transform3D(-0.39943722, 0, -0.91676056, 0, 1, 0, 0.91676056, 0, -0.39943722, 14.164216, -1.64149, -1.1641731)
 freeze = true
+
+[node name="FuelTank" parent="Obstacles" unique_id=1650509228 instance=ExtResource("11_s8y5b")]
+transform = Transform3D(0.8660254, 0, 0.5, 0, 1, 0, -0.5, 0, 0.8660254, -12, -2, -226)
+
+[node name="FuelTank2" parent="Obstacles" unique_id=1429485995 instance=ExtResource("11_s8y5b")]
+transform = Transform3D(-0.86602545, 0, 0.5, 0, 1, 0, -0.5, 0, -0.86602545, 9, -2, -205)
+
+[node name="FuelTank3" parent="Obstacles" unique_id=805153426 instance=ExtResource("11_s8y5b")]
+transform = Transform3D(-0.5, 0, 0.8660254, 0, 1, 0, -0.8660254, 0, -0.5, 36, -2, -178)
 
 [node name="Walls" type="Node3D" parent="." unique_id=116988649]
 
@@ -1584,8 +3064,64 @@ axis_lock_angular_x = true
 axis_lock_angular_y = true
 axis_lock_angular_z = true
 
+[node name="Wall23" parent="Walls" unique_id=1412621543 instance=ExtResource("21_kmry4")]
+transform = Transform3D(0.62219965, -0.7759927, 0.10345361, 0.24108548, 0.06420326, -0.96837777, 0.74481225, 0.62746537, 0.22702773, 6.7120476, 0, -178.65515)
+axis_lock_linear_x = true
+axis_lock_linear_z = true
+axis_lock_angular_x = true
+axis_lock_angular_y = true
+axis_lock_angular_z = true
+
+[node name="Wall24" parent="Walls" unique_id=54402136 instance=ExtResource("21_kmry4")]
+transform = Transform3D(0.6866328, -0.6889793, -0.23204023, 0.1337477, 0.4334388, -0.89120257, 0.71459556, 0.5808942, 0.38976282, 9.290413, 0, -175.59705)
+axis_lock_linear_x = true
+axis_lock_linear_z = true
+axis_lock_angular_x = true
+axis_lock_angular_y = true
+axis_lock_angular_z = true
+
 [node name="Wall16" parent="Walls" unique_id=638511880 instance=ExtResource("23_ag07g")]
 transform = Transform3D(0.4139309, -0.7947397, -0.443903, -0.14429516, 0.42419183, -0.8940023, 0.89879924, 0.4341083, 0.06090896, -31.321476, 0, -54.64898)
+axis_lock_linear_x = true
+axis_lock_linear_z = true
+axis_lock_angular_x = true
+axis_lock_angular_y = true
+axis_lock_angular_z = true
+
+[node name="Wall38" parent="Walls" unique_id=361271688 instance=ExtResource("21_kmry4")]
+transform = Transform3D(0.9561262, 0.15540469, 0.2483386, 0.24108547, 0.06420326, -0.96837777, -0.1664347, 0.9857622, 0.02392041, -31.398254, 4.0984535, -157.59854)
+axis_lock_linear_x = true
+axis_lock_linear_z = true
+axis_lock_angular_x = true
+axis_lock_angular_y = true
+axis_lock_angular_z = true
+
+[node name="Wall39" parent="Walls" unique_id=652782276 instance=ExtResource("21_kmry4")]
+transform = Transform3D(0.9621743, 0.15857956, 0.22152437, 0.1337477, 0.43343875, -0.89120257, -0.23734376, 0.88712066, 0.39583412, -27.35785, 2.2737107, -159.50786)
+axis_lock_linear_x = true
+axis_lock_linear_z = true
+axis_lock_angular_x = true
+axis_lock_angular_y = true
+axis_lock_angular_z = true
+
+[node name="Wall40" parent="Walls" unique_id=1513488937 instance=ExtResource("23_ag07g")]
+transform = Transform3D(0.98534846, -0.021421015, -0.1692028, -0.14429516, 0.42419183, -0.8940023, 0.09092489, 0.905319, 0.4148858, -45.805206, -2.4530177, -151.39708)
+axis_lock_linear_x = true
+axis_lock_linear_z = true
+axis_lock_angular_x = true
+axis_lock_angular_y = true
+axis_lock_angular_z = true
+
+[node name="Wall22" parent="Walls" unique_id=2020070514 instance=ExtResource("23_ag07g")]
+transform = Transform3D(0.4139309, -0.7947397, -0.443903, -0.14429516, 0.42419183, -0.8940023, 0.89879924, 0.4341083, 0.06090896, 64.67853, 0, -147.64899)
+axis_lock_linear_x = true
+axis_lock_linear_z = true
+axis_lock_angular_x = true
+axis_lock_angular_y = true
+axis_lock_angular_z = true
+
+[node name="Wall36" parent="Walls" unique_id=1075216596 instance=ExtResource("23_ag07g")]
+transform = Transform3D(0.9282404, -0.2550049, -0.27081773, -0.14429516, 0.42419183, -0.8940023, 0.3428537, 0.86892676, 0.35695595, 45.81218, 0, -184.2286)
 axis_lock_linear_x = true
 axis_lock_linear_z = true
 axis_lock_angular_x = true
@@ -1634,6 +3170,102 @@ axis_lock_angular_z = true
 
 [node name="Wall21" parent="Walls" unique_id=69470243 instance=ExtResource("22_ag07g")]
 transform = Transform3D(-0.6594186, 0.74915856, 0.06267926, -0.2953169, -0.33480725, 0.8948139, 0.6913431, 0.5715466, 0.4420173, 43.402138, 0.13006425, -60.29867)
+axis_lock_linear_x = true
+axis_lock_linear_z = true
+axis_lock_angular_x = true
+axis_lock_angular_y = true
+axis_lock_angular_z = true
+
+[node name="Wall35" parent="Walls" unique_id=1016187496 instance=ExtResource("23_ag07g")]
+transform = Transform3D(-0.50017405, -0.8108122, -0.30398935, -0.14429516, 0.42419183, -0.8940023, 0.85381776, -0.40329254, -0.32916605, 39.228996, 0, -227.84421)
+axis_lock_linear_x = true
+axis_lock_linear_z = true
+axis_lock_angular_x = true
+axis_lock_angular_y = true
+axis_lock_angular_z = true
+
+[node name="Wall37" parent="Walls" unique_id=1365330685 instance=ExtResource("22_ag07g")]
+transform = Transform3D(-0.6594186, 0.74915856, 0.06267926, -0.2953169, -0.33480725, 0.8948139, 0.6913431, 0.5715466, 0.4420173, 43.402138, 0.13006425, -252.29868)
+axis_lock_linear_x = true
+axis_lock_linear_z = true
+axis_lock_angular_x = true
+axis_lock_angular_y = true
+axis_lock_angular_z = true
+
+[node name="Wall25" parent="Walls" unique_id=1834417782 instance=ExtResource("21_kmry4")]
+transform = Transform3D(0.4820893, -0.8739197, 0.06207951, 0.24108548, 0.06420327, -0.96837777, 0.84229916, 0.48181084, 0.24164103, 56.149834, 0, -185.46652)
+axis_lock_linear_x = true
+axis_lock_linear_z = true
+axis_lock_angular_x = true
+axis_lock_angular_y = true
+axis_lock_angular_z = true
+
+[node name="Wall26" parent="Walls" unique_id=907940884 instance=ExtResource("21_kmry4")]
+transform = Transform3D(0.85451704, -0.50588924, -0.11779852, 0.1337477, 0.43343875, -0.8912025, 0.50190836, 0.74579257, 0.43804246, 60.511665, 0, -183.46745)
+axis_lock_linear_x = true
+axis_lock_linear_z = true
+axis_lock_angular_x = true
+axis_lock_angular_y = true
+axis_lock_angular_z = true
+
+[node name="Wall27" parent="Walls" unique_id=275324060 instance=ExtResource("23_ag07g")]
+transform = Transform3D(0.25006387, -0.8585017, -0.44770846, -0.14429513, 0.42419183, -0.8940023, 0.9574167, 0.28815985, -0.017802626, 53.8683, 0, -194.34645)
+axis_lock_linear_x = true
+axis_lock_linear_z = true
+axis_lock_angular_x = true
+axis_lock_angular_y = true
+axis_lock_angular_z = true
+
+[node name="Wall28" parent="Walls" unique_id=54924324 instance=ExtResource("21_kmry4")]
+transform = Transform3D(0.6520177, 0.6313537, 0.41983977, 0.13251385, 0.45031664, -0.88298076, -0.746534, 0.6313537, 0.20995128, 40.171753, -0.13006425, -209.4704)
+axis_lock_linear_x = true
+axis_lock_linear_z = true
+axis_lock_angular_x = true
+axis_lock_angular_y = true
+axis_lock_angular_z = true
+
+[node name="Wall29" parent="Walls" unique_id=960041278 instance=ExtResource("22_ag07g")]
+transform = Transform3D(0.022574037, 0.93387955, 0.35687435, -0.2953169, -0.33480725, 0.8948139, 0.9551327, -0.12559062, 0.2682325, 39.527237, 0.13006425, -214.58923)
+axis_lock_linear_x = true
+axis_lock_linear_z = true
+axis_lock_angular_x = true
+axis_lock_angular_y = true
+axis_lock_angular_z = true
+
+[node name="Wall30" parent="Walls" unique_id=390129789 instance=ExtResource("21_kmry4")]
+transform = Transform3D(-0.24765939, 0.96884346, 0.0025771149, 0.2410855, 0.06420326, -0.9683779, -0.93837255, -0.2392064, -0.24947467, -54.91739, 0, -233.43462)
+axis_lock_linear_x = true
+axis_lock_linear_z = true
+axis_lock_angular_x = true
+axis_lock_angular_y = true
+axis_lock_angular_z = true
+
+[node name="Wall31" parent="Walls" unique_id=1484763274 instance=ExtResource("21_kmry4")]
+transform = Transform3D(-0.6954966, 0.68167675, 0.22715837, 0.13374773, 0.43343875, -0.89120245, -0.70597166, -0.5894465, -0.39262813, -52.613197, 0, -236.4945)
+axis_lock_linear_x = true
+axis_lock_linear_z = true
+axis_lock_angular_x = true
+axis_lock_angular_y = true
+axis_lock_angular_z = true
+
+[node name="Wall32" parent="Walls" unique_id=1858550298 instance=ExtResource("23_ag07g")]
+transform = Transform3D(-0.2500638, 0.85850173, 0.44770852, -0.14429516, 0.42419198, -0.8940027, -0.9574168, -0.28815985, 0.017802708, -51.17295, 0, -213.96893)
+axis_lock_linear_x = true
+axis_lock_linear_z = true
+axis_lock_angular_x = true
+axis_lock_angular_y = true
+axis_lock_angular_z = true
+
+[node name="Wall33" parent="Walls" unique_id=1214998446 instance=ExtResource("21_kmry4")]
+transform = Transform3D(-0.6520177, -0.6313537, -0.41983974, 0.13251387, 0.45031688, -0.88298124, 0.74653393, -0.63135386, -0.20995137, -37.476406, -0.13006425, -198.845)
+axis_lock_linear_x = true
+axis_lock_linear_z = true
+axis_lock_angular_x = true
+axis_lock_angular_y = true
+axis_lock_angular_z = true
+
+[node name="Wall34" parent="Walls" unique_id=1213482670 instance=ExtResource("22_ag07g")]
+transform = Transform3D(-0.022574067, -0.93387955, -0.3568743, -0.29531687, -0.33480725, 0.89481384, -0.95513284, 0.12559046, -0.26823255, -36.831886, 0.13006426, -193.72615)
 axis_lock_linear_x = true
 axis_lock_linear_z = true
 axis_lock_angular_x = true
@@ -1692,5 +3324,7 @@ shape = SubResource("BoxShape3D_ynnpp")
 [connection signal="body_entered" from="ObstacleDestroyer" to="ObstacleDestroyer" method="_on_body_entered"]
 
 [editable path="MovingObstacles/MovingObstacles"]
+[editable path="MovingObstacles/MovingObstacles4"]
+[editable path="MovingObstacles/MovingObstacles5"]
 [editable path="MovingObstacles/MovingObstacles2"]
 [editable path="MovingObstacles/MovingObstacles3"]

@@ -20,7 +20,7 @@
 
 [node name="Node3D" type="Node3D" unique_id=599412236]
 
-[node name="Janitor Model" parent="." unique_id=2022574152 instance=ExtResource("1_fwqhj")]
+[node name="Janitor Player 1" parent="." unique_id=637967606 instance=ExtResource("1_fwqhj")]
 
 [node name="Tube Segment" parent="." unique_id=599646913 instance=ExtResource("2_16enq")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.6770054, 0, -0.16219401)
@@ -35,7 +35,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.3947923, 0, -0.16219401)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.0848756, 0, -0.0684315)
 
 [node name="Solar Panel" parent="." unique_id=129580980 instance=ExtResource("4_46h3x")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.4288032, 0, -1.0776718)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.4288032, 0, -5.253028)
 
 [node name="Radar Dish" parent="." unique_id=1524321552 instance=ExtResource("5_7vd43")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.7732048, 1.203681, 0.040421963)

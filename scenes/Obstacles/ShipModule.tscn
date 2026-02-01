@@ -12,6 +12,6 @@ axis_lock_linear_y = true
 [node name="Ship_Module" parent="." unique_id=479958842 instance=ExtResource("1_1eagu")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.4021443, 0, -2.4097939)
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Ship_Module" unique_id=1404710586]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.04069805, 0)
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1404710586]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.4021443, -0.04069805, -2.4097939)
 shape = SubResource("CylinderShape3D_m52sj")

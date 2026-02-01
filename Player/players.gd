@@ -8,6 +8,7 @@ static var instance: Players
 @export var starting_oxygen_time: float
 @export var damaged_oxygen_time_loss: float
 @export var damage_cooldown: float
+@export var bump_sound: AudioStream
 
 @onready var tether: Tether = $Tether
 
@@ -42,6 +43,7 @@ func _on_body_entered(body: Node, sender: NodePath) -> void:
 	if current_time - time_last_damaged >= damage_cooldown and body.get_parent() is not Players:
 		time_last_damaged = current_time
 		oxygen_time -= damaged_oxygen_time_loss
+		Sound.play(bump_sound)
 
 
 func get_distance_of_tank() -> float:

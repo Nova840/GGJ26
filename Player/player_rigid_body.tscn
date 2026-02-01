@@ -42,7 +42,7 @@ mesh = SubResource("BoxMesh_q3lat")
 [node name="Janitor Model" parent="." unique_id=1772564531 instance=ExtResource("2_gljh3")]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 1.25)
 
-[node name="Skeleton3D" parent="Janitor Model/Janitor/Janitor_Armature" parent_id_path=PackedInt32Array(1772564531, 2098501599) index="0" unique_id=1743191971]
+[node name="Skeleton3D" parent="Janitor Model/Janitor/Janitor_Armature" parent_id_path=PackedInt32Array(1772564531, 1737590953) index="0" unique_id=1610050293]
 bones/1/rotation = Quaternion(0.042347807, 1.1910233e-07, 5.0482516e-09, 0.99910295)
 bones/2/position = Vector3(2.1447375e-17, 0.0011498885, -8.995681e-11)
 bones/2/rotation = Quaternion(-0.20098504, 1.9040277e-14, -4.791856e-08, 0.9795943)
@@ -166,7 +166,7 @@ bones/54/position = Vector3(8.073754e-11, 0.0016105531, -4.073933e-10)
 bones/54/rotation = Quaternion(0.26919007, -0.01949194, 0.0654153, 0.9606652)
 bones/54/scale = Vector3(1.0000001, 1, 0.9999998)
 
-[node name="AnimationPlayer" parent="Janitor Model" index="1" unique_id=1976128526]
+[node name="AnimationPlayer" parent="Janitor Model" index="1" unique_id=1855215156]
 script = ExtResource("3_a2slk")
 
 [node name="LPipeRotatePoint" type="Node3D" parent="Janitor Model" unique_id=1005062277]

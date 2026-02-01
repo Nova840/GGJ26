@@ -2,14 +2,25 @@
 
 [ext_resource type="Script" uid="uid://bt4flonvff3qa" path="res://Player/players.gd" id="1_34lnl"]
 [ext_resource type="PackedScene" uid="uid://cearjmrpr23g5" path="res://Player/player_rigid_body.tscn" id="2_34lnl"]
+[ext_resource type="AudioStream" uid="uid://ddwvbgjbn4oea" path="res://Music/Space_Thump_1.mp3" id="2_hfmoq"]
 [ext_resource type="Script" uid="uid://fe81yhyqb5j6" path="res://Player/tether.gd" id="2_q3lat"]
+[ext_resource type="AudioStream" uid="uid://fn2kwl2k43am" path="res://Music/Space_Thump_2.mp3" id="3_jsfkk"]
 [ext_resource type="Material" uid="uid://cnn4w3wbhivf2" path="res://Player/Player_1_Mat.tres" id="3_ofj18"]
 [ext_resource type="Script" uid="uid://cy6iwl5cvohu2" path="res://Player/camera_point.gd" id="3_ow8rm"]
 [ext_resource type="Material" uid="uid://bo7q5qm7hr5ea" path="res://Player/Player_2_Mat.tres" id="4_3wvmt"]
 [ext_resource type="PackedScene" uid="uid://cpajenxkvx0y" path="res://Models/Air Tank.fbx" id="4_a1q3i"]
-[ext_resource type="Material" path="res://Textures/Player_2_Mat.tres" id="5_6nogq"]
+[ext_resource type="AudioStream" uid="uid://di4k2slgb6ngt" path="res://Music/Space_Thump_3.mp3" id="4_yp6lx"]
+[ext_resource type="Material" uid="uid://dutnlnm2e2156" path="res://Textures/Player_2_Mat.tres" id="5_6nogq"]
+[ext_resource type="AudioStream" uid="uid://btc02g1jf4hwj" path="res://Music/Space_Thump_4.mp3" id="5_168k6"]
 [ext_resource type="PackedScene" uid="uid://bqyyoahhxdux6" path="res://Models/Tube Segment.fbx" id="5_i4cbt"]
 [ext_resource type="Texture2D" uid="uid://cof310insy8mv" path="res://Textures/top.png" id="9_61e7j"]
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_5xdf3"]
+streams_count = 4
+stream_0/stream = ExtResource("2_hfmoq")
+stream_1/stream = ExtResource("3_jsfkk")
+stream_2/stream = ExtResource("4_yp6lx")
+stream_3/stream = ExtResource("5_168k6")
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_i4cbt"]
 radius = 0.4
@@ -19,7 +30,8 @@ height = 1.2
 script = ExtResource("1_34lnl")
 starting_oxygen_time = 120.0
 damaged_oxygen_time_loss = 10.0
-damage_cooldown = 1.0
+damage_cooldown = 0.5
+bump_sound = SubResource("AudioStreamRandomizer_5xdf3")
 
 [node name="PlayerRigidBody1" parent="." unique_id=553536451 instance=ExtResource("2_34lnl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.53, 0, 0.011)
@@ -44,7 +56,7 @@ material_override = ExtResource("4_3wvmt")
 [node name="MeshInstance3D" parent="PlayerRigidBody2/MeshInstance3D" index="0" unique_id=188329183]
 material_override = ExtResource("4_3wvmt")
 
-[node name="Janitor_Low" parent="PlayerRigidBody2/Janitor Model/Janitor/Janitor_Armature/Skeleton3D" parent_id_path=PackedInt32Array(763412840, 1088671623, 798683936) index="0" unique_id=1484124027]
+[node name="Janitor_Low" parent="PlayerRigidBody2/Janitor Model/Janitor/Janitor_Armature/Skeleton3D" parent_id_path=PackedInt32Array(763412840, 1772564531, 1610050293) index="0" unique_id=1420168297]
 material_override = ExtResource("5_6nogq")
 
 [node name="Tether" type="RigidBody3D" parent="." unique_id=375111991 node_paths=PackedStringArray("body_a", "body_b")]
@@ -123,5 +135,6 @@ texture = ExtResource("9_61e7j")
 [connection signal="body_entered" from="Tether" to="." method="_on_body_entered" binds= [NodePath("Tether")]]
 
 [editable path="PlayerRigidBody1"]
+[editable path="PlayerRigidBody1/Janitor Model"]
 [editable path="PlayerRigidBody2"]
 [editable path="PlayerRigidBody2/Janitor Model"]

@@ -5,7 +5,7 @@ extends Node
 
 
 func _process(delta: float) -> void:
-	if Input.get_action_strength("AddForce1") >= 1 or Input.get_action_strength("AddForce1") >= 1:
+	if Input.is_action_just_pressed("AddForce1") or Input.is_action_just_pressed("AddForce1") :
 		_on_pressed()
 
 

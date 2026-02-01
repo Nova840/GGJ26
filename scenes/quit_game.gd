@@ -2,5 +2,5 @@ extends Node
 
 
 func _process(delta: float) -> void:
-	if Input.get_action_strength("Exit") >= 1:
+	if Input.is_action_just_pressed("Exit"):
 		get_tree().quit()

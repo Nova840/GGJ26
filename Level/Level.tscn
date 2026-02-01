@@ -15,6 +15,7 @@
 [ext_resource type="PackedScene" uid="uid://cble4o5q5paha" path="res://scenes/Obstacles/Large/2XRadarDish.tscn" id="13_ul75j"]
 [ext_resource type="PackedScene" uid="uid://bl12tpu8kyaui" path="res://scenes/Obstacles/Large/2XStraightPipe.tscn" id="14_ul75j"]
 [ext_resource type="PackedScene" uid="uid://d0t4et1rit4dl" path="res://scenes/Obstacles/Large/2XSolarPanel.tscn" id="15_4jlx7"]
+[ext_resource type="PackedScene" uid="uid://blvh4uiy4ywe6" path="res://scenes/Obstacles/Moving/MovingObstacles.tscn" id="16_4jlx7"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_a526m"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -87,7 +88,7 @@ shape = SubResource("BoxShape3D_2gduj")
 mesh = SubResource("BoxMesh_2gduj")
 
 [node name="Finish" type="Area3D" parent="." unique_id=605422326]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -192.80406)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -209.1803)
 script = ExtResource("2_r3cbp")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Finish" unique_id=285719030]
@@ -1205,4 +1206,46 @@ freeze = true
 transform = Transform3D(-0.8635893, 0, 0.50419617, 0, 1, 0, -0.50419617, 0, -0.8635893, -17.515028, 0.35092735, -126.96866)
 freeze = true
 
+[node name="MovingObstacles" type="Node" parent="." unique_id=1026078093]
+
+[node name="MovingObstacles" parent="MovingObstacles" unique_id=1969872525 instance=ExtResource("16_4jlx7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -44.007523, 0, -155.099)
+
+[node name="ObstacleGenerator" parent="MovingObstacles/MovingObstacles" index="0" unique_id=231334155]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -26.77282, 0, 0)
+speed = 4.0
+scenes = Array[PackedScene]([ExtResource("5_6fg3j"), ExtResource("6_2ld0w"), ExtResource("7_32x38"), ExtResource("8_66v8m"), ExtResource("9_ul75j"), ExtResource("10_4jlx7")])
+delay_seconds = 5.0
+
+[node name="ObstacleDestroyer" parent="MovingObstacles/MovingObstacles" index="1" unique_id=731762659]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 142.97256, 0, 0)
+
+[node name="MovingObstacles2" parent="MovingObstacles" unique_id=693080781 instance=ExtResource("16_4jlx7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -44.007523, 0, -179.75111)
+
+[node name="ObstacleGenerator" parent="MovingObstacles/MovingObstacles2" index="0" unique_id=231334155]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -26.77282, 0, 0)
+speed = 4.0
+scenes = Array[PackedScene]([ExtResource("5_6fg3j"), ExtResource("6_2ld0w"), ExtResource("7_32x38"), ExtResource("8_66v8m"), ExtResource("9_ul75j"), ExtResource("10_4jlx7")])
+delay_seconds = 4.0
+
+[node name="ObstacleDestroyer" parent="MovingObstacles/MovingObstacles2" index="1" unique_id=731762659]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 142.97256, 0, 0)
+
+[node name="MovingObstacles3" parent="MovingObstacles" unique_id=1424898813 instance=ExtResource("16_4jlx7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -44.007523, 0, -171.02849)
+
+[node name="ObstacleGenerator" parent="MovingObstacles/MovingObstacles3" index="0" unique_id=231334155]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -26.77282, 0, 0)
+speed = 5.0
+scenes = Array[PackedScene]([ExtResource("5_6fg3j"), ExtResource("6_2ld0w"), ExtResource("7_32x38"), ExtResource("8_66v8m"), ExtResource("9_ul75j"), ExtResource("10_4jlx7")])
+delay_seconds = 3.0
+
+[node name="ObstacleDestroyer" parent="MovingObstacles/MovingObstacles3" index="1" unique_id=731762659]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 142.97256, 0, 0)
+
 [connection signal="body_entered" from="Finish" to="Finish" method="_on_body_entered"]
+
+[editable path="MovingObstacles/MovingObstacles"]
+[editable path="MovingObstacles/MovingObstacles2"]
+[editable path="MovingObstacles/MovingObstacles3"]

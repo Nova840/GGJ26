@@ -14,6 +14,10 @@ config/name="GGJ26"
 run/main_scene="uid://b7cuij4ir5lg2"
 config/features=PackedStringArray("4.6")
 
+[autoload]
+
+SceneTransition="*uid://cxo07ninhjclr"
+
 [debug]
 
 gdscript/warnings/unused_parameter=0

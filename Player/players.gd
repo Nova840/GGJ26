@@ -5,6 +5,8 @@ class_name Players
 static var instance: Players
 
 static var last_distance: float
+static var last_time_existed: float
+static var finished: bool
 
 
 @export var starting_oxygen_time: float
@@ -26,6 +28,9 @@ func _enter_tree() -> void:
 
 
 func _ready() -> void:
+	last_distance = 0
+	last_time_existed = 0
+	finished = false
 	oxygen_time = starting_oxygen_time
 	for child in get_children():
 		if child is PlayerRigidBody:
@@ -33,6 +38,8 @@ func _ready() -> void:
 
 
 func _process(delta: float) -> void:
+	if not oxygen_depleted and not finished:
+		last_time_existed += delta
 	oxygen_time -= delta
 	oxygen_time = max(oxygen_time, 0)
 	if oxygen_time <= 0 and not oxygen_depleted:

@@ -1,9 +1,9 @@
 extends Node3D
 
 @export var direction = Vector3(1, 0, 0)
-@export var speed = 1.0
+@export var speed: float = 1.0
 @export var scenes: Array[PackedScene] = []
-@export var delay_seconds = 2
+@export var delay_seconds: float = 2
 
 var elapsed = 0.0
 

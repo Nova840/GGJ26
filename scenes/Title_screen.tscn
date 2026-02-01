@@ -54,6 +54,7 @@ text = "Play"
 script = ExtResource("2_iiq27")
 scene_to_load = "res://Level/Level.tscn"
 click_sound = ExtResource("3_wv7dd")
+click_delay = 1.0
 
 [node name="Title" type="Label" parent="." unique_id=828828634]
 anchors_preset = 5

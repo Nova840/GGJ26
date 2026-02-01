@@ -27,6 +27,14 @@ scale_curve = SubResource("CurveTexture_iiq27")
 
 [node name="CanvasLayer" type="CanvasLayer" unique_id=471357788]
 
+[node name="ColorRect" type="ColorRect" parent="." unique_id=2025128607]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
 [node name="PlayButton" type="Button" parent="." unique_id=373178044]
 anchors_preset = 7
 anchor_left = 0.5

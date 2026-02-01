@@ -1,0 +1,17 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://vbdnhf4tcs4f"]
+
+[ext_resource type="Texture2D" uid="uid://5n31161d7g11" path="res://Textures/Debris_Batch_2_Mat_BaseColor.png" id="1_t5mnf"]
+[ext_resource type="Texture2D" uid="uid://ciyv10hw50ci7" path="res://Textures/Debris_Batch_2_Mat_OcclusionRoughnessMetallic.png" id="2_o0yi0"]
+[ext_resource type="Texture2D" uid="uid://dtfcvihf3prdn" path="res://Textures/Debris_Batch_2_Mat_Normal.png" id="3_3jf74"]
+
+[resource]
+albedo_texture = ExtResource("1_t5mnf")
+metallic = 1.0
+metallic_texture = ExtResource("2_o0yi0")
+metallic_texture_channel = 2
+roughness_texture = ExtResource("2_o0yi0")
+roughness_texture_channel = 1
+normal_enabled = true
+normal_texture = ExtResource("3_3jf74")
+ao_enabled = true
+ao_texture = ExtResource("2_o0yi0")

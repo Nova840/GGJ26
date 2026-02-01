@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://bbxm1cqdu70hf"]
+
+[ext_resource type="Script" uid="uid://ciljrctic4bdx" path="res://scenes/quit_game.gd" id="1_88tao"]
+
+[node name="QuitGame" type="Node" unique_id=1923157353]
+script = ExtResource("1_88tao")

@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://cmfcmb43xvqvu"]
+
+[ext_resource type="Script" uid="uid://c46kunepbn6su" path="res://scenes/sound.gd" id="1_blukp"]
+
+[node name="Sound" type="Node" unique_id=242892680]
+script = ExtResource("1_blukp")
+
+[node name="AudioStreamPlayerTemplate" type="AudioStreamPlayer" parent="." unique_id=568788290]

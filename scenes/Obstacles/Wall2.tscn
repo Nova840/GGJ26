@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://0418o0kw88bu"]
+
+[ext_resource type="PackedScene" uid="uid://cdgm0atuy0has" path="res://Models/Wall_Panel_2.fbx" id="1_g3m6e"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_2v0nt"]
+size = Vector3(3.8477478, 3.894043, 1)
+
+[node name="Wall2" type="RigidBody3D" unique_id=1110115923]
+
+[node name="Wall_Panel_2" parent="." unique_id=1667262108 instance=ExtResource("1_g3m6e")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1112548641]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00053215027, 0.031309366, 0.018466473)
+shape = SubResource("BoxShape3D_2v0nt")

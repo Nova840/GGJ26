@@ -8,6 +8,15 @@
 [ext_resource type="PackedScene" uid="uid://bg42iqvbrq18v" path="res://Models/T-Pipe.fbx" id="6_r0wwg"]
 [ext_resource type="PackedScene" uid="uid://bmas6t1vvwfth" path="res://Models/L-Pipe.fbx" id="7_3ctuk"]
 [ext_resource type="PackedScene" uid="uid://dgmqyau14w3o2" path="res://Models/Straight Pipe.fbx" id="8_x67vj"]
+[ext_resource type="PackedScene" uid="uid://cdxnkv6jtf13j" path="res://Models/Hull Piece.fbx" id="9_7vd43"]
+[ext_resource type="PackedScene" uid="uid://dwk1x1rkgh47k" path="res://Models/Fuel Tank.fbx" id="10_lubkq"]
+[ext_resource type="PackedScene" uid="uid://cah52fcyxm6je" path="res://Models/Rocket_Engine.fbx" id="11_mkskq"]
+[ext_resource type="PackedScene" uid="uid://bbijcwceybq1o" path="res://Models/Ship_Module.fbx" id="12_p14gt"]
+[ext_resource type="PackedScene" uid="uid://cdikfds6u22cd" path="res://Models/Steel Beam.fbx" id="13_qjjx7"]
+[ext_resource type="PackedScene" uid="uid://dm6eebuponltc" path="res://Models/Wall_Panel_1.fbx" id="14_0hkot"]
+[ext_resource type="PackedScene" uid="uid://cdgm0atuy0has" path="res://Models/Wall_Panel_2.fbx" id="15_epmho"]
+[ext_resource type="PackedScene" uid="uid://civ1bd5pberv6" path="res://Models/Wall_Panel_3.fbx" id="16_238bl"]
+[ext_resource type="PackedScene" uid="uid://be42b5nqvxdin" path="res://Models/Window.fbx" id="17_suwhd"]
 
 [node name="Node3D" type="Node3D" unique_id=599412236]
 
@@ -25,7 +34,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.3947923, 0, -0.16219401)
 [node name="Air Tank" parent="." unique_id=1479493546 instance=ExtResource("3_weftq")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.0848756, 0, -0.0684315)
 
-[node name="Solar Panel" parent="." unique_id=1036535517 instance=ExtResource("4_46h3x")]
+[node name="Solar Panel" parent="." unique_id=129580980 instance=ExtResource("4_46h3x")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.4288032, 0, -1.0776718)
 
 [node name="Radar Dish" parent="." unique_id=1524321552 instance=ExtResource("5_7vd43")]
@@ -34,8 +43,35 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.7732048, 1.203681, 0.040421
 [node name="T-Pipe" parent="." unique_id=1606313794 instance=ExtResource("6_r0wwg")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.3197155, 0, 1.6114697)
 
-[node name="L-Pipe" parent="." unique_id=925869105 instance=ExtResource("7_3ctuk")]
+[node name="L-Pipe" parent="." unique_id=1083751854 instance=ExtResource("7_3ctuk")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.457687, 0, -0.55744934)
 
-[node name="Straight Pipe" parent="." unique_id=896599239 instance=ExtResource("8_x67vj")]
+[node name="Straight Pipe" parent="." unique_id=1571097569 instance=ExtResource("8_x67vj")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.9272246, 0, 3.613483)
+
+[node name="Hull Piece" parent="." unique_id=857775023 instance=ExtResource("9_7vd43")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.147013, 0, 0.7840483)
+
+[node name="Fuel Tank" parent="." unique_id=868252455 instance=ExtResource("10_lubkq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.7523613, 0, -3.9062638)
+
+[node name="Rocket_Engine" parent="." unique_id=307701265 instance=ExtResource("11_mkskq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.2096052, 0, -7.9897842)
+
+[node name="Ship_Module" parent="." unique_id=1791223070 instance=ExtResource("12_p14gt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.080019, 0, 4.3718805)
+
+[node name="Steel Beam" parent="." unique_id=1631020899 instance=ExtResource("13_qjjx7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.2775426, 0, 4.909162)
+
+[node name="Wall_Panel_1" parent="." unique_id=382309582 instance=ExtResource("14_0hkot")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.4334339, 0, 8.961425)
+
+[node name="Wall_Panel_2" parent="." unique_id=1429238129 instance=ExtResource("15_epmho")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.374244, 0, 5.4912043)
+
+[node name="Wall_Panel_3" parent="." unique_id=1953639825 instance=ExtResource("16_238bl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5561898, 0, 8.26075)
+
+[node name="Window" parent="." unique_id=2121877635 instance=ExtResource("17_suwhd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.282547, 0, 7.0910664)

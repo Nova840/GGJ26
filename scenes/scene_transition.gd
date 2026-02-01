@@ -11,9 +11,13 @@ func _ready() -> void:
 
 func change_scene(file: String) -> void:
 	animation_player.play("dissolve")
-	
+
 	await animation_player.animation_finished
-	
+
 	get_tree().change_scene_to_file(file)
-	
+	if file == "res://Level/Level.tscn":
+		Input.mouse_mode = Input.MOUSE_MODE_HIDDEN
+	else:
+		Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
+
 	animation_player.play_backwards("dissolve")

@@ -14,7 +14,7 @@ func _ready() -> void:
 
 
 func _process(delta: float) -> void:
-	if (Input.is_action_just_pressed("AddForce1") or Input.is_action_just_pressed("AddForce1")) \
+	if (Input.is_action_just_pressed("AddForce1") or Input.is_action_just_pressed("AddForce2")) \
 			and Time.get_ticks_msec() / 1000.0 - time_created >= click_delay:
 		_on_pressed()
 

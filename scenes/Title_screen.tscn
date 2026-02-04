@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://dph261e1bojt5"]
 
-[ext_resource type="Theme" uid="uid://dg3umheryfd32" path="res://UI_theme.tres" id="1_jau5q"]
+[ext_resource type="Theme" uid="uid://dg3umheryfd32" path="res://scenes/UI_theme.tres" id="1_jau5q"]
 [ext_resource type="Texture2D" uid="uid://dp2yjijlpc0c8" path="res://Art/star.png" id="2_6x1xr"]
-[ext_resource type="Script" uid="uid://j73e7wccy6gi" path="res://scene_change.gd" id="2_iiq27"]
+[ext_resource type="Script" uid="uid://j73e7wccy6gi" path="res://scenes/scene_change.gd" id="2_iiq27"]
 [ext_resource type="AudioStream" uid="uid://q1ft48kc1v2f" path="res://Music/DigitalClick.mp3" id="3_wv7dd"]
 
 [sub_resource type="Curve" id="Curve_6x1xr"]

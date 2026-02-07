@@ -56,6 +56,7 @@ script = ExtResource("2_g44xs")
 scene_to_load = "res://scenes/Title_screen.tscn"
 click_sound = ExtResource("3_vj8vg")
 click_delay = 1.0
+press_on_input = Array[String](["Back1", "Back2"])
 
 [node name="EndLabel" type="Label" parent="." unique_id=828828634]
 anchors_preset = 5

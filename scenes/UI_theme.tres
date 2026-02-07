@@ -5,22 +5,39 @@
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_e1d5r"]
 texture = ExtResource("2_fryvk")
+expand_margin_left = 24.0
+expand_margin_top = 12.0
+expand_margin_right = 24.0
+expand_margin_bottom = 12.0
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_tw5cx"]
 texture = ExtResource("2_fryvk")
+expand_margin_left = 24.0
+expand_margin_top = 12.0
+expand_margin_right = 24.0
+expand_margin_bottom = 12.0
+modulate_color = Color(1, 0, 0.6039216, 1)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_n0b8l"]
 texture = ExtResource("2_fryvk")
+expand_margin_left = 24.0
+expand_margin_top = 12.0
+expand_margin_right = 24.0
+expand_margin_bottom = 12.0
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ida4b"]
 texture = ExtResource("2_fryvk")
-expand_margin_left = 12.0
+expand_margin_left = 24.0
 expand_margin_top = 12.0
-expand_margin_right = 12.0
+expand_margin_right = 24.0
 expand_margin_bottom = 12.0
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_w4l11"]
 texture = ExtResource("2_fryvk")
+expand_margin_left = 24.0
+expand_margin_top = 12.0
+expand_margin_right = 24.0
+expand_margin_bottom = 12.0
 
 [resource]
 Button/font_sizes/font_size = 32

@@ -36,7 +36,29 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("4_wv7dd")
 
-[node name="PlayButton" type="Button" parent="." unique_id=373178044]
+[node name="PlayButton" type="Button" parent="." unique_id=1962500572]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -54.0
+offset_top = -246.0
+offset_right = 55.0
+offset_bottom = -207.0
+grow_horizontal = 2
+grow_vertical = 0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+focus_neighbor_bottom = NodePath("../CreditsButton")
+theme = ExtResource("1_jau5q")
+text = "Play"
+script = ExtResource("2_iiq27")
+scene_to_load = "res://Level/Level.tscn"
+click_sound = ExtResource("3_wv7dd")
+click_delay = 1.0
+
+[node name="CreditsButton" type="Button" parent="." unique_id=373178044]
 anchors_preset = 7
 anchor_left = 0.5
 anchor_top = 1.0
@@ -50,22 +72,27 @@ grow_horizontal = 2
 grow_vertical = 0
 size_flags_horizontal = 4
 size_flags_vertical = 4
+focus_neighbor_top = NodePath("../PlayButton")
 theme = ExtResource("1_jau5q")
-text = "Play"
+text = "Credits"
 script = ExtResource("2_iiq27")
-scene_to_load = "res://Level/Level.tscn"
+scene_to_load = "res://scenes/credits_screen.tscn"
 click_sound = ExtResource("3_wv7dd")
 click_delay = 1.0
+focus_on_ready = false
 
 [node name="Title" type="Label" parent="." unique_id=828828634]
-anchors_preset = 5
+anchors_preset = 8
 anchor_left = 0.5
+anchor_top = 0.5
 anchor_right = 0.5
-offset_left = -98.5
-offset_top = 443.0
-offset_right = 98.5
-offset_bottom = 469.0
+anchor_bottom = 0.5
+offset_left = -612.5
+offset_top = -30.5
+offset_right = 612.5
+offset_bottom = 30.5
 grow_horizontal = 2
+grow_vertical = 2
 theme = ExtResource("1_jau5q")
 text = "Janitors from outer space"
 horizontal_alignment = 1
@@ -79,3 +106,4 @@ preprocess = 3.0
 process_material = SubResource("ParticleProcessMaterial_wv7dd")
 
 [connection signal="pressed" from="PlayButton" to="PlayButton" method="_on_pressed"]
+[connection signal="pressed" from="CreditsButton" to="CreditsButton" method="_on_pressed"]

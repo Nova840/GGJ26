@@ -14,9 +14,12 @@ func get_scores_text() -> String:
 	for score in Scores.scores_time:
 		scores += 1
 		t += str(scores) + ": Finished! " + str(floori(score)) + " S\n"
-		if scores >= scores_to_display: return t
+		if scores > scores_to_display: break
 	for score in Scores.scores_distance:
 		scores += 1
+		if scores > scores_to_display: break
 		t += str(scores) + ": Died! " + str(floori(score)) + " M\n"
-		if scores >= scores_to_display: return t
+	while scores < scores_to_display:
+		scores += 1
+		t += "___________\n"
 	return t

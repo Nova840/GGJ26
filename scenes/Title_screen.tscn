@@ -121,8 +121,21 @@ theme = ExtResource("1_jau5q")
 text = "Janitors from outer space"
 horizontal_alignment = 1
 
-[node name="GPUParticles2D" type="GPUParticles2D" parent="." unique_id=168349413]
-position = Vector2(960, 540)
+[node name="ParticleContainer" type="Control" parent="." unique_id=873076431]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="ParticleContainer" unique_id=168349413]
 amount = 200
 texture = ExtResource("2_6x1xr")
 lifetime = 3.0

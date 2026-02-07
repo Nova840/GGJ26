@@ -6,14 +6,14 @@
 [ext_resource type="Script" uid="uid://1jkkyq4ks5ua" path="res://scenes/end_label.gd" id="4_g44xs"]
 [ext_resource type="Texture2D" uid="uid://dp2yjijlpc0c8" path="res://Art/star.png" id="4_plosh"]
 
-[sub_resource type="Curve" id="Curve_6x1xr"]
+[sub_resource type="Curve" id="Curve_g44xs"]
 _data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
 point_count = 2
 
 [sub_resource type="CurveTexture" id="CurveTexture_iiq27"]
-curve = SubResource("Curve_6x1xr")
+curve = SubResource("Curve_g44xs")
 
-[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_wv7dd"]
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_vj8vg"]
 particle_flag_disable_z = true
 emission_shape = 1
 emission_sphere_radius = 128.0
@@ -72,12 +72,25 @@ text = "kjsfdhguoihguoi"
 horizontal_alignment = 1
 script = ExtResource("4_g44xs")
 
-[node name="GPUParticles2D" type="GPUParticles2D" parent="." unique_id=2136858020]
-position = Vector2(960, 540)
+[node name="ParticleContainer" type="Control" parent="." unique_id=1205444524]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="ParticleContainer" unique_id=1920051982]
 amount = 200
 texture = ExtResource("4_plosh")
 lifetime = 3.0
 preprocess = 3.0
-process_material = SubResource("ParticleProcessMaterial_wv7dd")
+process_material = SubResource("ParticleProcessMaterial_vj8vg")
 
 [connection signal="pressed" from="BackButton" to="BackButton" method="_on_pressed"]

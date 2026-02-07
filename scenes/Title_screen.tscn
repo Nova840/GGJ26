@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://dp2yjijlpc0c8" path="res://Art/star.png" id="2_6x1xr"]
 [ext_resource type="Script" uid="uid://j73e7wccy6gi" path="res://scenes/scene_change.gd" id="2_iiq27"]
 [ext_resource type="AudioStream" uid="uid://q1ft48kc1v2f" path="res://Music/DigitalClick.mp3" id="3_wv7dd"]
+[ext_resource type="Texture2D" uid="uid://kp8i2hqacuma" path="res://Textures/Splash_Screen.png" id="4_wv7dd"]
 
 [sub_resource type="Curve" id="Curve_6x1xr"]
 _data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
@@ -27,13 +28,13 @@ scale_curve = SubResource("CurveTexture_iiq27")
 
 [node name="CanvasLayer" type="CanvasLayer" unique_id=471357788]
 
-[node name="ColorRect" type="ColorRect" parent="." unique_id=2025128607]
+[node name="Background" type="TextureRect" parent="." unique_id=2130028334]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0, 0, 0, 1)
+texture = ExtResource("4_wv7dd")
 
 [node name="PlayButton" type="Button" parent="." unique_id=373178044]
 anchors_preset = 7
@@ -69,7 +70,7 @@ theme = ExtResource("1_jau5q")
 text = "Janitors from outer space"
 horizontal_alignment = 1
 
-[node name="GPUParticles2D" type="GPUParticles2D" parent="." unique_id=2136858020]
+[node name="GPUParticles2D" type="GPUParticles2D" parent="." unique_id=168349413]
 position = Vector2(960, 540)
 amount = 200
 texture = ExtResource("2_6x1xr")

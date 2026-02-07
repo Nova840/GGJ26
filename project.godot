@@ -21,6 +21,7 @@ SceneTransition="*uid://bxtq6xnmvwjxq"
 Music="*uid://iojpkvet4pfu"
 Sound="*uid://cmfcmb43xvqvu"
 QuitGame="*uid://bbxm1cqdu70hf"
+Scores="*uid://djn0ayhj41anx"
 
 [debug]
 
@@ -30,7 +31,6 @@ gdscript/warnings/unused_parameter=0
 
 window/size/viewport_width=1920
 window/size/viewport_height=1080
-window/size/mode=4
 window/stretch/mode="canvas_items"
 window/stretch/aspect="expand"
 

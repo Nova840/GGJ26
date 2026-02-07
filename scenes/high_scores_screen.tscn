@@ -1,0 +1,65 @@
+[gd_scene format=3 uid="uid://d1fif0p0cy1mp"]
+
+[ext_resource type="Theme" uid="uid://dg3umheryfd32" path="res://scenes/UI_theme.tres" id="1_dysq1"]
+[ext_resource type="Script" uid="uid://j73e7wccy6gi" path="res://scenes/scene_change.gd" id="2_lclfp"]
+[ext_resource type="Script" uid="uid://mhjayadvakvg" path="res://scenes/credits_label.gd" id="2_xcc1s"]
+[ext_resource type="AudioStream" uid="uid://q1ft48kc1v2f" path="res://Music/DigitalClick.mp3" id="3_xcc1s"]
+
+[node name="CreditsScreen" type="CanvasLayer" unique_id=127226750]
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1449198187]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="Credits" type="Label" parent="." unique_id=1172231009]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -612.5
+offset_top = -390.0
+offset_right = 612.5
+offset_bottom = 247.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_dysq1")
+text = "1
+2
+3
+4
+5
+6
+7
+8
+9
+10"
+script = ExtResource("2_xcc1s")
+
+[node name="BackButton" type="Button" parent="." unique_id=1968354800]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -54.5
+offset_top = -171.0
+offset_right = 54.5
+offset_bottom = -132.0
+grow_horizontal = 2
+grow_vertical = 0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme = ExtResource("1_dysq1")
+text = "Back"
+script = ExtResource("2_lclfp")
+scene_to_load = "res://scenes/Title_screen.tscn"
+click_sound = ExtResource("3_xcc1s")
+click_delay = 1.0
+press_on_input = Array[String](["Back1", "Back2"])
+
+[connection signal="pressed" from="BackButton" to="BackButton" method="_on_pressed"]

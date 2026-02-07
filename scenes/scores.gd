@@ -9,7 +9,7 @@ var scores_time: Array[float]
 
 func _ready() -> void:
 	if FileAccess.file_exists(save_path):
-		var file = FileAccess.open(save_path, FileAccess.READ)
+		var file := FileAccess.open(save_path, FileAccess.READ)
 		var s := file.get_as_text()
 		var arrays := s.split("\n")
 		var dist_array := arrays[0].split(",")
@@ -35,7 +35,7 @@ func add_score_time(score: float) -> void:
 
 
 func save() -> void:
-	var file = FileAccess.open(save_path, FileAccess.WRITE)
+	var file := FileAccess.open(save_path, FileAccess.WRITE)
 	var s := ""
 	s += "Distance,"
 	for sd in scores_distance:

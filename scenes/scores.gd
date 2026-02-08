@@ -2,6 +2,7 @@ extends Node
 
 
 @export var save_path: String = "user://high_scores.txt"
+@export var num_high_scores_to_keep: int = 10
 
 var scores_distance: Array[float]
 var scores_time: Array[float]
@@ -22,15 +23,15 @@ func _ready() -> void:
 
 func add_score_distance(score: float) -> void:
 	scores_distance.append(score)
-	# Descending
-	scores_distance.sort_custom(func(a, b): return a > b)
+	scores_distance.sort_custom(func(a, b): return a > b) # Descending
+	scores_distance = scores_distance.slice(0, num_high_scores_to_keep)
 	save()
 
 
 func add_score_time(score: float) -> void:
 	scores_time.append(score)
-	# Ascending
-	scores_time.sort_custom(func(a, b): return a < b)
+	scores_time.sort_custom(func(a, b): return a < b) # Ascending
+	scores_time = scores_time.slice(0, num_high_scores_to_keep)
 	save()
 
 

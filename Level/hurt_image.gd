@@ -11,4 +11,5 @@ func _ready() -> void:
 
 
 func damage_taken() -> void:
+	animation_player.stop()
 	animation_player.play("fade")

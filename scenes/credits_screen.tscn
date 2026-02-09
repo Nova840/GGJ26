@@ -20,17 +20,26 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -612.5
-offset_top = -30.5
-offset_right = 612.5
-offset_bottom = 30.5
+offset_left = -830.0
+offset_top = -350.0
+offset_right = 825.0
+offset_bottom = 351.0
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("1_8n838")
-text = "lolol: stuff
-me: idk
-bob: other things"
+text = "_Created for the GGJ 2026_
+#Game design_sfx_music#
+Maiia Lysytska
+#3D artist#
+Ted Agriogianus
+#Play testing_UI theming#
+Joffre @sparkcloud
+#Game programming#
+Adam Zmudzinski
+#Level design#
+Vinayak Karuppasamy"
 horizontal_alignment = 1
+autowrap_mode = 2
 
 [node name="BackButton" type="Button" parent="." unique_id=1968354800]
 anchors_preset = 7

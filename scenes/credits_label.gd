@@ -21,5 +21,5 @@ func get_scores_text() -> String:
 		t += str(scores) + ": Died! " + str(floori(score)) + " M\n"
 	while scores < scores_to_display:
 		scores += 1
-		t += "___________\n"
+		t += str(scores) + ": ___________\n"
 	return t

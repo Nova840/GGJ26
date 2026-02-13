@@ -16,7 +16,7 @@ expand_margin_left = 40.0
 expand_margin_top = 12.0
 expand_margin_right = 40.0
 expand_margin_bottom = 12.0
-modulate_color = Color(1, 0, 0.6039216, 1)
+modulate_color = Color(0.54156524, 0.5415652, 0.5415652, 1)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_n0b8l"]
 texture = ExtResource("2_fryvk")
@@ -24,6 +24,7 @@ expand_margin_left = 40.0
 expand_margin_top = 12.0
 expand_margin_right = 40.0
 expand_margin_bottom = 12.0
+modulate_color = Color(0.74188054, 0.74188054, 0.7418805, 1)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ida4b"]
 texture = ExtResource("2_fryvk")
@@ -38,6 +39,7 @@ expand_margin_left = 40.0
 expand_margin_top = 12.0
 expand_margin_right = 40.0
 expand_margin_bottom = 12.0
+modulate_color = Color(0.5411765, 0.5411765, 0.5411765, 1)
 
 [resource]
 BoxContainer/constants/separation = 50

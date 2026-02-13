@@ -14,7 +14,7 @@ var time_created: float
 
 func _ready() -> void:
 	time_created = Time.get_ticks_msec() / 1000.0
-	if focus_on_ready:
+	if focus_on_ready and Input.get_connected_joypads().size() > 0:
 		grab_focus()
 
 
@@ -29,5 +29,7 @@ func _process(delta: float) -> void:
 
 
 func _on_pressed():
+	if SceneTransition.is_scene_changing:
+		return
 	Sound.play(click_sound)
 	SceneTransition.change_scene(scene_to_load)

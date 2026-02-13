@@ -14,6 +14,7 @@ config/name="Janitors From Outer Space"
 config/version="1.0.1"
 run/main_scene="uid://dph261e1bojt5"
 config/features=PackedStringArray("4.6")
+config/icon="uid://ckfmlivawn4we"
 
 [autoload]
 

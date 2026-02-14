@@ -5,7 +5,7 @@ extends Button
 @export var click_sound: AudioStream
 @export var click_delay: float
 
-@export var focus_on_ready: bool = true
+@export var default_to_focus: bool = true
 
 @export var press_on_input: Array[String]
 
@@ -14,8 +14,8 @@ var time_created: float
 
 func _ready() -> void:
 	time_created = Time.get_ticks_msec() / 1000.0
-	if focus_on_ready and Input.get_connected_joypads().size() > 0:
-		grab_focus()
+	Input.joy_connection_changed.connect(func(device: int, connected: bool) -> void: refresh_focus())
+	refresh_focus()
 
 
 func _process(delta: float) -> void:
@@ -26,6 +26,14 @@ func _process(delta: float) -> void:
 	for input in press_on_input:
 		if Input.is_action_just_pressed(input):
 			_on_pressed()
+
+
+func refresh_focus() -> void:
+	if Input.get_connected_joypads().size() == 0:
+		if has_focus():
+			get_viewport().gui_release_focus()
+	elif default_to_focus and not is_instance_valid(get_viewport().gui_get_focus_owner()):
+		grab_focus()
 
 
 func _on_pressed():

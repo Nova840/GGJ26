@@ -80,7 +80,7 @@ script = ExtResource("2_iiq27")
 scene_to_load = "res://scenes/high_scores_screen.tscn"
 click_sound = ExtResource("3_wv7dd")
 click_delay = 1.0
-focus_on_ready = false
+default_to_focus = false
 
 [node name="CreditsButton" type="Button" parent="." unique_id=373178044]
 anchors_preset = 7
@@ -103,7 +103,7 @@ script = ExtResource("2_iiq27")
 scene_to_load = "res://scenes/credits_screen.tscn"
 click_sound = ExtResource("3_wv7dd")
 click_delay = 1.0
-focus_on_ready = false
+default_to_focus = false
 
 [node name="Title" type="Label" parent="." unique_id=828828634]
 anchors_preset = 8

@@ -43,7 +43,7 @@ material_override = ExtResource("3_ofj18")
 [node name="MeshInstance3D" parent="PlayerRigidBody1/MeshInstance3D" index="0" unique_id=188329183]
 material_override = ExtResource("3_ofj18")
 
-[node name="Skeleton3D" parent="PlayerRigidBody1/Janitor Model/Janitor/Janitor_Armature" parent_id_path=PackedInt32Array(553536451, 1772564531, 1737590953) index="0" unique_id=1610050293]
+[node name="Skeleton3D" parent="PlayerRigidBody1/Janitor Model/Janitor/Janitor_Armature" parent_id_path=PackedInt32Array(553536451, 1772564531, 1527795855) index="0" unique_id=1797457076]
 bones/6/rotation = Quaternion(0.68749684, 0.7212432, -0.06123338, -0.05836823)
 bones/7/rotation = Quaternion(-0.08850527, 0.027761064, 0.37605464, 0.9219431)
 bones/8/rotation = Quaternion(-0.29773584, -0.012838907, 0.03815517, 0.95379907)
@@ -70,7 +70,7 @@ material_override = ExtResource("4_3wvmt")
 [node name="MeshInstance3D" parent="PlayerRigidBody2/MeshInstance3D" index="0" unique_id=188329183]
 material_override = ExtResource("4_3wvmt")
 
-[node name="Skeleton3D" parent="PlayerRigidBody2/Janitor Model/Janitor/Janitor_Armature" parent_id_path=PackedInt32Array(763412840, 1772564531, 1737590953) index="0" unique_id=1610050293]
+[node name="Skeleton3D" parent="PlayerRigidBody2/Janitor Model/Janitor/Janitor_Armature" parent_id_path=PackedInt32Array(763412840, 1772564531, 1527795855) index="0" unique_id=1797457076]
 bones/6/rotation = Quaternion(0.68749684, 0.7212432, -0.06123338, -0.05836823)
 bones/7/rotation = Quaternion(-0.08850527, 0.027761064, 0.37605464, 0.9219431)
 bones/8/rotation = Quaternion(-0.29773584, -0.012838907, 0.03815517, 0.95379907)
@@ -83,7 +83,7 @@ bones/51/rotation = Quaternion(0.76644665, -0.6404828, -0.035436828, 0.03294848)
 bones/52/rotation = Quaternion(0.09490027, 0.0024777495, 0.03732022, 0.9947839)
 bones/53/rotation = Quaternion(-0.002698525, 0.8324597, -0.5483281, -0.079623565)
 
-[node name="Janitor_Low" parent="PlayerRigidBody2/Janitor Model/Janitor/Janitor_Armature/Skeleton3D" index="0" unique_id=1420168297]
+[node name="Janitor_Low" parent="PlayerRigidBody2/Janitor Model/Janitor/Janitor_Armature/Skeleton3D" index="0" unique_id=826177831]
 material_override = ExtResource("5_6nogq")
 
 [node name="Tether" type="RigidBody3D" parent="." unique_id=375111991 node_paths=PackedStringArray("body_a", "body_b")]
@@ -98,10 +98,10 @@ tube_length = 1.9
 
 [node name="Air Tank" parent="Tether" unique_id=785992069 instance=ExtResource("4_a1q3i")]
 
-[node name="Skeleton3D" parent="Tether/Air Tank/Air_Tank/Armature" parent_id_path=PackedInt32Array(785992069, 2049813765) index="0" unique_id=1254876979]
+[node name="Skeleton3D" parent="Tether/Air Tank/Air_Tank/Armature" parent_id_path=PackedInt32Array(785992069, 842528524) index="0" unique_id=445665520]
 bones/1/rotation = Quaternion(-0.7071068, 0, 0, 0.7071067)
 
-[node name="AnimationPlayer" parent="Tether/Air Tank" index="2" unique_id=1686362496]
+[node name="AnimationPlayer" parent="Tether/Air Tank" index="2" unique_id=1170662584]
 script = ExtResource("12_jsfkk")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Tether" unique_id=652967938]

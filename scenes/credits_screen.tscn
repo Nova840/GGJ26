@@ -3,6 +3,7 @@
 [ext_resource type="Theme" uid="uid://dg3umheryfd32" path="res://scenes/UI_theme.tres" id="1_8n838"]
 [ext_resource type="Script" uid="uid://j73e7wccy6gi" path="res://scenes/scene_change.gd" id="2_m2eu1"]
 [ext_resource type="AudioStream" uid="uid://q1ft48kc1v2f" path="res://Music/DigitalClick.mp3" id="3_1amdp"]
+[ext_resource type="Script" uid="uid://x5qiw57ygjdw" path="res://scenes/version_label.gd" id="4_1amdp"]
 
 [node name="CreditsScreen" type="CanvasLayer" unique_id=127226750]
 
@@ -62,5 +63,19 @@ scene_to_load = "res://scenes/Title_screen.tscn"
 click_sound = ExtResource("3_1amdp")
 click_delay = 1.0
 press_on_input = Array[String](["Back1", "Back2"])
+
+[node name="VersionLabel" type="Label" parent="." unique_id=1234138121]
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -40.0
+offset_top = -23.0
+grow_horizontal = 0
+grow_vertical = 0
+theme = ExtResource("1_8n838")
+theme_override_font_sizes/font_size = 32
+script = ExtResource("4_1amdp")
 
 [connection signal="pressed" from="BackButton" to="BackButton" method="_on_pressed"]

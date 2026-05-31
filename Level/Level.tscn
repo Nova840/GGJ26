@@ -25,6 +25,7 @@
 [ext_resource type="PackedScene" uid="uid://0418o0kw88bu" path="res://scenes/Obstacles/Wall2.tscn" id="22_ag07g"]
 [ext_resource type="PackedScene" uid="uid://dl2fbolep8phb" path="res://scenes/Obstacles/Wall3.tscn" id="23_ag07g"]
 [ext_resource type="Script" uid="uid://bya2sx1s0qt6m" path="res://scenes/Obstacles/Moving/obstacle_destroyer.gd" id="25_sxym8"]
+[ext_resource type="PackedScene" uid="uid://lmk5f21a41dj" path="res://scenes/Obstacles/kitty.tscn" id="26_e2xc3"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_a526m"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -3318,6 +3319,9 @@ script = ExtResource("25_sxym8")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="ObstacleDestroyer" unique_id=1145226716]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0.9370575, -201.63974)
 shape = SubResource("BoxShape3D_ynnpp")
+
+[node name="Kitty" parent="." unique_id=564913533 instance=ExtResource("26_e2xc3")]
+transform = Transform3D(0.32556817, -2.948035e-08, 0.9455185, -0.94551855, -4.132993e-08, 0.32556814, 2.948035e-08, -1, -4.1329926e-08, 39.20189, 0, 40.00004)
 
 [connection signal="body_entered" from="Finish" to="Finish" method="_on_body_entered"]
 [connection signal="body_entered" from="ObstacleDestroyer" to="ObstacleDestroyer" method="_on_body_entered"]

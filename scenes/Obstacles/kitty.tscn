@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://lmk5f21a41dj"]
+
+[ext_resource type="PackedScene" uid="uid://clc743tbk2m07" path="res://Models/kitty.glb" id="1_6xvxp"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_6xvxp"]
+size = Vector3(0.51408386, 1.2809753, 1)
+
+[node name="Kitty" type="RigidBody3D" unique_id=564913533]
+axis_lock_linear_y = true
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=17647994]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0017776489, 0.64045715, 0)
+shape = SubResource("BoxShape3D_6xvxp")
+
+[node name="kitty2" parent="." unique_id=1621889467 instance=ExtResource("1_6xvxp")]
